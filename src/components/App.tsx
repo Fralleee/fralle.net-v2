@@ -18,10 +18,10 @@ const Header = styled.section`
 const Title = styled.h1`
   z-index: 1;
   text-shadow: 
-    -6px -6px 6px var(--background), 
-    6px -6px 6px var(--background), 
-    -6px 6px 6px var(--background), 
-    6px 6px 6px var(--background);
+    -12px -12px 12px var(--background), 
+    12px -12px 12px var(--background), 
+    -12px 12px 12px var(--background), 
+    12px 12px 12px var(--background);
 `
 
 const Subtitle = styled.h2`
