@@ -2,6 +2,7 @@
 import BackgroundImage from "images/background.svg"
 import LogoImage from "images/logo.svg"
 import styled from "styled-components"
+import media from "styles/media"
 
 const Header = styled.section`
   width: 100%;
@@ -13,8 +14,12 @@ const Header = styled.section`
   flex-wrap: wrap;
   mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 1) 75%, rgba(0, 0, 0, 0) 90%);
   background-image: ${() => `url(${BackgroundImage})`};
-  background-size: calc(900px + 35vw);
+  background-size: cover;
   background-repeat: no-repeat;
+  
+  @media screen and (max-width: ${media.xl}) {
+    background-size: calc(900px + 35vw);
+  } 
 `
 
 const Logo = styled.i`
