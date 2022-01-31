@@ -1,4 +1,3 @@
-
 import BackgroundImage from "images/background.svg"
 import LogoImage from "images/logo.svg"
 import styled from "styled-components"

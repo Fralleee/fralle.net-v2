@@ -2,7 +2,7 @@
   "name": "fralle",
   "version": "0.1.0",
   "private": true,
-  "homepage": "http://www.fralle.net/",
+  "homepage": "https://www.fralle.net/",
   "dependencies": {
     "@types/node": "^17.0.2",
     "@types/react": "^17.0.37",
