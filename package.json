@@ -24,7 +24,8 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "eject": "react-scripts eject",
-    "predeploy": "yarn build && cp CNAME ./build",
+    "copy-cname": "cp CNAME ./build || copy \"CNAME\" \"build\"",
+    "predeploy": "yarn build && yarn copy-cname",
     "deploy": "gh-pages -d build"
   },
   "eslintConfig": {
