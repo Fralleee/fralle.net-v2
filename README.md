@@ -11,7 +11,7 @@ Tech used
 
 Live
 -------------
-- [Live demo](http://www.fralle.net/)
+- [Live demo](https://www.fralle.net/)
 
 <em>Last updated 2022-01-31</em>
 
