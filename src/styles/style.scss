@@ -41,13 +41,13 @@ body {
   h1 {
     color: var(--color-light);
     font-family: 'Raleway', sans-serif;
-    font-size: clamp(6rem, 10vw, 12rem);
+    font-size: clamp(5rem, 10vw, 12rem);
   }
 
   h2 {   
     color: var(--color); 
     font-family: 'Montserrat', serif;
-    font-size: clamp(0.925rem, calc(0.25rem + 2vw), 2rem);
+    font-size: clamp(0.9rem, calc(0.25rem + 2vw), 2rem);
   }
 
   input {
