@@ -1,0 +1,61 @@
+:root {
+  // default colors
+  --color: rgb(32, 48, 54);
+  --background-color: rgb(248,244,240);
+  --stroke-color: rgba(0,0,0,.5);
+  --shadow-color: rgba(12,8,4,.15);
+
+  // colors
+  --header-background: #99D2DB;
+  --hover-color: #42a5f5;
+  --link-color: #ba68c8;
+  --stripes: repeating-linear-gradient(
+    90deg,
+    rgba(0,0,0,.1),
+    rgba(0,0,0,.1) 3rem,
+    rgba(0,0,0,.05) 3rem,
+    rgba(0,0,0,.05) 6rem
+  );
+
+  // gradients
+  --purple-gradient: linear-gradient(220.55deg, #A531DC 0%, #4300B1 100%);
+  --red-gradient: linear-gradient(220.55deg, #FF896D 0%, #D02020 100%);
+  --blue-gradient: linear-gradient(220.55deg, #3793FF 0%, #0017E4 100%);
+  --orange-gradient: linear-gradient(220.55deg, #FFD439 0%, #FF7A00 100%);
+  --teal-gradient: linear-gradient(220.55deg, #7CF7FF 0%, #4B73FF 100%);
+  --gray-gradient: linear-gradient(220.55deg, #EAEAEA 0%, #8B8B8B 100%);
+  --black-gradient: linear-gradient(220.55deg, #565656 0%, #181818 100%);
+  --yellow-gradient: linear-gradient(220.55deg, #FFF500 0%, #FFB800 100%);
+  --cozy-gradient: linear-gradient(220.55deg, #FF8570 0%, #ff8bf3 100%);
+  --green-gradient: linear-gradient(220.55deg, #00B960 0%, #00552C 100%);
+  --midnight-gradient: linear-gradient(220.55deg, #00E0EE 0%, #A060EE 100%);
+  --fizzy-gradient: linear-gradient(220.55deg, #FF8570 0%, #418CB7 100%);
+  --fizzy-light-gradient: linear-gradient(220.55deg, #89c6ff 0%, #ff8bf3 100%);
+  --vital-ocean: linear-gradient(90deg, #1CB5E0 0%, #000851 100%);
+  --kale-salad: linear-gradient(90deg, #00C9FF 0%, #92FE9D 100%);
+  --disco-club: linear-gradient(90deg, #FC466B 0%, #3F5EFB 100%);
+  --shady-lane: linear-gradient(90deg, #3F2B96 0%, #A8C0FF 100%);
+  --retro-wagon: linear-gradient(90deg, #FDBB2D 0%, #22C1C3 100%);
+  --fresco-crush: linear-gradient(90deg, #FDBB2D 0%, #3A1C71 100%);
+  --cucumber-water: linear-gradient(90deg, #e3ffe7 0%, #d9e7ff 100%);
+  --sea-salt: linear-gradient(90deg, #4b6cb7 0%, #182848 100%);
+  --par-four: linear-gradient(90deg, #9ebd13 0%, #008552 100%);
+  --ooey-gooey: linear-gradient(90deg, #0700b8 0%, #00ff88 100%);
+  --bloody-mimosa: linear-gradient(90deg, #daae51 0%, #d53369 100%);
+  --lovely-lily: linear-gradient(90deg, #efd5ff 0%, #515ada 100%);
+  --aqua-spray: linear-gradient(90deg, #00d2ff 0%, #3a47d5 100%);
+  --mello-yellow: linear-gradient(90deg, #f8ff00 0%, #3ad59f 100%);
+  --dusty-cactus: linear-gradient(90deg, #fcff9e 0%, #c67700 100%);
+  --sexy-sandal: linear-gradient(90deg, #FC466B 0%, #FC466B 100%);
+
+  // border-radius
+  --radius-xl: 48px;
+  --radius-lg: 32px;
+  --radius-md: 8px;
+  --radius-sm: 4px;
+
+  // timing
+  --easeInOutQuadratic: cubic-bezier(0.455, 0.03, 0.515, 0.955);
+  --easeOutBack: cubic-bezier(0.34, 1.56, 0.64, 1);
+  --easeOutBack-large: cubic-bezier(0.175, 0.885, 0.405, 1.570);
+}

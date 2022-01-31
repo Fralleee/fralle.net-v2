@@ -1,0 +1,64 @@
+@import url('https://fonts.googleapis.com/css2?family=Oleo+Script:wght@400;700&family=Quicksand:wght@600&family=Roboto+Slab&display=swap');
+@import './variables.scss';
+
+html {
+  box-sizing: border-box;
+}
+*, *:before, *:after {
+  box-sizing: inherit;
+  caret-color: transparent;
+
+  &:focus {
+    outline: auto 5px -webkit-focus-ring-color;
+  }
+}
+
+body {
+  margin: 0;
+  font-family: 'Roboto Slab', serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  min-height: 100vh;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  color: var(--color);
+  box-sizing: border-box;
+
+  h1, h2, h3, h4, h5, h6 {
+    text-transform: capitalize;
+    font-family: 'Oleo Script', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+    color: var(--title-color-intense);
+    margin: 0;
+    padding: 0;
+  }
+
+  input {
+    text-transform: lowercase;
+    font-family: 'Quicksand', sans-serif;
+    font-size: 1rem;
+  }
+
+  h1 {
+    color: var(--title-color);
+  }
+
+  h2 {
+    color: var(--subtitle-color);
+    font-size: clamp(2.5rem, 1vw + 1.5rem, 6rem)
+  }
+  
+  ol, ul {    
+    font-size: clamp(.925rem, 3vw, 1.25rem); 
+  }
+
+  #root {
+    width: 100%;
+    overflow: hidden;
+  }
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
