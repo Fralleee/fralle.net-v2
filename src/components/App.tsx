@@ -1,9 +1,10 @@
-import BackgroundImage from "images/background.svg"
 import LogoImage from "images/logo.svg"
 import styled from "styled-components"
-import media from "styles/media"
+import Canvas from "components/Canvas"
+import FloatingParticles from "canvas/FloatingParticles"
 
 const Header = styled.section`
+  position: relative;
   width: 100%;
   min-height: 500px;
   display: flex;
@@ -12,13 +13,6 @@ const Header = styled.section`
   align-items: center;
   flex-wrap: wrap;
   mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 1) 75%, rgba(0, 0, 0, 0) 90%);
-  background-image: ${() => `url(${BackgroundImage})`};
-  background-size: cover;
-  background-repeat: no-repeat;
-  
-  @media screen and (max-width: ${media.xl}) {
-    background-size: calc(900px + 35vw);
-  } 
 `
 
 const Logo = styled.i`
@@ -54,13 +48,16 @@ const Subtitle = styled.h2`
 
 const App = () => {
   return (
-    <Header>
-      <Title>
-        <Logo />
-        Fralle
-      </Title>
-      <Subtitle>Software developer & sassy home cook</Subtitle>
-    </Header>
+    <div>
+      <Header>
+        <Canvas render={FloatingParticles} />
+        <Title>
+          <Logo />
+          Fralle
+        </Title>
+        <Subtitle>Software developer & sassy home cook</Subtitle>
+      </Header>
+    </div>
   )
 }
 
