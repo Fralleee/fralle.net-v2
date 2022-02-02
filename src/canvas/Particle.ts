@@ -5,12 +5,14 @@ class Particle {
   position: Vector
   direction: Vector
   radius: number
+  targetRadius: number
   color: string
 
   constructor(position: Vector, direction: Vector, radius: number, color: string) {
     this.position = position
     this.direction = direction
-    this.radius = radius
+    this.radius = 0
+    this.targetRadius = radius
     this.color = color
   }
 
@@ -28,6 +30,8 @@ class Particle {
     if (this.position.y + this.radius > canvas.width || this.position.y - this.radius < 0) {
       this.direction.y = -this.direction.y
     }
+
+    if (this.radius < this.targetRadius) this.radius += this.radius * 0.05 + 0.01
 
     this.position.x += this.direction.x
     this.position.y += this.direction.y

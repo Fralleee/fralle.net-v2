@@ -30,7 +30,7 @@ const FloatingParticles = () => {
     for (let i = 0; i < particleAmount; i++) {
       let radius = Math.random() * (maxParticleSize - minParticleSize) + minParticleSize
       let position = new Vector(Math.random() * size.width, Math.random() * size.height)
-      let direction = new Vector(Math.random() * particleSpeedFactor - .2, Math.random() * particleSpeedFactor - .2)
+      let direction = new Vector(Math.random() * particleSpeedFactor - 0.2, Math.random() * particleSpeedFactor - 0.2)
       let color = colorArray[Math.floor(Math.random() * colorArray.length)]
       particles.push(new Particle(position, direction, radius, color))
     }
@@ -53,7 +53,7 @@ const FloatingParticles = () => {
   animate()
 
   window.addEventListener("resize", function () {
-    init()
+    if (canvas.getBoundingClientRect().width !== size.width) init()
   })
 }
 
