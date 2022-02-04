@@ -24,12 +24,16 @@ const FloatingParticles = () => {
     particleAmount = Math.floor(particleAmountDensity * (size.width + size.height) / maxParticleSize)
   }
 
+  function getRandomScreenPosition(maxSize: number) {
+    return Math.min(Math.max(Math.random() * maxSize, maxParticleSize), maxSize - maxParticleSize)
+  }
+
   function init() {
     setupSize()
     particles = []
     for (let i = 0; i < particleAmount; i++) {
       let radius = Math.random() * (maxParticleSize - minParticleSize) + minParticleSize
-      let position = new Vector(Math.random() * size.width, Math.random() * size.height)
+      let position = new Vector(getRandomScreenPosition(size.width), getRandomScreenPosition(size.height))
       let direction = new Vector(Math.random() * particleSpeedFactor - 0.2, Math.random() * particleSpeedFactor - 0.2)
       let color = colorArray[Math.floor(Math.random() * colorArray.length)]
       particles.push(new Particle(position, direction, radius, color))

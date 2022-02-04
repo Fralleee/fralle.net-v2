@@ -1,63 +1,31 @@
-import LogoImage from "images/logo.svg"
-import styled from "styled-components"
-import Canvas from "components/Canvas"
-import FloatingParticles from "canvas/FloatingParticles"
-
-const Header = styled.section`
-  position: relative;
-  width: 100%;
-  min-height: 500px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  flex-wrap: wrap;
-  mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 1) 75%, rgba(0, 0, 0, 0) 90%);
-`
-
-const Logo = styled.i`
-  position: absolute;
-  top: -1vh;
-  left: -3vw;
-  background-size: contain;
-  background-image: ${() => `url(${LogoImage})`};
-  background-repeat: no-repeat;
-  width: calc(20px + 2vw);
-  height: 100%;
-  text-shadow: none;
-  z-index: 2;
-  
-`
-
-const Title = styled.h1`
-  position: relative;
-  display: flex;
-  z-index: 1;
-  text-shadow: 
-    -12px -12px 12px var(--background), 
-    12px -12px 12px var(--background), 
-    -12px 12px 12px var(--background), 
-    12px 12px 12px var(--background);
-`
-
-const Subtitle = styled.h2`
-  z-index: 1;
-  background: var(--background);
-  box-shadow: 0 0 6px 6px var(--background);
-`
+import { Routes, Route } from "react-router-dom"
+import Header from "components/Header"
+import About from "components/About"
+import Portfolio from "components/Portfolio"
+import Browse from "components/Browse"
+import Project from "components/Project"
+import NoMatch from "components/NoMatch"
+import { Link } from "react-router-dom"
 
 const App = () => {
   return (
-    <div>
-      <Header>
-        <Canvas render={FloatingParticles} />
-        <Title>
-          <Logo />
-          Fralle
-        </Title>
-        <Subtitle>Software developer & sassy home cook</Subtitle>
-      </Header>
-    </div>
+    <>
+      <Header />
+      <div style={{ display: "flex", maxWidth: 500, margin: "0 auto", justifyContent: "space-around" }}>
+        <Link to="/">About</Link>
+        <Link to="/portfolio">Portfolio</Link>
+        <Link to="/portfolio/cooking">Cooking</Link>
+        <Link to="/asdasd">NoMatch</Link>
+      </div>
+      <Routes>
+        <Route path="/" element={<About />} />
+        <Route path="portfolio" element={<Portfolio />}>
+          <Route path="" element={<Browse />} />
+          <Route path=":projectId" element={<Project />} />
+        </Route>
+        <Route path="*" element={<NoMatch />} />
+      </Routes>
+    </>
   )
 }
 
