@@ -7,10 +7,10 @@ import LogoImage from "images/logo.svg"
 const HeaderSection = styled.section`
   position: relative;
   width: 100%;
-  min-height: 500px;
+  height: clamp(380px, calc(300px + 15vw), 500px);
+  padding-top: 5rem;
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
   flex-wrap: wrap;
   mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 1) 75%, rgba(0, 0, 0, 0) 90%);
@@ -46,7 +46,6 @@ const Logo = styled.i`
 
 const Title = styled.h1`
   position: relative;
-  display: flex;
   z-index: 1;
   text-shadow: 
     -12px -12px 12px var(--background), 

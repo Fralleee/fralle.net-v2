@@ -40,7 +40,7 @@ body {
   h1 {
     color: var(--color-light);
     font-family: Kanit, sans-serif;
-    font-size: clamp(5rem, 10vw, 12rem);
+    font-size: clamp(5rem, calc(4rem + 8vw), 12rem);
     line-height: 100%;
   }
 

@@ -8,6 +8,7 @@
       "dom.iterable",
       "esnext"
     ],
+    "checkJs": true,
     "allowJs": true,
     "skipLibCheck": true,
     "esModuleInterop": true,
