@@ -1,31 +1,33 @@
-import { Routes, Route } from "react-router-dom"
+import { Routes, Route, useLocation } from "react-router-dom"
+import Navigation from "components/Navigation"
 import Header from "components/Header"
-import About from "components/About"
-import Portfolio from "components/Portfolio"
+// import About from "components/About"
+// import Portfolio from "components/Portfolio"
 import Browse from "components/Browse"
 import Project from "components/Project"
-import NoMatch from "components/NoMatch"
-import { Link } from "react-router-dom"
+// import NoMatch from "components/NoMatch"
+import styled from "styled-components"
+import { AnimatePresence } from "framer-motion"
+
+const Container = styled.div`
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+`
 
 const App = () => {
+  const location = useLocation()
   return (
-    <>
+    <Container>
       <Header />
-      <div style={{ display: "flex", maxWidth: 500, margin: "0 auto", justifyContent: "space-around" }}>
-        <Link to="/">About</Link>
-        <Link to="/portfolio">Portfolio</Link>
-        <Link to="/portfolio/cooking">Cooking</Link>
-        <Link to="/asdasd">NoMatch</Link>
-      </div>
-      <Routes>
-        <Route path="/" element={<About />} />
-        <Route path="portfolio" element={<Portfolio />}>
-          <Route path="" element={<Browse />} />
-          <Route path=":projectId" element={<Project />} />
-        </Route>
-        <Route path="*" element={<NoMatch />} />
-      </Routes>
-    </>
+      <Navigation />
+      <AnimatePresence exitBeforeEnter initial={false}>
+        <Routes location={location} key={location.pathname}>
+          <Route path="/" element={<Browse />} />
+          <Route path="/:projectId" element={<Project />} />
+        </Routes>
+      </AnimatePresence>
+    </Container>
   )
 }
 

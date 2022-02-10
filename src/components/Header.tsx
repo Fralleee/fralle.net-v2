@@ -65,7 +65,7 @@ const Subtitle = styled.h2`
 
 const Header = () => {
   const location = useLocation()
-  const viewingProject = location.pathname.includes("portfolio/") && location.pathname.length > 11
+  const viewingProject = location.pathname.length > 1
 
   return (
     <HeaderSection className={viewingProject ? "to-background" : ""}>
