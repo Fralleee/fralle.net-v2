@@ -15,7 +15,7 @@ const Button = styled(Link)`
   user-select: none;
 
   svg {
-    transition: transform 200ms var(--easeInOutBack);
+    transition: transform 200ms var(--easeOutBack);
   }
 
   &:hover {
