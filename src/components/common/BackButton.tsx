@@ -14,8 +14,15 @@ const Button = styled(Link)`
   transition: color 200ms ease-out;
   user-select: none;
 
+  svg {
+    transition: transform 200ms var(--easeInOutBack);
+  }
+
   &:hover {
     color: var(--cta);
+    svg {
+      transform: rotate(-90deg);
+    }
   }
   
   @media only screen and (max-width: ${media.large}) {

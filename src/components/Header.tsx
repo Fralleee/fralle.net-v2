@@ -15,7 +15,7 @@ const HeaderSection = styled.section`
   align-items: center;
   flex-wrap: wrap;
   mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 1) 75%, rgba(0, 0, 0, 0) 90%);
-  transition: opacity 400ms var(--easeOutBack-large), transform 400ms var(--easeOutBack-large);
+  transition: opacity 400ms var(--easeInOutBack), transform 400ms var(--easeInOutBack);
 
 
   &.to-background {
@@ -61,7 +61,7 @@ const Logo = styled.i`
   height: 100%;
   text-shadow: none;
   z-index: 2;
-  transition: all 400ms var(--easeOutBack-large);
+  transition: all 400ms var(--easeInOutBack);
   
 `
 
@@ -73,14 +73,14 @@ const Title = styled.h1`
     12px -12px 12px var(--background), 
     -12px 12px 12px var(--background), 
     12px 12px 12px var(--background);
-  transition: all 400ms var(--easeOutBack-large);
+  transition: all 400ms var(--easeInOutBack);
 `
 
 const Subtitle = styled.h2`
   z-index: 1;
   background: var(--background);
   box-shadow: 0 0 6px 6px var(--background);
-  transition: all 400ms var(--easeOutBack-large);
+  transition: all 400ms var(--easeInOutBack);
 `
 
 const Header = () => {
