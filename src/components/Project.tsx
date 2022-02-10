@@ -7,21 +7,23 @@ import media from "styles/media"
 
 const Component = styled(motion.div)`
   position: relative;
-  background: white;
+  background: ghostwhite;
   width: 100%;
   max-width: ${media.large}; 
   padding-top: 2rem;
-  margin: -380px auto 0 auto;
+  margin: -360px auto 0 auto;
   box-shadow: 0 -8px 32px rgba(4,8,12,.5);
   flex: 1;
+  border-radius: 32px 32px 0 0;
 
   h3 {
     margin-top: 2rem;
     text-align: center;
   }
 
-  @media only screen and (max-width: ${media.large}) {
+  @media only screen and (max-width: ${media.medium}) {
     margin: -380px auto 0 auto;
+    border-radius: 0;
   }
 `
 

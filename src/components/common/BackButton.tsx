@@ -2,17 +2,28 @@ import { FC } from "react"
 import styled from "styled-components"
 import { Link } from "react-router-dom"
 import { ImArrowLeft } from "react-icons/im"
+import media from "styles/media"
 
 const Button = styled(Link)`
   position: absolute;
-  left: 1rem;
-  top: 1rem;
+  padding: 2rem;
+  left: 0;
+  top: 0;
   font-size: 4rem;
   color: var(--color);
   transition: color 200ms ease-out;
+  user-select: none;
 
   &:hover {
     color: var(--cta);
+  }
+  
+  @media only screen and (max-width: ${media.large}) {
+    position: fixed;
+    left: auto;
+    top: auto;
+    right: 0;
+    bottom: 0;
   }
 `
 

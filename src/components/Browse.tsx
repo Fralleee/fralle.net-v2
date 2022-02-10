@@ -27,10 +27,11 @@ const Item = styled(Link)`
   font-size: 1.25rem;
   transition: all 150ms ease-out;
   z-index: 1;
+  border-radius: 32px;
 
   &:hover {
     transform: scale(1.05);
-    box-shadow: 0 2px 4px 1px rgba(4, 8, 16, .2);
+    box-shadow: 0 2px 2px 4px rgba(4, 8, 16, .2);
   }
 `
 

@@ -22,11 +22,15 @@ const HeaderSection = styled.section`
     opacity: 0.5;
     
     i {
-        transform: translateY(4px) scale(0.8);
+        transform: translateY(24px) scale(0.8);
     }
 
     h1, h2 {
       transform: translateY(-106px) scale(0.8);
+    }
+
+    h2 {
+      opacity: 0;
     }
 
     & canvas {
@@ -37,8 +41,10 @@ const HeaderSection = styled.section`
   @media only screen and (max-width: ${media.large}) {
     height: 380px;
     &.to-background {
-      h1, h2 {
-        transform: translateY(0) scale(0.8);
+      opacity: 0;
+      transform: translateY(50px) scale(0.6);
+      i, h1, h2 {
+        transform: translateY(0) scale(1);
       }
     }
   }
