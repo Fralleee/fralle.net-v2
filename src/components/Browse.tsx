@@ -3,6 +3,7 @@ import styled from "styled-components"
 import { motion } from "framer-motion"
 import { Link } from "react-router-dom"
 import { browseTransitions } from "utils/pageTransitions"
+import media from "styles/media"
 
 const Component = styled(motion.div)`
   display: flex;
@@ -10,7 +11,7 @@ const Component = styled(motion.div)`
   justify-content: center;
   margin: -100px auto 0 auto;
   padding-top: 2rem;
-  max-width: 1140px;
+  max-width: ${media.large};
   width: 100%;
 `
 

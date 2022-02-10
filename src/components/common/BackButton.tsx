@@ -7,7 +7,7 @@ const Button = styled(Link)`
   position: absolute;
   left: 1rem;
   top: 1rem;
-  font-size: 2.5rem;
+  font-size: 4rem;
   color: var(--color);
   transition: color 200ms ease-out;
 

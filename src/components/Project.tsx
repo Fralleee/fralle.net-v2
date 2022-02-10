@@ -3,19 +3,25 @@ import styled from "styled-components"
 import { motion } from "framer-motion"
 import { projectTransition } from "utils/pageTransitions"
 import BackButton from "components/common/BackButton"
+import media from "styles/media"
 
 const Component = styled(motion.div)`
   position: relative;
   background: white;
   width: 100%;
-  max-width: 1140px;  
+  max-width: ${media.large}; 
   padding-top: 2rem;
-  margin: -150px auto 0 auto;
+  margin: -380px auto 0 auto;
   box-shadow: 0 -8px 32px rgba(4,8,12,.5);
   flex: 1;
 
   h3 {
+    margin-top: 2rem;
     text-align: center;
+  }
+
+  @media only screen and (max-width: ${media.large}) {
+    margin: -380px auto 0 auto;
   }
 `
 

@@ -3,6 +3,7 @@ import styled from "styled-components"
 import Canvas from "components/Canvas"
 import FloatingParticles from "canvas/FloatingParticles"
 import LogoImage from "images/logo.svg"
+import media from "styles/media"
 
 const HeaderSection = styled.section`
   position: relative;
@@ -16,15 +17,29 @@ const HeaderSection = styled.section`
   mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 1) 75%, rgba(0, 0, 0, 0) 90%);
   transition: opacity 400ms var(--easeOutBack-large), transform 400ms var(--easeOutBack-large);
 
+
   &.to-background {
     opacity: 0.5;
     
-    i, h1, h2 {
-      transform: scale(0.8);
+    i {
+        transform: translateY(4px) scale(0.8);
+    }
+
+    h1, h2 {
+      transform: translateY(-106px) scale(0.8);
     }
 
     & canvas {
       transform: scale(0.9);
+    }
+  }
+  
+  @media only screen and (max-width: ${media.large}) {
+    height: 380px;
+    &.to-background {
+      h1, h2 {
+        transform: translateY(0) scale(0.8);
+      }
     }
   }
 `
