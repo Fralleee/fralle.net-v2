@@ -68,11 +68,7 @@ const Logo = styled.i`
 const Title = styled.h1`
   position: relative;
   z-index: 1;
-  text-shadow: 
-    -12px -12px 12px var(--background), 
-    12px -12px 12px var(--background), 
-    -12px 12px 12px var(--background), 
-    12px 12px 12px var(--background);
+  text-shadow: 0 6px 6px var(--shadow);
   transition: all 400ms var(--easeInOutBack);
 `
 
