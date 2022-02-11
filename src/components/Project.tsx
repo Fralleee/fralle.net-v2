@@ -15,7 +15,7 @@ const Component = styled(motion.div)`
   margin: -360px auto 0 auto;
   box-shadow: 0 -8px 32px var(--shadow);
   flex: 1;
-  border-radius: 32px 32px 0 0;
+  border-radius: 8px 8px 0 0;
 
   h3 {
     margin-top: 2rem;

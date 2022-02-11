@@ -16,8 +16,8 @@ const Component = styled(motion.div)`
 `
 
 const Item = styled(Link)`
-  max-width: 320px;
-  height: 200px;
+  max-width: 280px;
+  height: 360px;
   width: 100%;
   background: white;
   margin: 1rem;
@@ -27,11 +27,12 @@ const Item = styled(Link)`
   font-size: 1.25rem;
   transition: all 150ms ease-out;
   z-index: 1;
-  border-radius: 32px;
+  border-radius: 8px;
 
   &:hover {
     transform: scale(1.05);
-    box-shadow: 0 2px 2px 4px rgba(4, 8, 16, .2);
+    box-shadow: var(--shadow) 0px 6px 12px -2px, var(--shadow) 0px 3px 7px -3px;
+    
   }
 `
 
