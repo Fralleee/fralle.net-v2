@@ -2,7 +2,7 @@ import { FC } from "react"
 import styled from "styled-components"
 import { motion } from "framer-motion"
 import { Link } from "react-router-dom"
-import { browseTransitions } from "utils/pageTransitions"
+import { browseTransition } from "utils/pageTransitions"
 import media from "styles/media"
 
 const Component = styled(motion.div)`
@@ -38,7 +38,7 @@ const Item = styled(Link)`
 const Browse: FC = () => {
 
   return (
-    <Component key="Browse" {...browseTransitions} onAnimationComplete={() => window.scrollTo(0, 0)}>
+    <Component key="Browse" {...browseTransition} onAnimationComplete={() => window.scrollTo(0, 0)}>
       <Item to="cooking">Cooking</Item>
       <Item to="pingtap">PingTap</Item>
       <Item to="asdasdasd">ASDASDASD</Item>
