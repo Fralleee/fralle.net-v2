@@ -10,9 +10,10 @@ const Button = styled(Link)`
   left: 0;
   top: 0;
   font-size: 4rem;
-  color: var(--color);
+  color: var(--shadow-dark);
   transition: color 200ms ease-out;
   user-select: none;
+  z-index: 10;
 
   svg {
     transition: transform 200ms var(--easeOutBack);
@@ -22,6 +23,7 @@ const Button = styled(Link)`
     color: var(--cta);
     svg {
       transform: rotate(-90deg);
+      filter: drop-shadow(0 0 3px var(--shadow-dark));
     }
   }
   
