@@ -116,8 +116,8 @@ const Project: FC = () => {
           <MetaData>
             <p>C#</p>
             <p>Javascript</p>
-            <a href="#">Go to site</a>
-            <a href="#">Repository</a>
+            <a href="https://assbutt.com">Go to site</a>
+            <a href="https://assbutt.com">Repository</a>
           </MetaData>
         </Content>
 
