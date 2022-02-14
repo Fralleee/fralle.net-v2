@@ -1,6 +1,7 @@
 import { Routes, Route, useLocation } from "react-router-dom"
 // import Navigation from "components/Navigation"
 import Header from "components/Header"
+import Footer from "components/Footer"
 import Browse from "components/Browse"
 import Project from "components/Project"
 import styled from "styled-components"
@@ -24,6 +25,7 @@ const App = () => {
           <Route path="/:projectId" element={<Project />} />
         </Routes>
       </AnimatePresence>
+      <Footer />
     </Container>
   )
 }

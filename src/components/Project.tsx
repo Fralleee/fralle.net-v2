@@ -17,10 +17,12 @@ const Component = styled(motion.div)`
   border-radius: 8px 8px 0 0;
   display: flex;
   flex-direction: column;
+  z-index: 1;
 
   @media only screen and (max-width: ${media.medium}) {
-    margin: -380px auto 0 auto;
+    margin: -280px auto 0 auto;
     border-radius: 0;
+    min-height: 100vh;
   }
 `
 
@@ -39,6 +41,10 @@ const Header = styled.section`
   padding-top: 56.3925%;
   border-radius: 8px 8px 0 0;
   overflow: hidden;
+  
+  @media only screen and (max-width: ${media.medium}) {
+    border-radius: 0;
+  }
 `
 const HeaderImage = styled.img`
   position: absolute;

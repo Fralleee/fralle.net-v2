@@ -8,6 +8,7 @@ const CanvasComponent = styled.canvas`
   width: 100%;
   height: 100%;
   transition: all 500ms var(--easeInOutBack);
+  /* mask-image: linear-gradient(172deg, rgba(0, 0, 0, 1) 60%, rgba(0, 0, 0, 0) 65%); */
 `
 
 type CanvasProps = {

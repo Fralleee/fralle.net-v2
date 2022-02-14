@@ -3,18 +3,19 @@ import styled from "styled-components"
 import Canvas from "components/Canvas"
 import FloatingParticles from "canvas/FloatingParticles"
 import LogoImage from "images/logo.svg"
+import { ReactComponent as ShapeImage } from "images/shape.svg"
 import media from "styles/media"
 
 const HeaderSection = styled.section`
   position: relative;
   width: 100%;
-  height: clamp(380px, calc(300px + 15vw), 500px);
+  height: 580px;
   padding-top: 5rem;
   display: flex;
   flex-direction: column;
   align-items: center;
   flex-wrap: wrap;
-  mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 1) 75%, rgba(0, 0, 0, 0) 90%);
+  background-color: ghostwhite;
   transition: opacity 400ms var(--easeInOutBack), transform 400ms var(--easeInOutBack);
 
 
@@ -26,7 +27,7 @@ const HeaderSection = styled.section`
     }
 
     h1, h2 {
-      transform: translateY(-106px) scale(0.8);
+      transform: translateY(-80px) scale(0.8);
     }
 
     h2 {
@@ -36,6 +37,10 @@ const HeaderSection = styled.section`
     & canvas {
       transform: scale(0.9);
     }
+  }
+
+  @media only screen and (max-width: ${media.xl}) {
+    height: 480px;
   }
   
   @media only screen and (max-width: ${media.large}) {
@@ -47,6 +52,10 @@ const HeaderSection = styled.section`
         transform: translateY(0) scale(1);
       }
     }
+  }
+
+  @media only screen and (max-width: ${media.small}) {
+    height: 280px;
   }
 `
 
@@ -70,13 +79,27 @@ const Title = styled.h1`
   z-index: 1;
   text-shadow: 0 6px 6px var(--shadow);
   transition: all 400ms var(--easeInOutBack);
+  color: var(--cta) !important;
 `
 
 const Subtitle = styled.h2`
   z-index: 1;
-  background: var(--background);
-  box-shadow: 0 0 6px 6px var(--background);
+  background: ghostwhite;
+  box-shadow: 0 0 6px 6px ghostwhite;
   transition: all 400ms var(--easeInOutBack);
+`
+
+const Shape = styled.div`
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  left: 0;  
+  background: linear-gradient(-6.5deg, ghostwhite 50%, transparent 55%);
+  svg {
+    margin-bottom: -5px;
+    min-width: 900px;
+    fill: var(--background);
+  }
 `
 
 const Header = () => {
@@ -86,6 +109,7 @@ const Header = () => {
   return (
     <HeaderSection className={viewingProject ? "to-background" : ""}>
       <Canvas render={FloatingParticles} />
+      <Shape><ShapeImage /></Shape>
       <Title>
         <Logo />
         Fralle

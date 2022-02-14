@@ -9,8 +9,8 @@ const Component = styled(motion.div)`
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  margin: -100px auto 0 auto;
-  padding-top: 2rem;
+  margin: 0 auto;
+  padding: 2rem 0;
   max-width: ${media.large};
   width: 100%;
 `
