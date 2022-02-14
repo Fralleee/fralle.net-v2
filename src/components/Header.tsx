@@ -3,7 +3,7 @@ import styled from "styled-components"
 import Canvas from "components/Canvas"
 import FloatingParticles from "canvas/FloatingParticles"
 import LogoImage from "images/logo.svg"
-import JesusImage from "images/jesus.png"
+// import JesusImage from "images/jesus.png"
 import media from "styles/media"
 
 const HeaderSection = styled.section`
@@ -89,11 +89,11 @@ const Subtitle = styled.h2`
   user-select: none;
 `
 
-const ProfileImage = styled.img`
-  position: absolute;
-  bottom: -380px;
-  transform: scale(1);
-`
+// const ProfileImage = styled.img`
+//   position: absolute;
+//   bottom: -380px;
+//   transform: scale(1);
+// `
 
 const Header = () => {
   const location = useLocation()
