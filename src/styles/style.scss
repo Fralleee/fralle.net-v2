@@ -4,6 +4,7 @@
 
 html {
   box-sizing: border-box;
+  overflow-y: scroll;
 }
 *, *:before, *:after {
   box-sizing: inherit;
@@ -23,7 +24,7 @@ body {
   margin: 0 auto;
   color: var(--text);
   box-sizing: border-box;
-  background-color: var(--background);
+  background-color: var(--background-light);
 
   a {
     color: var(--cta);

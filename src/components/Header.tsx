@@ -3,21 +3,20 @@ import styled from "styled-components"
 import Canvas from "components/Canvas"
 import FloatingParticles from "canvas/FloatingParticles"
 import LogoImage from "images/logo.svg"
-import { ReactComponent as ShapeImage } from "images/shape.svg"
+import JesusImage from "images/jesus.png"
 import media from "styles/media"
 
 const HeaderSection = styled.section`
   position: relative;
   width: 100%;
-  height: 580px;
+  min-height: 580px;
   padding-top: 5rem;
   display: flex;
   flex-direction: column;
   align-items: center;
   flex-wrap: wrap;
-  background-color: ghostwhite;
+  background-color: var(--background-light);
   transition: opacity 400ms var(--easeInOutBack), transform 400ms var(--easeInOutBack);
-
 
   &.to-background {
     opacity: 0.5;
@@ -40,11 +39,11 @@ const HeaderSection = styled.section`
   }
 
   @media only screen and (max-width: ${media.xl}) {
-    height: 480px;
+    min-height: 480px;
   }
   
   @media only screen and (max-width: ${media.large}) {
-    height: 380px;
+    min-height: 380px;
     &.to-background {
       opacity: 0;
       transform: translateY(50px) scale(0.6);
@@ -52,10 +51,6 @@ const HeaderSection = styled.section`
         transform: translateY(0) scale(1);
       }
     }
-  }
-
-  @media only screen and (max-width: ${media.small}) {
-    height: 280px;
   }
 `
 
@@ -68,7 +63,7 @@ const Logo = styled.i`
   background-repeat: no-repeat;
   width: calc(20px + 2vw);
   height: 100%;
-  text-shadow: none;
+  filter: drop-shadow(0 6px 6px var(--shadow));
   z-index: 2;
   transition: all 400ms var(--easeInOutBack);
   
@@ -80,26 +75,24 @@ const Title = styled.h1`
   text-shadow: 0 6px 6px var(--shadow);
   transition: all 400ms var(--easeInOutBack);
   color: var(--cta) !important;
+  background-color: var(--background-light-opacity);
+  box-shadow: 0 0 6px 6px var(--background-light-opacity);
+  user-select: none;
 `
 
 const Subtitle = styled.h2`
+  margin-top: 1rem;
   z-index: 1;
-  background: ghostwhite;
-  box-shadow: 0 0 6px 6px ghostwhite;
   transition: all 400ms var(--easeInOutBack);
+  background-color: var(--background-light-opacity);
+  box-shadow: 0 0 6px 6px var(--background-light-opacity);
+  user-select: none;
 `
 
-const Shape = styled.div`
+const ProfileImage = styled.img`
   position: absolute;
-  bottom: 0;
-  right: 0;
-  left: 0;  
-  background: linear-gradient(-6.5deg, ghostwhite 50%, transparent 55%);
-  svg {
-    margin-bottom: -5px;
-    min-width: 900px;
-    fill: var(--background);
-  }
+  bottom: -380px;
+  transform: scale(1);
 `
 
 const Header = () => {
@@ -109,12 +102,12 @@ const Header = () => {
   return (
     <HeaderSection className={viewingProject ? "to-background" : ""}>
       <Canvas render={FloatingParticles} />
-      <Shape><ShapeImage /></Shape>
       <Title>
         <Logo />
         Fralle
       </Title>
       <Subtitle>Software developer & sassy home cook</Subtitle>
+      {/* <ProfileImage src={JesusImage} /> */}
     </HeaderSection>
   )
 }
