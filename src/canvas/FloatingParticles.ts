@@ -1,7 +1,7 @@
 import Particle from "./Particle"
 import Vector from "./Vector"
 
-const particleAmountDensity = 0.2
+const particleAmountDensity = 0.25
 const minParticleSize = 4
 const maxParticleSize = 12
 const particleSpeedFactor = .4

@@ -9,7 +9,6 @@ const CanvasComponent = styled.canvas`
   height: 100%;
   transition: all 500ms var(--easeInOutBack);
   mask-image: linear-gradient(-187deg, rgba(0, 0, 0, 1) 65%, rgba(0, 0, 0, 0) 75%);
-  /* background: linear-gradient(-187deg, rgba(0, 0, 0, 1) 65%, rgba(0, 0, 0, 0) 75%); */
 `
 
 type CanvasProps = {

@@ -29,7 +29,7 @@ class Particle {
     if (this.position.x + this.targetRadius > canvas.width || this.position.x - this.targetRadius < 0) {
       this.direction.x = -this.direction.x
     }
-    if (this.position.y + this.targetRadius > canvas.width || this.position.y - this.targetRadius < 0) {
+    if (this.position.y + this.targetRadius > canvas.height || this.position.y - this.targetRadius < 0) {
       this.direction.y = -this.direction.y
     }
 
