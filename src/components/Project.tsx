@@ -97,7 +97,7 @@ const Content = styled.section`
   height: 100vh;
 `
 
-const Description = styled.p`
+const Description = styled.div`
   max-width: 65ch;
   padding: 1rem;
   padding-left: 3rem;

@@ -54,6 +54,10 @@ const Browse: FC = () => {
       <Component >
         <Wrapper>
           <Link to="cooking" backgroundImage={CookingWithFralle} titleImage={CookingWithFralleTitle} foregroundImage={CookingWithFralleForeground} />
+          <Link to="cooking" backgroundImage={CookingWithFralle} titleImage={CookingWithFralleTitle} foregroundImage={CookingWithFralleForeground} />
+          <Link to="cooking" backgroundImage={CookingWithFralle} titleImage={CookingWithFralleTitle} foregroundImage={CookingWithFralleForeground} />
+          <Link to="cooking" backgroundImage={CookingWithFralle} titleImage={CookingWithFralleTitle} foregroundImage={CookingWithFralleForeground} />
+          <Link to="cooking" backgroundImage={CookingWithFralle} titleImage={CookingWithFralleTitle} foregroundImage={CookingWithFralleForeground} />
         </Wrapper>
       </Component>
       <Bottom />

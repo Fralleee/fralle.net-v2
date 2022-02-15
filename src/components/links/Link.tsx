@@ -29,11 +29,11 @@ const LinkComponent = styled(RouterLink)`
 
     &:hover {
       .title {
-        transform: scale(1.2) translate(4%, 0%);
+        transform: scale(1.1); 
         transition: transform 200ms var(--easeOutBack);
       }
       .foreground {
-        transform: scale(1.2) translate(-2%, -2%);
+        transform: scale(1.2);
         transition: transform 200ms 50ms var(--easeOutBack);
       }
     }
@@ -44,18 +44,8 @@ const BackgroundImage = styled.img`
   width: 100%;
   border-radius: 8px;
 `
-const TitleImage = styled.img`
-  position: absolute;
-  top: -3%;
-  left: 0;
-  width: 100%;  
-  z-index: 1;
-  transition: all 300ms ease-out;
-`
 const ForegroundImage = styled.img`
   position: absolute;
-  top: -3%;
-  left: 0;
   width: 100%;  
   transition: all 300ms ease-out;
 `
@@ -72,8 +62,8 @@ const Link: FC<LinkProps> = ({ to, backgroundImage, titleImage, foregroundImage,
   return (
     <LinkComponent to={to}>
       <BackgroundImage src={backgroundImage} />
-      <TitleImage className="title" style={foregroundImageStyle} src={titleImage} />
       <ForegroundImage className="foreground" style={foregroundImageStyle} src={foregroundImage} />
+      <ForegroundImage className="title" style={foregroundImageStyle} src={titleImage} />
     </LinkComponent>
   )
 }
