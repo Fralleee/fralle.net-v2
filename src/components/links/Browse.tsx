@@ -5,6 +5,7 @@ import { browseTransition } from "utils/pageTransitions"
 import media from "styles/media"
 import { ReactComponent as ShapeImage } from "images/shape.svg"
 import CookingWithFralle from "images/links/cooking-with-fralle.png"
+import CookingWithFralleTitle from "images/links/cooking-with-fralle_title.png"
 import CookingWithFralleForeground from "images/links/cooking-with-fralle_foreground.png"
 import Link from "components/links/Link"
 
@@ -28,7 +29,7 @@ const Wrapper = styled.div`
 
 const Top = styled(ShapeImage)`
   position: absolute;
-  top: 0;
+  top: 1px;
   right: 0;
   left: 0;
   transform: translateY(-100%);
@@ -37,7 +38,7 @@ const Top = styled(ShapeImage)`
 `
 const Bottom = styled(ShapeImage)`
   position: absolute;
-  bottom: 0;
+  bottom: 1px;
   right: 0;
   left: 0;
   min-width: 900px;
@@ -52,7 +53,7 @@ const Browse: FC = () => {
       <Top />
       <Component >
         <Wrapper>
-          <Link to="cooking" backgroundImage={CookingWithFralle} foregroundImage={CookingWithFralleForeground} />
+          <Link to="cooking" backgroundImage={CookingWithFralle} titleImage={CookingWithFralleTitle} foregroundImage={CookingWithFralleForeground} />
         </Wrapper>
       </Component>
       <Bottom />
