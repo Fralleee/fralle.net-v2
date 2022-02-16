@@ -17,9 +17,7 @@ const Container = styled.div`
   pointer-events: none;
 
   @media only screen and (max-width: ${media.medium}) {
-    margin: -280px auto 0 auto;
-    border-radius: 0;
-    min-height: 100vh;
+    margin-top: 0;
   }
 `
 const Component = styled(motion.div)`
@@ -36,9 +34,7 @@ const Component = styled(motion.div)`
   pointer-events: all;
 
   @media only screen and (max-width: ${media.medium}) {
-    margin: -280px auto 0 auto;
     border-radius: 0;
-    min-height: 100vh;
   }
 `
 
@@ -125,7 +121,7 @@ const Project: FC = () => {
         <Overlay to="/" />
       </motion.div>
       <Container>
-        <Component key="Project" {...projectTransition} onAnimationComplete={() => window.scrollTo(0, 0)}>
+        <Component key="Project" {...projectTransition}>
           <BackButton />
           <Header>
             <HeaderImage src="https://picsum.photos/1280/720" />

@@ -14,7 +14,7 @@ const Section = styled(motion.section)`
 `
 
 const Component = styled.div`
-  padding: 5rem 0;
+  padding: 3rem 0;
   background-color: var(--background-dark);
 `
 
@@ -49,7 +49,7 @@ const Bottom = styled(ShapeImage)`
 const Browse: FC = () => {
 
   return (
-    <Section key="Browse" {...browseTransition} onAnimationComplete={() => window.scrollTo(0, 0)}>
+    <Section key="Browse" {...browseTransition}>
       <Top />
       <Component >
         <Wrapper>
