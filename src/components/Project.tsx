@@ -7,7 +7,7 @@ import media from "styles/media"
 import { Link } from "react-router-dom"
 
 const Container = styled.div`
-  position: absolute;
+  position: fixed;
   width: 100%;
   height: 100%;
   z-index: 1;
@@ -121,7 +121,7 @@ const Project: FC = () => {
         <Overlay to="/" />
       </motion.div>
       <Container>
-        <Component key="Project" {...projectTransition}>
+        <Component key="Project" {...projectTransition} onAnimationComplete={() => window.scrollTo(0, 0)}>
           <BackButton />
           <Header>
             <HeaderImage src="https://picsum.photos/1280/720" />

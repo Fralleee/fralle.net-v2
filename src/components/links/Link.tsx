@@ -14,11 +14,10 @@ const LinkComponent = styled(RouterLink)`
   justify-content: center;
   align-items: center;
   font-size: 1.25rem;
-  transition: transform 300ms ease-out;
   z-index: 1;
   border-radius: 8px;
   box-shadow: 0 0 0 5px var(--background-light);
-
+  transition: transform 300ms var(--easeOutBack);
 
   @media only screen and (min-width: ${media.medium}) {
     &:hover {
@@ -47,7 +46,7 @@ const BackgroundImage = styled.img`
 const ForegroundImage = styled.img`
   position: absolute;
   width: 100%;  
-  transition: all 300ms ease-out;
+  transition: all 300ms var(--easeOutBack);
 `
 
 type LinkProps = {

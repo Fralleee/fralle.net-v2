@@ -49,7 +49,7 @@ const Bottom = styled(ShapeImage)`
 const Browse: FC = () => {
 
   return (
-    <Section key="Browse" {...browseTransition}>
+    <Section key="Browse" {...browseTransition} onAnimationComplete={() => window.scrollTo(0, 0)}>
       <Top />
       <Component >
         <Wrapper>
