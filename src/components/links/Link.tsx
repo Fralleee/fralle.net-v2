@@ -50,16 +50,17 @@ const ForegroundImage = styled.img`
 `
 
 type LinkProps = {
+  title: string
   to: string
   backgroundImage: string
   titleImage: string
   foregroundImage: string
   foregroundImageStyle?: object
 }
-const Link: FC<LinkProps> = ({ to, backgroundImage, titleImage, foregroundImage, foregroundImageStyle }) => {
+const Link: FC<LinkProps> = ({ title, to, backgroundImage, titleImage, foregroundImage, foregroundImageStyle }) => {
 
   return (
-    <LinkComponent to={to}>
+    <LinkComponent to={to} title={title}>
       <BackgroundImage src={backgroundImage} />
       <ForegroundImage className="foreground" style={foregroundImageStyle} src={foregroundImage} />
       <ForegroundImage className="title" style={foregroundImageStyle} src={titleImage} />

@@ -46,14 +46,12 @@ body {
   h1 {
     color: var(--color-light);
     font-family: Kanit, sans-serif;
-    font-size: clamp(5rem, calc(4rem + 8vw), 12rem);
     line-height: 100%;
   }
 
   h2 {   
     color: var(--color); 
     font-family: Montserrat, serif;
-    font-size: clamp(0.9125rem, calc(0.25rem + 2vw), 2rem);
   }
 
   input {

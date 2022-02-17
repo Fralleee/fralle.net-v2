@@ -3,10 +3,8 @@ import styled from "styled-components"
 import { motion } from "framer-motion"
 import { browseTransition } from "utils/pageTransitions"
 import media from "styles/media"
-import { ReactComponent as ShapeImage } from "images/shape.svg"
-import CookingWithFralle from "images/links/cooking-with-fralle.png"
-import CookingWithFralleTitle from "images/links/cooking-with-fralle_title.png"
-import CookingWithFralleForeground from "images/links/cooking-with-fralle_foreground.png"
+import { ReactComponent as BackgroundDelimiter } from "images/background-delimiter.svg"
+import Links from "data/links"
 import Link from "components/links/Link"
 
 const Section = styled(motion.section)`
@@ -14,12 +12,12 @@ const Section = styled(motion.section)`
 `
 
 const Component = styled.div`
-  padding: 3rem 0;
+  padding: 3rem 0 5rem 0;
   background-color: var(--background-dark);
 `
 
 const Wrapper = styled.div`
-  max-width: ${media.large};
+  max-width: ${media.xl};
   width: 100%;
   display: flex;
   flex-wrap: wrap;
@@ -27,7 +25,7 @@ const Wrapper = styled.div`
   margin: 0 auto;
 `
 
-const Top = styled(ShapeImage)`
+const Top = styled(BackgroundDelimiter)`
   position: absolute;
   top: 1px;
   right: 0;
@@ -36,7 +34,7 @@ const Top = styled(ShapeImage)`
   min-width: 900px;
   fill: var(--background-dark);
 `
-const Bottom = styled(ShapeImage)`
+const Bottom = styled(BackgroundDelimiter)`
   position: absolute;
   bottom: 1px;
   right: 0;
@@ -46,16 +44,25 @@ const Bottom = styled(ShapeImage)`
   transform: translateY(100%) scale(-1, -1);
 `
 
+const Header = styled.h1`
+  font-size: clamp(3rem, calc(2rem + 4vw), 5rem);
+  text-align: center;
+  margin-bottom: 1rem;
+  margin-top: -1rem;
+  text-shadow: 0 3px 3px var(--shadow);
+`
+
 const Browse: FC = () => {
 
   return (
     <Section key="Browse" {...browseTransition} onAnimationComplete={() => window.scrollTo(0, 0)}>
       <Top />
       <Component >
+        <Header>Recent work</Header>
         <Wrapper>
-          <Link to="cooking" backgroundImage={CookingWithFralle} titleImage={CookingWithFralleTitle} foregroundImage={CookingWithFralleForeground} />
-          <Link to="cooking" backgroundImage={CookingWithFralle} titleImage={CookingWithFralleTitle} foregroundImage={CookingWithFralleForeground} />
-          <Link to="cooking" backgroundImage={CookingWithFralle} titleImage={CookingWithFralleTitle} foregroundImage={CookingWithFralleForeground} />
+          {Links.map(link => (
+            <Link key={link.title} title={link.title} to={link.to} titleImage={link.titleImage} backgroundImage={link.backgroundImage} foregroundImage={link.foregroundImage} />
+          ))}
         </Wrapper>
       </Component>
       <Bottom />

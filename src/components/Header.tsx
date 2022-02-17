@@ -3,7 +3,6 @@ import styled from "styled-components"
 import Canvas from "components/Canvas"
 import FloatingParticles from "canvas/FloatingParticles"
 import LogoImage from "images/logo.svg"
-// import JesusImage from "images/jesus.png"
 import media from "styles/media"
 
 const HeaderSection = styled.section`
@@ -18,6 +17,14 @@ const HeaderSection = styled.section`
   background-color: var(--background-light);
   transition: opacity 400ms var(--easeInOutBack), transform 400ms var(--easeInOutBack);
 
+  h1 {      
+    font-size: clamp(5rem, calc(4rem + 8vw), 12rem);
+  }
+
+  h2{
+    font-size: clamp(0.9125rem, calc(0.25rem + 2vw), 2rem);
+  }
+  
   &.to-background {
     opacity: 0.5;
     
@@ -28,6 +35,7 @@ const HeaderSection = styled.section`
     h1, h2 {
       transform: translateY(-80px) scale(0.8);
     }
+
 
     h2 {
       opacity: 0;
@@ -88,12 +96,6 @@ const Subtitle = styled.h2`
   box-shadow: 0 0 6px 6px var(--background-light-opacity);
   user-select: none;
 `
-
-// const ProfileImage = styled.img`
-//   position: absolute;
-//   bottom: -380px;
-//   transform: scale(1);
-// `
 
 const Header = () => {
   const location = useLocation()
