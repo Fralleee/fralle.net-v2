@@ -108,11 +108,14 @@ const Title = styled.img`
 
 const Content = styled.section`
   display: flex;
-  padding: 1rem;
+  padding: 3rem 1rem;
+  max-width: 900px;
+  margin: 0 auto;
   
   @media only screen and (max-width: ${media.small}) {
     flex-direction: column-reverse;
     align-items: center;
+    padding: 1rem;
   }
 `
 
@@ -176,7 +179,7 @@ const ProjectComponent: FC = () => {
             <HeaderOverlay />
             <Title src={project.logo} />
             <Technologies>
-              {project.technologies.map(Tech => <Tech />)}
+              {project.technologies.map((Tech, i) => <Tech key={i} />)}
             </Technologies>
           </Header>
           <Content>
