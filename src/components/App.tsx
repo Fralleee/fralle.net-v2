@@ -1,5 +1,4 @@
 import { Routes, Route, useLocation } from "react-router-dom"
-// import Navigation from "components/Navigation"
 import Header from "components/Header"
 import Footer from "components/Footer"
 import Browse from "components/links/Browse"
@@ -18,7 +17,6 @@ const App = () => {
   return (
     <Container>
       <Header />
-      {/* <Navigation /> */}
       <AnimatePresence exitBeforeEnter initial={false}>
         <Routes location={location} key={location.pathname}>
           <Route path="/" element={<Browse />} />

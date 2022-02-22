@@ -31,12 +31,12 @@ const Button = styled(Link)`
     position: fixed;
     left: auto;
     top: auto;
-    right: 0;
-    bottom: 0;
+    right: -1rem;
+    bottom: -2rem;
   }
 `
 
-const Project: FC = () => {
+const BackButton: FC = () => {
   return (
     <Button to="/">
       <ImArrowLeft />
@@ -44,4 +44,4 @@ const Project: FC = () => {
   )
 }
 
-export default Project
+export default BackButton

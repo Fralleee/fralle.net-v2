@@ -1,4 +1,4 @@
-import { FC } from "react"
+import { FC, useEffect } from "react"
 import styled from "styled-components"
 import { motion } from "framer-motion"
 import { browseTransition } from "utils/pageTransitions"
@@ -45,14 +45,28 @@ const Bottom = styled(BackgroundDelimiter)`
 `
 
 const Header = styled.h1`
-  font-size: clamp(3rem, calc(2rem + 4vw), 5rem);
+  font-size: 4rem;
   text-align: center;
   margin-bottom: 1rem;
   margin-top: -1rem;
   text-shadow: 0 3px 3px var(--shadow);
+  
+  @media only screen and (max-width: ${media.large}) {
+    font-size: 3.5rem;
+  }
+  @media only screen and (max-width: ${media.medium}) {
+    font-size: 3rem;
+  }
+  @media only screen and (max-width: ${media.small}) {
+    font-size: 2.5rem;
+  }
 `
 
 const Browse: FC = () => {
+
+  useEffect(() => {
+    document.title = "Fralle"
+  }, [])
 
   return (
     <Section key="Browse" {...browseTransition} onAnimationComplete={() => window.scrollTo(0, 0)}>

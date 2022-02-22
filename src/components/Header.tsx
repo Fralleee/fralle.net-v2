@@ -15,25 +15,25 @@ const HeaderSection = styled.section`
   align-items: center;
   flex-wrap: wrap;
   background-color: var(--background-light);
-  transition: opacity 400ms var(--easeInOutBack), transform 400ms var(--easeInOutBack);
+  transition: opacity 300ms var(--easeInOutBack), transform 300ms var(--easeInOutBack);
 
   h1 {      
-    font-size: clamp(5rem, calc(4rem + 8vw), 12rem);
+    font-size: 10rem;
   }
 
   h2{
-    font-size: clamp(0.9125rem, calc(0.25rem + 2vw), 2rem);
+    font-size: 1.75rem;
   }
   
   &.to-background {
     opacity: 0.5;
     
     i {
-        transform: translateY(24px) scale(0.8);
+      transform: translateY(24px) scale(0.85);
     }
 
     h1, h2 {
-      transform: translateY(-80px) scale(0.8);
+      transform: translateY(-80px) scale(0.85);
     }
 
 
@@ -45,20 +45,24 @@ const HeaderSection = styled.section`
       transform: scale(0.9);
     }
   }
-
+  
   @media only screen and (max-width: ${media.xl}) {
     min-height: 480px;
-  }
-  
+  }    
   @media only screen and (max-width: ${media.large}) {
     min-height: 380px;
     &.to-background {
-      opacity: 0;
-      transform: translateY(50px) scale(0.6);
-      i, h1, h2 {
-        transform: translateY(0) scale(1);
-      }
+      display: none;
     }
+    h1 { font-size: 7rem; }
+    h2{ font-size: 1.5rem; }
+  }
+  @media only screen and (max-width: ${media.medium}) {
+    h1 { font-size: 5rem; }
+    h2{ font-size: 1.25rem; }
+  }
+  @media only screen and (max-width: ${media.small}) {
+    h2{ font-size: 0.8rem; }
   }
 `
 

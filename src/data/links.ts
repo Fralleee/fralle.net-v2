@@ -1,5 +1,3 @@
-
-
 import CWFTitle from "images/links/CWF/title.png"
 import CWFBg from "images/links/CWF/background.png"
 import CWFFg from "images/links/CWF/foreground.png"
