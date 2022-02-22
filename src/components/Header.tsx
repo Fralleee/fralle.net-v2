@@ -53,6 +53,9 @@ const HeaderSection = styled.section`
     min-height: 380px;
     &.to-background {
       opacity: 0;
+      transform: translateY(25px) scale(0.85);
+      i { transform: none; }
+      h1, h2 { transform: none; }
     }
     h1 { font-size: 7rem; }
     h2{ font-size: 1.5rem; }
