@@ -52,7 +52,7 @@ const HeaderSection = styled.section`
   @media only screen and (max-width: ${media.large}) {
     min-height: 380px;
     &.to-background {
-      display: none;
+      opacity: 0;
     }
     h1 { font-size: 7rem; }
     h2{ font-size: 1.5rem; }
