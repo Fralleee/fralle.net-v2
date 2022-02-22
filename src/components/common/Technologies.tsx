@@ -4,10 +4,9 @@ import { ReactComponent as JavascriptSVG } from "images/programming/javascript.s
 import { ReactComponent as TypescriptSVG } from "images/programming/typescript.svg"
 import { ReactComponent as ReactSVG } from "images/programming/react.svg"
 import { ReactComponent as UnitySVG } from "images/programming/unity.svg"
-import { Link as DefaultLink } from "react-router-dom"
 import styled from "styled-components"
 
-const Link = styled(DefaultLink)`
+const Link = styled.a`
   width: 48px;
   height: 48px;
   margin: 0.25rem;
@@ -18,8 +17,8 @@ const Link = styled(DefaultLink)`
   
 `
 
-export const CSharp = () => <Link to="https://docs.microsoft.com/en-us/dotnet/csharp/"><CSharpSVG /></Link>
-export const Javascript = () => <Link to="https://www.javascript.com/"><JavascriptSVG /></Link>
-export const Typescript = () => <Link to="https://www.typescriptlang.org/"><TypescriptSVG /></Link>
-export const React = () => <Link to="https://reactjs.org/"><ReactSVG /></Link>
-export const Unity = () => <Link to="https://unity.com/"><UnitySVG /></Link>
+export const CSharp = () => <Link href="https://docs.microsoft.com/en-us/dotnet/csharp/" title="C#" target="_blank"><CSharpSVG /></Link>
+export const Javascript = () => <Link href="https://www.javascript.com/" title="Javascript" target="_blank"><JavascriptSVG /></Link>
+export const Typescript = () => <Link href="https://www.typescriptlang.org/" title="Typescript" target="_blank"><TypescriptSVG /></Link>
+export const React = () => <Link href="https://reactjs.org/" title="React" target="_blank"><ReactSVG /></Link>
+export const Unity = () => <Link href="https://unity.com/" title="Unity" target="_blank"><UnitySVG /></Link>
