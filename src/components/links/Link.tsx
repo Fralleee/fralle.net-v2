@@ -47,6 +47,7 @@ const ForegroundImage = styled.img`
   position: absolute;
   width: 100%;  
   transition: all 300ms var(--easeOutBack);
+  filter: drop-shadow(2px 4px 6px var(--shadow));
 `
 
 type LinkProps = {

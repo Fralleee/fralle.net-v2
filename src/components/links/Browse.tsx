@@ -6,6 +6,7 @@ import media from "styles/media"
 import { ReactComponent as BackgroundDelimiter } from "images/background-delimiter.svg"
 import Links from "data/links"
 import Link from "components/links/Link"
+import { hoverUpAnimation } from "styles/keyframes"
 
 const Section = styled(motion.section)`
   position: relative;
@@ -50,6 +51,7 @@ const Header = styled.h1`
   margin-bottom: 1rem;
   margin-top: -1rem;
   text-shadow: 0 3px 3px var(--shadow);
+  animation: ${hoverUpAnimation} 400ms var(--easeOutBack);
   
   @media only screen and (max-width: ${media.large}) {
     font-size: 3.5rem;

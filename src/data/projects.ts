@@ -1,5 +1,5 @@
-
-
+import NotFoundTitle from "images/links/NotFound/title.png"
+import NotFoundBg from "images/links/NotFound/background.png"
 import CWFTitle from "images/links/CWF/title.png"
 import CWFBg from "images/links/CWF/background.png"
 import PizzeriaTitle from "images/links/Pizzeria/title.png"
@@ -33,8 +33,8 @@ const projects: ProjectMap = {
   },
   notfound: {
     title: "Not found",
-    logo: PingtapTitle,
-    background: CWFBg,
+    logo: NotFoundTitle,
+    background: NotFoundBg,
     technologies: []
   }
 }

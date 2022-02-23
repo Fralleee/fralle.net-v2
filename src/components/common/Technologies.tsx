@@ -7,14 +7,18 @@ import { ReactComponent as UnitySVG } from "images/programming/unity.svg"
 import styled from "styled-components"
 
 const Link = styled.a`
-  width: 48px;
-  height: 48px;
+  width: 42px;
+  height: 42px;
   margin: 0.25rem;
+  transition: all 200ms var(--easeOutBack);
   svg {
     width: 100%;
     height: auto;
+  }  
+
+  &:hover {
+    transform: scale(1.15);
   }
-  
 `
 
 export const CSharp = () => <Link href="https://docs.microsoft.com/en-us/dotnet/csharp/" title="C#" target="_blank"><CSharpSVG /></Link>

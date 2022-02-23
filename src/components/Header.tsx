@@ -4,6 +4,7 @@ import Canvas from "components/Canvas"
 import FloatingParticles from "canvas/FloatingParticles"
 import LogoImage from "images/logo.svg"
 import media from "styles/media"
+import { titleAnimation, hoverUpAnimation, spinAnimation } from "styles/keyframes"
 
 const HeaderSection = styled.section`
   position: relative;
@@ -81,7 +82,7 @@ const Logo = styled.i`
   filter: drop-shadow(0 6px 6px var(--shadow));
   z-index: 2;
   transition: all 400ms var(--easeInOutBack);
-  
+  animation: ${spinAnimation} 600ms var(--easeOutBack);  
 `
 
 const Title = styled.h1`
@@ -93,6 +94,7 @@ const Title = styled.h1`
   background-color: var(--background-light-opacity);
   box-shadow: 0 0 6px 6px var(--background-light-opacity);
   user-select: none;
+  animation: ${titleAnimation} 400ms var(--easeOutBack);
 `
 
 const Subtitle = styled.h2`
@@ -102,6 +104,7 @@ const Subtitle = styled.h2`
   background-color: var(--background-light-opacity);
   box-shadow: 0 0 6px 6px var(--background-light-opacity);
   user-select: none;
+  animation: ${hoverUpAnimation} 400ms var(--easeOutBack);
 `
 
 const Header = () => {

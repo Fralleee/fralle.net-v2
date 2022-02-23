@@ -77,7 +77,6 @@ const HeaderImage = styled.img`
   top: 0;
   height: 100%;
   width: 100%;
-  background: pink;
   
   @media only screen and (max-width: ${media.large}) {
     width: ${media.large};
@@ -134,6 +133,7 @@ const Links = styled.div`
   flex-direction: column;
   align-items: flex-end;
   flex: 1;
+  width: 100%;
   margin-bottom: 1rem;
 `
 
@@ -178,9 +178,11 @@ const ProjectComponent: FC = () => {
             <HeaderImage src={project.background} />
             <HeaderOverlay />
             <Title src={project.logo} />
-            <Technologies>
-              {project.technologies.map((Tech, i) => <Tech key={i} />)}
-            </Technologies>
+            {project.technologies.length > 0 && (
+              <Technologies>
+                {project.technologies.map((Tech, i) => <Tech key={i} />)}
+              </Technologies>
+            )}
           </Header>
           <Content>
             <Description>
