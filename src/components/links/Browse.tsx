@@ -1,4 +1,4 @@
-import { FC, useEffect } from "react"
+import { useEffect } from "react"
 import styled from "styled-components"
 import { motion } from "framer-motion"
 import { browseTransition } from "utils/pageTransitions"
@@ -6,7 +6,7 @@ import media from "styles/media"
 import { ReactComponent as BackgroundDelimiter } from "images/background-delimiter.svg"
 import Links from "data/links"
 import Link from "components/links/Link"
-import { hoverUpAnimation } from "styles/keyframes"
+import { popAnimation } from "styles/keyframes"
 
 const Section = styled(motion.section)`
   position: relative;
@@ -24,6 +24,16 @@ const Wrapper = styled.div`
   flex-wrap: wrap;
   justify-content: center;
   margin: 0 auto;
+  
+  & > a {
+    opacity: 0;
+    animation: ${popAnimation} 300ms var(--easeOutBack) forwards;  
+    animation-delay: 300ms;
+    &:nth-child(1) { animation-delay: 75ms; }
+    &:nth-child(2) { animation-delay: 150ms; }
+    &:nth-child(3) { animation-delay: 225ms; }
+  }
+  
 `
 
 const Top = styled(BackgroundDelimiter)`
@@ -51,7 +61,14 @@ const Header = styled.h1`
   margin-bottom: 1rem;
   margin-top: -1rem;
   text-shadow: 0 3px 3px var(--shadow);
-  animation: ${hoverUpAnimation} 400ms var(--easeOutBack);
+  transition: all 400ms var(--easeOutBack);
+  transform: none;
+  opacity: 1;
+  
+  &.hidden {
+    transform: translateY(30px); 
+    opacity: 0;
+  }
   
   @media only screen and (max-width: ${media.large}) {
     font-size: 3.5rem;
@@ -64,7 +81,7 @@ const Header = styled.h1`
   }
 `
 
-const Browse: FC = () => {
+const Browse = ({ fontsLoaded }: FontsLoadedProps) => {
 
   useEffect(() => {
     document.title = "Fralle"
@@ -74,7 +91,7 @@ const Browse: FC = () => {
     <Section key="Browse" {...browseTransition} onAnimationComplete={() => window.scrollTo(0, 0)}>
       <Top />
       <Component >
-        <Header>Recent work</Header>
+        <Header className={fontsLoaded ? "" : "hidden"}>Recent work</Header>
         <Wrapper>
           {Links.map(link => (
             <Link key={link.title} title={link.title} to={link.to} titleImage={link.titleImage} backgroundImage={link.backgroundImage} foregroundImage={link.foregroundImage} />

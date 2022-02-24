@@ -4,7 +4,7 @@ import Canvas from "components/Canvas"
 import FloatingParticles from "canvas/FloatingParticles"
 import LogoImage from "images/logo.svg"
 import media from "styles/media"
-import { titleAnimation, hoverUpAnimation, spinAnimation } from "styles/keyframes"
+import { spinAnimation } from "styles/keyframes"
 
 const HeaderSection = styled.section`
   position: relative;
@@ -31,15 +31,6 @@ const HeaderSection = styled.section`
     
     i {
       transform: translateY(24px) scale(0.85);
-    }
-
-    h1, h2 {
-      transform: translateY(-80px) scale(0.85);
-    }
-
-
-    h2 {
-      opacity: 0;
     }
 
     & canvas {
@@ -82,44 +73,64 @@ const Logo = styled.i`
   filter: drop-shadow(0 6px 6px var(--shadow));
   z-index: 2;
   transition: all 400ms var(--easeInOutBack);
-  animation: ${spinAnimation} 600ms var(--easeOutBack);  
+  animation: ${spinAnimation} 600ms var(--easeOutBack) forwards;  
 `
 
 const Title = styled.h1`
   position: relative;
   z-index: 1;
   text-shadow: 0 6px 6px var(--shadow);
-  transition: all 400ms var(--easeInOutBack);
   color: var(--cta) !important;
   background-color: var(--background-light-opacity);
   box-shadow: 0 0 6px 6px var(--background-light-opacity);
   user-select: none;
-  animation: ${titleAnimation} 400ms var(--easeOutBack);
+  transition: all 400ms var(--easeOutBack);
+  transform: none;
+  opacity: 1;
+  
+  &.project {
+    transition: all 400ms var(--easeInOutBack);
+    transform: translateY(-80px) scale(0.85);
+  }
+  &.hidden {
+    transform: translateY(30px) rotate(6deg); 
+    opacity: 0;
+  }
 `
 
 const Subtitle = styled.h2`
   margin-top: 1rem;
   z-index: 1;
-  transition: all 400ms var(--easeInOutBack);
   background-color: var(--background-light-opacity);
   box-shadow: 0 0 6px 6px var(--background-light-opacity);
   user-select: none;
-  animation: ${hoverUpAnimation} 400ms var(--easeOutBack);
+  transition: all 400ms var(--easeInOutBack);
+  transform: none;
+  opacity: 1;
+  
+  &.project {
+    transform: translateY(-30px) scale(0.9); 
+    opacity: 0;
+  }
+  &.hidden {
+    transform: translateY(15px); 
+    opacity: 0;
+  }
 `
 
-const Header = () => {
+
+const Header = ({ fontsLoaded }: FontsLoadedProps) => {
   const location = useLocation()
   const viewingProject = location.pathname.length > 1
 
   return (
     <HeaderSection className={viewingProject ? "to-background" : ""}>
       <Canvas render={FloatingParticles} />
-      <Title>
+      <Title className={viewingProject ? "project" : fontsLoaded ? "" : "hidden"}>
         <Logo />
         Fralle
       </Title>
-      <Subtitle>Software developer & sassy home cook</Subtitle>
-      {/* <ProfileImage src={JesusImage} /> */}
+      <Subtitle className={viewingProject ? "project" : fontsLoaded ? "" : "hidden"}>Software developer & sassy home cook</Subtitle>
     </HeaderSection>
   )
 }
