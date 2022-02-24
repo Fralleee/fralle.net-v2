@@ -3,7 +3,6 @@ import styled from "styled-components"
 import { motion } from "framer-motion"
 import { browseTransition } from "utils/pageTransitions"
 import media from "styles/media"
-import { ReactComponent as BackgroundDelimiter } from "images/background-delimiter.svg"
 import Links from "data/links"
 import Link from "components/links/Link"
 import { popAnimation } from "styles/keyframes"
@@ -13,8 +12,13 @@ const Section = styled(motion.section)`
 `
 
 const Component = styled.div`
-  padding: 3rem 0 5rem 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 5rem 0;
   background-color: var(--background-dark);
+  min-height: 500px;
 `
 
 const Wrapper = styled.div`
@@ -23,7 +27,6 @@ const Wrapper = styled.div`
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  margin: 0 auto;
   
   & > a {
     opacity: 0;
@@ -36,28 +39,32 @@ const Wrapper = styled.div`
   
 `
 
-const Top = styled(BackgroundDelimiter)`
+const Top = styled.div`
   position: absolute;
   top: 1px;
   right: 0;
   left: 0;
   transform: translateY(-100%);
-  min-width: 900px;
-  fill: var(--background-dark);
+  min-width: 100%;
+  height: 6vw;
+  background: var(--background-dark);
+  clip-path: polygon(100% 0%, 100% 100%, 0% 100%, 50% 50%);
+  z-index: 1000;
 `
-const Bottom = styled(BackgroundDelimiter)`
+const Bottom = styled.div`
   position: absolute;
   bottom: 1px;
   right: 0;
   left: 0;
-  min-width: 900px;
-  fill: var(--background-dark);
-  transform: translateY(100%) scale(-1, -1);
+  min-width: 100%;
+  transform: translateY(100%);
+  height: 6vw;
+  background: var(--background-dark);
+  clip-path: polygon(0% 100%, 0% 0%, 100% 0%, 50% 50%);
 `
 
 const Header = styled.h1`
   font-size: 4rem;
-  text-align: center;
   margin-bottom: 1rem;
   margin-top: -1rem;
   text-shadow: 0 3px 3px var(--shadow);

@@ -2,12 +2,13 @@ import { FC } from "react"
 import styled from "styled-components"
 import { Link } from "react-router-dom"
 import { ImArrowLeft } from "react-icons/im"
+import { FaTimesCircle } from "react-icons/fa"
 import media from "styles/media"
 
 const Button = styled(Link)`
   position: absolute;
   padding: 2rem;
-  left: 0;
+  right: 0;
   top: 0;
   font-size: 4rem;
   color: var(--shadow-dark);
@@ -15,11 +16,16 @@ const Button = styled(Link)`
   user-select: none;
   z-index: 10;
 
+  #backbutton-back { display: none; }
+  #backbutton-close { display: block; }
+
+
   svg {
     transition: transform 200ms var(--easeOutBack);
   }
 
   &:hover {
+  background: radial-gradient(circle at center, white 1.5rem, transparent 1.6rem);
     color: var(--cta);
     svg {
       transform: rotate(-90deg);
@@ -28,6 +34,8 @@ const Button = styled(Link)`
   }
   
   @media only screen and (max-width: ${media.large}) {
+    #backbutton-back { display: block; }
+    #backbutton-close { display: none; }
     position: fixed;
     left: auto;
     top: auto;
@@ -39,7 +47,8 @@ const Button = styled(Link)`
 const BackButton: FC = () => {
   return (
     <Button to="/">
-      <ImArrowLeft />
+      <ImArrowLeft id="backbutton-back" />
+      <FaTimesCircle id="backbutton-close" />
     </Button>
   )
 }

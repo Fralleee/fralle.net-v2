@@ -9,7 +9,7 @@ import { spinAnimation } from "styles/keyframes"
 const HeaderSection = styled.section`
   position: relative;
   width: 100%;
-  min-height: 580px;
+  min-height: 480px;
   padding-top: 5rem;
   display: flex;
   flex-direction: column;
@@ -38,9 +38,6 @@ const HeaderSection = styled.section`
     }
   }
   
-  @media only screen and (max-width: ${media.xl}) {
-    min-height: 480px;
-  }    
   @media only screen and (max-width: ${media.large}) {
     min-height: 380px;
     &.to-background {

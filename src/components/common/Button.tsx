@@ -8,15 +8,29 @@ const Button = styled.a`
   padding: 1rem;
   width: 100%;
   text-decoration: none;
-  background-color: var(--cta);
-  margin: 0.5rem 0;
+  margin: 0.5rem auto;
   min-width: 280px;
   user-select: none;  
+  background-color: var(--cta);
   border: 2px solid transparent;
+  color: white;   
   border-radius: 2px;
-  color: white;
   transition: all 200ms ease-out;
+  
+  &:hover, &:focus {
+    color: var(--cta);   
+    border-color: var(--cta);
+    box-shadow: inset 280px 0 0 0 white;
+  }
 
+  @media only screen and (max-width: ${media.large}) {
+    &:hover, &:focus {
+      color: var(--cta);   
+      background-color: white;
+      border-color: var(--cta);
+      box-shadow: none;
+    }
+  }  
   @media only screen and (max-width: ${media.medium}) {
     min-width: 200px;
   }
@@ -28,11 +42,6 @@ const Button = styled.a`
     margin-right: 1rem;
   }
 
-  &:hover {
-    color: var(--cta);   
-    border-color: var(--cta);
-    background-color: white; 
-  }
 `
 
 type ButtonProps = {
