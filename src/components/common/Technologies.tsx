@@ -1,16 +1,23 @@
 /* eslint-disable max-len */
-import { ReactComponent as CSharpSVG } from "images/programming/csharp.svg"
-import { ReactComponent as JavascriptSVG } from "images/programming/javascript.svg"
-import { ReactComponent as TypescriptSVG } from "images/programming/typescript.svg"
-import { ReactComponent as ReactSVG } from "images/programming/react.svg"
-import { ReactComponent as UnitySVG } from "images/programming/unity.svg"
+import { ReactComponent as CSharpSVG } from "media/programming/csharp.svg"
+import { ReactComponent as JavascriptSVG } from "media/programming/javascript.svg"
+import { ReactComponent as TypescriptSVG } from "media/programming/typescript.svg"
+import { ReactComponent as ReactSVG } from "media/programming/react.svg"
+import { ReactComponent as UnitySVG } from "media/programming/unity.svg"
 import styled from "styled-components"
+import media from "styles/media"
 
 const Link = styled.a`
   width: 42px;
   height: 42px;
   margin: 0.25rem;
   transition: all 200ms var(--easeOutBack);
+  
+  @media only screen and (max-width: ${media.small}) {
+    width: 32px;
+    height: 32px;
+  }
+
   svg {
     width: 100%;
     height: auto;

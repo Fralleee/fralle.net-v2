@@ -1,34 +1,50 @@
-import NotFoundTitle from "images/links/NotFound/title.png"
-import NotFoundBg from "images/links/NotFound/background.png"
-import CWFTitle from "images/links/CWF/title.png"
-import CWFBg from "images/links/CWF/background.png"
-import PizzeriaTitle from "images/links/Pizzeria/title.png"
-import PizzeriaBg from "images/links/Pizzeria/background.png"
-import PingtapTitle from "images/links/Pingtap/title.png"
-import PingtapBg from "images/links/Pingtap/background.png"
+import NotFoundTitle from "media/projects/NotFound/title.png"
+import NotFoundBg from "media/projects/NotFound/background.png"
+import CWFTitle from "media/projects/CWF/title.png"
+import CWFBg from "media/projects/CWF/background.png"
+import CWFFg from "media/projects/CWF/foreground.png"
+import CWFPreview1 from "media/projects/CWF/preview1.png"
+// import CWFPreview2 from "media/projects/CWF/preview2.png"
+import PizzeriaTitle from "media/projects/Pizzeria/title.png"
+import PizzeriaBg from "media/projects/Pizzeria/background.png"
+import PizzeriaFg from "media/projects/Pizzeria/foreground.png"
+import PizzeriaPreview1 from "media/projects/Pizzeria/preview1.png"
+// import PizzeriaPreview2 from "media/projects/Pizzeria/preview2.png"
+import PingtapTitle from "media/projects/Pingtap/title.png"
+import PingtapBg from "media/projects/Pingtap/background.png"
+import PingtapFg from "media/projects/Pingtap/foreground.png"
 import { CSharp, Javascript, React, Typescript, Unity } from "components/common/Technologies"
 
 const projects: ProjectMap = {
   cooking: {
     title: "Cooking with Fralle",
+    to: "cooking",
     logo: CWFTitle,
     background: CWFBg,
+    foreground: CWFFg,
+    preview: CWFPreview1,
     technologies: [Typescript, React],
     repository: "https://github.com/Fralleee/cooking-with-fralle",
     site: "https://cooking.fralle.net/"
   },
   pizzeria: {
     title: "Pizzeria",
+    to: "pizzeria",
     logo: PizzeriaTitle,
     background: PizzeriaBg,
+    foreground: PizzeriaFg,
+    preview: PizzeriaPreview1,
     technologies: [Javascript, React],
     repository: "https://github.com/Fralleee/pizzeria-frontend-challenge",
     site: "https://fralleee.github.io/pizzeria-frontend-challenge/"
   },
   pingtap: {
     title: "Pingtap",
+    to: "pingtap",
     logo: PingtapTitle,
     background: PingtapBg,
+    foreground: PingtapFg,
+    video: "https://i.giphy.com/media/zguajoJdvnBkJR9VjT/giphy.mp4",
     technologies: [CSharp, Unity]
   },
   notfound: {
@@ -46,3 +62,4 @@ export const getProject = (id: string | undefined): Project => {
   return projects.notfound
 }
 
+export default projects

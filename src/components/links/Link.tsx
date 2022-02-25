@@ -55,7 +55,7 @@ type LinkProps = {
   to: string
   backgroundImage: string
   titleImage: string
-  foregroundImage: string
+  foregroundImage?: string
   foregroundImageStyle?: object
 }
 const Link: FC<LinkProps> = ({ title, to, backgroundImage, titleImage, foregroundImage, foregroundImageStyle }) => {

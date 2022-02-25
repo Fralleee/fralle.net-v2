@@ -11,10 +11,10 @@ const Button = styled(Link)`
   right: 0;
   top: 0;
   font-size: 4rem;
-  color: var(--shadow-dark);
+  color: var(--color);
   transition: color 200ms ease-out;
   user-select: none;
-  z-index: 10;
+  z-index: 10;  
 
   #backbutton-back { display: none; }
   #backbutton-close { display: block; }
@@ -25,7 +25,7 @@ const Button = styled(Link)`
   }
 
   &:hover {
-  background: radial-gradient(circle at center, white 1.5rem, transparent 1.6rem);
+    background: radial-gradient(circle at center, white 1.5rem, transparent 1.6rem);
     color: var(--cta);
     svg {
       transform: rotate(-90deg);

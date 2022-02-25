@@ -3,10 +3,11 @@ import styled from "styled-components"
 import { motion } from "framer-motion"
 import { browseTransition } from "utils/pageTransitions"
 import media from "styles/media"
-import Links from "data/links"
+import Projects from "data/projects"
 import Link from "components/links/Link"
 import { popAnimation } from "styles/keyframes"
 
+// #region styled
 const Section = styled(motion.section)`
   position: relative;
 `
@@ -87,6 +88,7 @@ const Header = styled.h1`
     font-size: 2.5rem;
   }
 `
+// #endregion
 
 const Browse = ({ fontsLoaded }: FontsLoadedProps) => {
 
@@ -100,9 +102,9 @@ const Browse = ({ fontsLoaded }: FontsLoadedProps) => {
       <Component >
         <Header className={fontsLoaded ? "" : "hidden"}>Recent work</Header>
         <Wrapper>
-          {Links.map(link => (
-            <Link key={link.title} title={link.title} to={link.to} titleImage={link.titleImage} backgroundImage={link.backgroundImage} foregroundImage={link.foregroundImage} />
-          ))}
+          {Object.values(Projects).map(link => link.to ? (
+            <Link key={link.title} title={link.title} to={link.to} titleImage={link.logo} backgroundImage={link.background} foregroundImage={link.foreground} />
+          ) : null)}
         </Wrapper>
       </Component>
       <Bottom />

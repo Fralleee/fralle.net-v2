@@ -2,7 +2,7 @@ import { useLocation } from "react-router-dom"
 import styled from "styled-components"
 import Canvas from "components/Canvas"
 import FloatingParticles from "canvas/FloatingParticles"
-import LogoImage from "images/logo.svg"
+import LogoImage from "media/logo.svg"
 import media from "styles/media"
 import { spinAnimation } from "styles/keyframes"
 import { useEffect, useState } from "react"
@@ -135,11 +135,11 @@ const Header = ({ fontsLoaded }: FontsLoadedProps) => {
   return (
     <HeaderSection className={`${viewingProject ? "to-background" : ""} ${fixed ? "fixed" : ""}`}>
       <Canvas render={FloatingParticles} />
-      <Title className={viewingProject ? "project" : fontsLoaded ? "" : "hidden"}>
+      <Title className={`${viewingProject ? "project" : ""} ${fontsLoaded ? "" : "hidden"}`}>
         <Logo />
         Fralle
       </Title>
-      <Subtitle className={viewingProject ? "project" : fontsLoaded ? "" : "hidden"}>Software developer & sassy home cook</Subtitle>
+      <Subtitle className={`${viewingProject ? "project" : ""} ${fontsLoaded ? "" : "hidden"}`}>Software developer & sassy home cook</Subtitle>
     </HeaderSection>
   )
 }
