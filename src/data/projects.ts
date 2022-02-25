@@ -13,6 +13,7 @@ import PizzeriaPreview1 from "media/projects/Pizzeria/preview1.png"
 import PingtapTitle from "media/projects/Pingtap/title.png"
 import PingtapBg from "media/projects/Pingtap/background.png"
 import PingtapFg from "media/projects/Pingtap/foreground.png"
+import PingtapVideo from "media/projects/Pingtap/preview.mp4"
 import { CSharp, Javascript, React, Typescript, Unity } from "components/common/Technologies"
 
 const projects: ProjectMap = {
@@ -44,7 +45,7 @@ const projects: ProjectMap = {
     logo: PingtapTitle,
     background: PingtapBg,
     foreground: PingtapFg,
-    video: "https://i.giphy.com/media/zguajoJdvnBkJR9VjT/giphy.mp4",
+    video: PingtapVideo,
     technologies: [CSharp, Unity]
   },
   notfound: {

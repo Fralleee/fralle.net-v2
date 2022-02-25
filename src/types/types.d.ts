@@ -15,3 +15,7 @@ type Project = {
 type FontsLoadedProps = {
   fontsLoaded: boolean
 }
+declare module "*.mp4" {
+  const src: string
+  export default src
+}
