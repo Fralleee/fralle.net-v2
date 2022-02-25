@@ -70,23 +70,16 @@ const Foreground = styled.img`
 
 const Video = styled(VideoPlayer)`
   position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  right: 5%;
-  width: 640px;
+  bottom: 20%;
+  right: 10%;
   height: auto;
+  width: 50%;
+  transform: perspective(360px) rotateY(-15deg);
   filter: drop-shadow(4px 8px 8px var(--shadow-dark));
-
-  @media only screen and (max-width: ${media.medium}) {  
-    right: auto;
-    left: 50%;
-    transform: translate(-50%, -50%); 
-    width: 480px;
-    height: auto;
-  }  
+  
   @media only screen and (max-width: ${media.small}) {
-    width: 320px;
-    height: auto;
+    top: 20%;
+    min-width: 320px;
   }  
 `
 
