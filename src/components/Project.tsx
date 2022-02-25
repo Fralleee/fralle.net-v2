@@ -12,7 +12,7 @@ import { FaGlobe, FaGithub } from "react-icons/fa"
 
 // #region styled
 const Container = styled.div`
-  position: fixed;
+  position: absolute;
   width: 100%;
   height: 100%;
   z-index: 1;
@@ -36,10 +36,11 @@ const Component = styled(motion.div)`
   display: flex;
   flex-direction: column;
   z-index: 1;
-  pointer-events: all;
+  pointer-events: all;   
 
   @media only screen and (max-width: ${media.large}) {
     border-radius: 0;
+    box-shadow: none;
   }
 `
 
@@ -50,6 +51,10 @@ const Overlay = styled(Link)`
   right: 0;
   bottom: 0;
   background-color: var(--shadow);
+
+  @media only screen and (max-width: ${media.large}) {
+    display: none;
+  }
 `
 
 const Header = styled.section`
@@ -69,6 +74,18 @@ const Header = styled.section`
     min-height: 400px;
   }
   @media only screen and (max-width: ${media.small}) {
+    min-height: 300px;
+  }
+  
+  @media only screen and (max-height: ${media.large}) {
+    padding-top: 0;
+    min-height: 505px;
+  }
+  
+  @media only screen and (max-height: ${media.medium}) {
+    min-height: 400px;
+  }
+  @media only screen and (max-height: ${media.small}) {
     min-height: 300px;
   }
 `

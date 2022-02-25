@@ -5,6 +5,8 @@ import FloatingParticles from "canvas/FloatingParticles"
 import LogoImage from "images/logo.svg"
 import media from "styles/media"
 import { spinAnimation } from "styles/keyframes"
+import { useEffect, useState } from "react"
+import { browseTransition } from "utils/pageTransitions"
 
 const HeaderSection = styled.section`
   position: relative;
@@ -26,6 +28,9 @@ const HeaderSection = styled.section`
     font-size: 1.75rem;
   }
   
+  &.fixed {
+    position: fixed;
+  }
   &.to-background {
     opacity: 0.5;
     
@@ -119,9 +124,16 @@ const Subtitle = styled.h2`
 const Header = ({ fontsLoaded }: FontsLoadedProps) => {
   const location = useLocation()
   const viewingProject = location.pathname.length > 1
+  const [fixed, setFixed] = useState(viewingProject)
+
+  useEffect(() => {
+    if (viewingProject)
+      setTimeout(() => setFixed(true), browseTransition.transition.duration * 1000)
+    else setFixed(false)
+  }, [viewingProject])
 
   return (
-    <HeaderSection className={viewingProject ? "to-background" : ""}>
+    <HeaderSection className={`${viewingProject ? "to-background" : ""} ${fixed ? "fixed" : ""}`}>
       <Canvas render={FloatingParticles} />
       <Title className={viewingProject ? "project" : fontsLoaded ? "" : "hidden"}>
         <Logo />
