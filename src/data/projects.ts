@@ -4,12 +4,12 @@ import CWFTitle from "media/projects/CWF/title.png"
 import CWFBg from "media/projects/CWF/background.png"
 import CWFFg from "media/projects/CWF/foreground.png"
 import CWFPreview1 from "media/projects/CWF/preview1.png"
-// import CWFPreview2 from "media/projects/CWF/preview2.png"
+import CWFPreview2 from "media/projects/CWF/preview2.png"
 import PizzeriaTitle from "media/projects/Pizzeria/title.png"
 import PizzeriaBg from "media/projects/Pizzeria/background.png"
 import PizzeriaFg from "media/projects/Pizzeria/foreground.png"
 import PizzeriaPreview1 from "media/projects/Pizzeria/preview1.png"
-// import PizzeriaPreview2 from "media/projects/Pizzeria/preview2.png"
+import PizzeriaPreview2 from "media/projects/Pizzeria/preview2.png"
 import PingtapTitle from "media/projects/Pingtap/title.png"
 import PingtapBg from "media/projects/Pingtap/background.png"
 import PingtapFg from "media/projects/Pingtap/foreground.png"
@@ -23,7 +23,7 @@ const projects: ProjectMap = {
     logo: CWFTitle,
     background: CWFBg,
     foreground: CWFFg,
-    preview: CWFPreview1,
+    preview: [CWFPreview1, CWFPreview2],
     technologies: [Typescript, React],
     repository: "https://github.com/Fralleee/cooking-with-fralle",
     site: "https://cooking.fralle.net/"
@@ -34,7 +34,7 @@ const projects: ProjectMap = {
     logo: PizzeriaTitle,
     background: PizzeriaBg,
     foreground: PizzeriaFg,
-    preview: PizzeriaPreview1,
+    preview: [PizzeriaPreview1, PizzeriaPreview2],
     technologies: [Javascript, React],
     repository: "https://github.com/Fralleee/pizzeria-frontend-challenge",
     site: "https://fralleee.github.io/pizzeria-frontend-challenge/"

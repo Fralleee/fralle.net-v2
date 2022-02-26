@@ -1,6 +1,9 @@
 import styled from "styled-components"
 import media from "styles/media"
 import VideoPlayer from "components/common/VideoPlayer"
+import CrossfadeImage from "components/common/CrossfadeImage"
+import { useEffect, useState } from "react"
+import { nextIndex } from "utils/arrayHelpers"
 
 // #region styled
 const Header = styled.section`
@@ -51,7 +54,7 @@ const Background = styled.img`
   }
 `
 
-const Foreground = styled.img`
+const Foreground = styled(CrossfadeImage)`      
   position: absolute;
   bottom: 20%;
   right: 10%;
@@ -61,11 +64,11 @@ const Foreground = styled.img`
   filter: drop-shadow(4px 8px 8px var(--shadow-dark));
 
   min-width: 480px;
-  
+
   @media only screen and (max-width: ${media.small}) {
     top: 20%;
     min-width: 320px;
-  }  
+  }
 `
 
 const Video = styled(VideoPlayer)`
@@ -93,12 +96,16 @@ const HeaderOverlay = styled.div`
 
 const Title = styled.img`
   position: absolute;
-  bottom: -6%;
+  bottom: -5%;
   left: 0;
   width: 100%;  
   max-width: 900px;
   min-width: 420px;
   filter: drop-shadow(1px 1px 4px var(--shadow-dark));
+
+  @media only screen and (max-width: ${media.small}) {
+    bottom: 0;
+  }
 `
 
 const Technologies = styled.div`
@@ -133,11 +140,20 @@ const Technologies = styled.div`
 
 type ParamTypes = { project: Project }
 const ProjectHeader = ({ project }: ParamTypes) => {
+  const [index, setIndex] = useState(0)
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setIndex(nextIndex(index, project.preview || [], true))
+    }, 5000)
+    return () => clearInterval(interval)
+  }, [index, project.preview])
+
   return (
     <Header>
       <Background src={project.background} />
       <HeaderOverlay />
-      {project.preview && <Foreground src={project.preview} />}
+      {project.preview && <Foreground src={project.preview[index]} />}
       {project.video && <Video video={project.video} />}
       <Title src={project.logo} />
       {project.technologies.length > 0 && (
