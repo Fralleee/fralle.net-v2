@@ -101,7 +101,6 @@ const Title = styled.img`
   width: 100%;  
   max-width: 900px;
   min-width: 420px;
-  filter: drop-shadow(1px 1px 4px var(--shadow-dark));
 
   @media only screen and (max-width: ${media.small}) {
     bottom: 0;
@@ -118,7 +117,6 @@ const Technologies = styled.div`
   align-items: center;
   background: var(--background-light);
   border-radius: 4px;
-  filter: drop-shadow(0 0 4px var(--shadow-dark));
   
   @media only screen and (max-width: ${media.large}) {
     bottom: 4rem;

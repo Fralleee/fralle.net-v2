@@ -10,21 +10,19 @@ import { popAnimation } from "styles/keyframes"
 // #region styled
 const Section = styled(motion.section)`
   position: relative;
-`
-
-const Component = styled.div`
+  max-width: ${media.large};
+  margin: 0 auto;
+  border-radius: 48px;
+  
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  padding: 5rem 0;
   background-color: var(--background-dark);
-  min-height: 500px;
+  min-height: 700px;
 `
 
-const Wrapper = styled.div`
-  max-width: ${media.xl};
-  width: 100%;
+const Container = styled.div`
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
@@ -40,35 +38,10 @@ const Wrapper = styled.div`
   
 `
 
-const Top = styled.div`
-  position: absolute;
-  top: 1px;
-  right: 0;
-  left: 0;
-  transform: translateY(-100%);
-  min-width: 100%;
-  height: 6vw;
-  background: var(--background-dark);
-  clip-path: polygon(100% 0%, 100% 100%, 0% 100%, 50% 50%);
-  z-index: 1000;
-`
-const Bottom = styled.div`
-  position: absolute;
-  bottom: 1px;
-  right: 0;
-  left: 0;
-  min-width: 100%;
-  transform: translateY(100%);
-  height: 6vw;
-  background: var(--background-dark);
-  clip-path: polygon(0% 100%, 0% 0%, 100% 0%, 50% 50%);
-`
-
 const Header = styled.h1`
   font-size: 4rem;
   margin-bottom: 1rem;
   margin-top: -1rem;
-  text-shadow: 0 3px 3px var(--shadow);
   transition: all 400ms var(--easeOutBack);
   transform: none;
   opacity: 1;
@@ -98,16 +71,12 @@ const Browse = ({ fontsLoaded }: FontsLoadedProps) => {
 
   return (
     <Section key="Browse" {...browseTransition} onAnimationComplete={() => window.scrollTo(0, 0)}>
-      <Top />
-      <Component >
-        <Header className={fontsLoaded ? "" : "hidden"}>Recent work</Header>
-        <Wrapper>
-          {Object.values(Projects).map(link => link.to ? (
-            <Link key={link.title} title={link.title} to={link.to} titleImage={link.logo} backgroundImage={link.background} foregroundImage={link.foreground} />
-          ) : null)}
-        </Wrapper>
-      </Component>
-      <Bottom />
+      <Header className={fontsLoaded ? "" : "hidden"}>Recent work</Header>
+      <Container>
+        {Object.values(Projects).map(link => link.to ? (
+          <Link key={link.title} title={link.title} to={link.to} titleImage={link.logo} backgroundImage={link.background} foregroundImage={link.foreground} />
+        ) : null)}
+      </Container>
     </Section>
   )
 }

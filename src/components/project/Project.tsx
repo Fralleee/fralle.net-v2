@@ -30,7 +30,6 @@ const Component = styled(motion.div)`
   background: var(--background-light);
   width: 100%;
   max-width: ${media.large}; 
-  box-shadow: 0 -8px 32px var(--shadow-dark);
   flex: 1;
   border-radius: 8px 8px 0 0;
   display: flex;

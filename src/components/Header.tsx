@@ -12,7 +12,6 @@ const HeaderSection = styled.section`
   position: relative;
   width: 100%;
   min-height: 480px;
-  padding-top: 5rem;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -65,27 +64,36 @@ const HeaderSection = styled.section`
 
 const Logo = styled.i`
   position: absolute;
-  top: -1vh;
+  top: 1vh;
   left: -3vw;
   background-size: contain;
   background-image: ${() => `url(${LogoImage})`};
   background-repeat: no-repeat;
   width: calc(20px + 2vw);
   height: 100%;
-  filter: drop-shadow(0 6px 6px var(--shadow));
   z-index: 2;
   transition: all 400ms var(--easeInOutBack);
   animation: ${spinAnimation} 600ms var(--easeOutBack) forwards;  
 `
 
+const TitleContainer = styled.div`
+  width: 100%;
+  max-width: ${media.large};
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: var(--background-light-opacity);
+  background: linear-gradient(to right, transparent 0%, var(--background-light-opacity) 20%, var(--background-light-opacity) 80%, transparent 100%);
+  z-index: 1;
+  height: 100%;
+  flex: 1;
+  padding-top: 5rem;
+`
+
 const Title = styled.h1`
   position: relative;
-  z-index: 1;
-  text-shadow: 0 6px 6px var(--shadow);
   color: var(--cta) !important;
-  background-color: var(--background-light-opacity);
-  box-shadow: 0 0 6px 6px var(--background-light-opacity);
-  user-select: none;
+  line-height: 1.6;
   transition: all 400ms var(--easeOutBack);
   transform: none;
   opacity: 1;
@@ -101,11 +109,6 @@ const Title = styled.h1`
 `
 
 const Subtitle = styled.h2`
-  margin-top: 1rem;
-  z-index: 1;
-  background-color: var(--background-light-opacity);
-  box-shadow: 0 0 6px 6px var(--background-light-opacity);
-  user-select: none;
   transition: all 400ms var(--easeInOutBack);
   transform: none;
   opacity: 1;
@@ -135,11 +138,13 @@ const Header = ({ fontsLoaded }: FontsLoadedProps) => {
   return (
     <HeaderSection className={`${viewingProject ? "to-background" : ""} ${fixed ? "fixed" : ""}`}>
       <Canvas render={FloatingParticles} />
-      <Title className={`${viewingProject ? "project" : ""} ${fontsLoaded ? "" : "hidden"}`}>
-        <Logo />
-        Fralle
-      </Title>
-      <Subtitle className={`${viewingProject ? "project" : ""} ${fontsLoaded ? "" : "hidden"}`}>Software developer & sassy home cook</Subtitle>
+      <TitleContainer>
+        <Title className={`${viewingProject ? "project" : ""} ${fontsLoaded ? "" : "hidden"}`}>
+          <Logo />
+          Fralle
+        </Title>
+        <Subtitle className={`${viewingProject ? "project" : ""} ${fontsLoaded ? "" : "hidden"}`}>Software developer & sassy home cook</Subtitle>
+      </TitleContainer>
     </HeaderSection>
   )
 }
