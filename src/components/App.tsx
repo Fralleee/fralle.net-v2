@@ -1,7 +1,7 @@
 import { Routes, Route, useLocation } from "react-router-dom"
 import Header from "components/Header"
 import Footer from "components/Footer"
-import Browse from "components/links/Browse"
+import Main from "components/Main"
 import Project from "components/project/Project"
 import styled from "styled-components"
 import { AnimatePresence } from "framer-motion"
@@ -23,7 +23,7 @@ const App = () => {
     DeveloperMessage()
     WebFont.load({
       google: {
-        families: ["Roboto:400,700", "Kanit:700", "Montserrat:100"]
+        families: ["Roboto:400,700", "Kanit:700", "Montserrat:100", "Neucha"]
       },
       active: () => setFontsLoaded(true)
     })
@@ -34,7 +34,7 @@ const App = () => {
       <Header fontsLoaded={fontsLoaded} />
       <AnimatePresence exitBeforeEnter initial={false}>
         <Routes location={location} key={location.pathname}>
-          <Route path="/" element={<Browse fontsLoaded={fontsLoaded} />} />
+          <Route path="/" element={<Main fontsLoaded={fontsLoaded} />} />
           <Route path="/:projectId" element={<Project />} />
         </Routes>
       </AnimatePresence>

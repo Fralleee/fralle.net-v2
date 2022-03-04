@@ -13,6 +13,7 @@ const Section = styled(motion.section)`
   max-width: ${media.large};
   width: 100%;
   margin: 0 auto;
+  margin-top: 40px;
   border-radius: 48px;
   padding: 5rem 0;
   

@@ -35,3 +35,12 @@ export const popUpTransform = keyframes`
     transform: translateY(0);
   }
 `
+
+export const upAndDownLoop = keyframes`
+  from {
+    transform: translateY(-3px);
+  }
+  to {
+    transform: translateY(3px);
+  }
+`

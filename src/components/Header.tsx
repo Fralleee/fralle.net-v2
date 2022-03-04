@@ -8,6 +8,7 @@ import { spinAnimation } from "styles/keyframes"
 import { useEffect, useState } from "react"
 import { browseTransition } from "utils/pageTransitions"
 import { GitHub, HackerRank, LinkedIn } from "./common/Social"
+import AboutLink from "./common/AboutLink"
 
 const HeaderSection = styled.section`
   position: relative;
@@ -59,13 +60,13 @@ const HeaderSection = styled.section`
     h2{ font-size: 1.25rem; }
   }
   @media only screen and (max-width: ${media.small}) {
-    h2{ font-size: 0.8rem; }
+    h2{ font-size: 0.9rem; }
   }
 `
 
 const Logo = styled.i`
   position: absolute;
-  top: 1vh;
+  top: -.75rem;
   left: -3vw;
   background-size: contain;
   background-image: ${() => `url(${LogoImage})`};
@@ -156,20 +157,22 @@ const Header = ({ fontsLoaded }: FontsLoadedProps) => {
     else setFixed(false)
   }, [viewingProject])
 
+  const transitionClasses = `${viewingProject ? "project" : ""} ${fontsLoaded ? "" : "hidden"}`
   return (
     <HeaderSection className={`${viewingProject ? "to-background" : ""} ${fixed ? "fixed" : ""}`}>
       <Canvas render={FloatingParticles} />
       <TitleContainer>
-        <Title className={`${viewingProject ? "project" : ""} ${fontsLoaded ? "" : "hidden"}`}>
+        <Title className={transitionClasses}>
           <Logo />
           Fralle
         </Title>
-        <Subtitle className={`${viewingProject ? "project" : ""} ${fontsLoaded ? "" : "hidden"}`}>Software developer & sassy home cook</Subtitle>
-        <SocialContainer className={`${viewingProject ? "project" : ""} ${fontsLoaded ? "" : "hidden"}`}>
+        <Subtitle className={transitionClasses}>Software developer & sassy home cook</Subtitle>
+        <SocialContainer className={transitionClasses}>
           <LinkedIn />
           <GitHub />
           <HackerRank />
         </SocialContainer>
+        <AboutLink />
       </TitleContainer>
     </HeaderSection>
   )

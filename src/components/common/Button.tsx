@@ -2,7 +2,7 @@ import { FC } from "react"
 import styled from "styled-components"
 import media from "styles/media"
 
-const Button = styled.a`
+const ButtonComponent = styled.a`
   display: flex;
   align-items: center;
   padding: 1rem;
@@ -14,7 +14,7 @@ const Button = styled.a`
   background-color: var(--cta);
   border: 2px solid transparent;
   color: white;   
-  border-radius: 2px;
+  border-radius: 8px;
   transition: all 200ms ease-out;
   
   &:hover, &:focus {
@@ -48,16 +48,18 @@ const Button = styled.a`
 
 `
 
-type ButtonProps = {
+type PropTypes = {
   to: string
   title: string
+  style?: object
+  download?: string
 }
-const ButtonComponent: FC<ButtonProps> = ({ children, to, title }) => {
+const Button: FC<PropTypes> = ({ children, to, title, style, download }) => {
   return (
-    <Button href={to} title={title} target="_blank">
+    <ButtonComponent href={to} title={title} style={style} download={download} target="_blank">
       {children}
-    </Button>
+    </ButtonComponent>
   )
 }
 
-export default ButtonComponent
+export default Button

@@ -34,6 +34,11 @@ declare module "*.mp4" {
   export default src
 }
 
+declare module "*.pdf" {
+  const src: string
+  export default src
+}
+
 declare module "react-crossfade-image" {
   const CrossfadeImage: CrossfadeImageType
   export = CrossfadeImage

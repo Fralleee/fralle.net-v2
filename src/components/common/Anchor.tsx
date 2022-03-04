@@ -38,10 +38,11 @@ const Anchor = styled.a`
 type PropTypes = {
   href: string
   title?: string
+  style?: object
 }
-const AnchorComponent: FC<PropTypes> = ({ children, href, title }) => {
+const AnchorComponent: FC<PropTypes> = ({ children, href, title, style }) => {
   return (
-    <Anchor href={href} title={title} target="_blank">
+    <Anchor href={href} title={title} style={style} target="_blank">
       {children}
     </Anchor>
   )
