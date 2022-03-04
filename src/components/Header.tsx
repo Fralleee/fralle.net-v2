@@ -94,7 +94,6 @@ const TitleContainer = styled.div`
 const Title = styled.h1`
   position: relative;
   color: var(--cta) !important;
-  /* line-height: 1.6; */
   transition: all 400ms var(--easeOutBack);
   transform: none;
   opacity: 1;
@@ -115,11 +114,11 @@ const Subtitle = styled.h2`
   opacity: 1;
   
   &.project {
-    transform: translateY(-30px) scale(0.9); 
+    transform: translateY(-60px) scale(0.9); 
     opacity: 0;
   }
   &.hidden {
-    transform: translateY(15px); 
+    transform: translateY(30px); 
     opacity: 0;
   }
 `
@@ -129,6 +128,20 @@ const SocialContainer = styled.div`
   margin: 0.5rem 0;
   & > a {
     margin: 0 .5rem;
+  }
+  
+  transition: all 400ms  100ms var(--easeOutBack);
+  transform: none;
+  opacity: 1;
+  
+  &.project {
+    transition: all 400ms var(--easeInOutBack);
+    transform: translateY(-60px) scale(0.9); 
+    opacity: 0;
+  }
+  &.hidden {
+    transform: translateY(30px); 
+    opacity: 0;
   }
 `
 
@@ -152,7 +165,7 @@ const Header = ({ fontsLoaded }: FontsLoadedProps) => {
           Fralle
         </Title>
         <Subtitle className={`${viewingProject ? "project" : ""} ${fontsLoaded ? "" : "hidden"}`}>Software developer & sassy home cook</Subtitle>
-        <SocialContainer>
+        <SocialContainer className={`${viewingProject ? "project" : ""} ${fontsLoaded ? "" : "hidden"}`}>
           <LinkedIn />
           <GitHub />
           <HackerRank />
