@@ -2,6 +2,7 @@ import styled from "styled-components"
 import Button from "components/common/Button"
 import media from "styles/media"
 import { FaGlobe, FaGithub } from "react-icons/fa"
+import { popUpTransform } from "styles/keyframes"
 
 // #region styled
 const Content = styled.section`
@@ -34,6 +35,18 @@ const Links = styled.div`
   flex: 1;
   width: 100%;
   margin-bottom: 1rem;
+
+  & > a {   
+    opacity: 0; 
+    transform: translateY(30px);
+    animation: ${popUpTransform} 300ms var(--easeOutBack) forwards;  
+    &:nth-child(1) {    
+      animation-delay: 350ms;
+    }
+    &:nth-child(2) {    
+      animation-delay: 400ms;
+    }
+  }
 `
 // #endregion
 

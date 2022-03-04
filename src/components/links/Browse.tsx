@@ -11,6 +11,7 @@ import { popAnimation } from "styles/keyframes"
 const Section = styled(motion.section)`
   position: relative;
   max-width: ${media.large};
+  width: 100%;
   margin: 0 auto;
   border-radius: 48px;
   

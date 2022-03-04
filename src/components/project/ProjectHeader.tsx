@@ -4,20 +4,19 @@ import VideoPlayer from "components/common/VideoPlayer"
 import CrossfadeImage from "components/common/CrossfadeImage"
 import { useEffect, useState } from "react"
 import { nextIndex } from "utils/arrayHelpers"
+import { popUpTransform } from "styles/keyframes"
 
 // #region styled
 const Header = styled.section`
   position: relative;
   width: 100%;
-  padding-top: 56.3925%;
+  min-height: 500px;
   border-radius: 8px 8px 0 0;
   overflow: hidden;
   clip-path: polygon(100% 0%, 100% 90%, 0% 100%, 0% 0%);
 
   @media only screen and (max-width: ${media.large}) {
     border-radius: 0;
-    min-height: 505px;
-    padding-top: 0;
   }
   @media only screen and (max-width: ${media.medium}) {
     min-height: 400px;
@@ -26,13 +25,8 @@ const Header = styled.section`
     min-height: 300px;
   }
   
-  @media only screen and (max-height: ${media.large}) {
-    padding-top: 0;
-    min-height: 505px;
-  }
-  
   @media only screen and (max-height: ${media.medium}) {
-    min-height: 400px;
+    min-height: 450px;
   }
   @media only screen and (max-height: ${media.small}) {
     min-height: 300px;
@@ -62,7 +56,6 @@ const Foreground = styled(CrossfadeImage)`
   width: 50%;
   transform: perspective(360px) rotateY(-15deg);
   filter: drop-shadow(4px 8px 8px var(--shadow-dark));
-
   min-width: 480px;
 
   @media only screen and (max-width: ${media.small}) {
@@ -101,6 +94,9 @@ const Title = styled.img`
   width: 100%;  
   max-width: 900px;
   min-width: 420px;
+  opacity: 0; 
+  transform: translateY(30px);
+  animation: ${popUpTransform} 300ms 200ms var(--easeOutBack) forwards;  
 
   @media only screen and (max-width: ${media.small}) {
     bottom: 0;
@@ -117,6 +113,9 @@ const Technologies = styled.div`
   align-items: center;
   background: var(--background-light);
   border-radius: 4px;
+  opacity: 0; 
+  transform: translateY(30px);
+  animation: ${popUpTransform} 300ms 250ms var(--easeOutBack) forwards;  
   
   @media only screen and (max-width: ${media.large}) {
     bottom: 4rem;
