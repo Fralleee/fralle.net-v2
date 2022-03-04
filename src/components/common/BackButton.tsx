@@ -29,7 +29,6 @@ const Button = styled(Link)`
     color: var(--cta);
     svg {
       transform: rotate(-90deg);
-      filter: drop-shadow(0 0 3px var(--shadow-dark));
     }
   }
   

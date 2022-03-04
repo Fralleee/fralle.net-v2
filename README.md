@@ -13,12 +13,4 @@ Live
 -------------
 - [Live demo](https://www.fralle.net/)
 
-<em>Last updated 2022-01-31</em>
-
-
-Preview
--------------
-<img src="#" width="640" /> 
-<img src="#" width="640" /> 
-
-
+<em>Last updated 2022-03-04</em>

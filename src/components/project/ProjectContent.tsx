@@ -9,7 +9,8 @@ const Content = styled.section`
   display: flex;
   padding: 3rem 1rem;
   max-width: 900px;
-  margin: 0 auto;
+  width: 100%;
+  margin: 0 auto;  
   
   @media only screen and (max-width: ${media.small}) {
     flex-direction: column-reverse;
@@ -19,12 +20,14 @@ const Content = styled.section`
 `
 
 const Description = styled.div`
+  width: 100%;
+  flex: 1;
   max-width: 65ch;
-  padding: 1rem;
-  padding-left: 3rem;
+  padding: 0 1rem;
+  padding-right: 2rem;
   
-  @media only screen and (max-width: ${media.medium}) {
-    padding-left: 1rem;
+  @media only screen and (max-width: ${media.small}) {
+    padding-right: 1rem;
   }
 `
 
@@ -32,8 +35,7 @@ const Links = styled.div`
   display: flex;
   flex-direction: column;
   align-items: flex-end;
-  flex: 1;
-  width: 100%;
+  width: 280px;
   margin-bottom: 1rem;
 
   & > a {   
@@ -48,6 +50,15 @@ const Links = styled.div`
     }
   }
 `
+
+const NoLinks = styled.div`
+  border-radius: 16px;
+  width: 100%;
+  padding: 2rem;
+  text-align: center;
+
+  background: var(--background-dark);
+`
 // #endregion
 
 type ParamTypes = { project: Project }
@@ -55,15 +66,13 @@ const ProjectContent = ({ project }: ParamTypes) => {
   return (
     <Content>
       <Description>
-        <p>Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet</p>
-        <p>Consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem.</p>
+        {project.content}
       </Description>
-      {(project.site || project.repository) && (
-        <Links>
-          {project.site && <Button to={project.site} title="View site"><FaGlobe /> View site</Button>}
-          {project.repository && <Button to={project.repository} title="View repository"><FaGithub /> View repository </Button>}
-        </Links>
-      )}
+      <Links>
+        {project.site && <Button to={project.site} title="View site"><FaGlobe /> View site</Button>}
+        {project.repository && <Button to={project.repository} title="View repository"><FaGithub /> View repository </Button>}
+        {!project.site && !project.repository && <NoLinks>No external links available</NoLinks>}
+      </Links>
     </Content>
   )
 }

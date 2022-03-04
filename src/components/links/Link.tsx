@@ -18,6 +18,10 @@ const LinkComponent = styled(RouterLink)`
   border-radius: 8px;
   box-shadow: 0 0 0 5px var(--background-light);
   transition: transform 300ms var(--easeOutBack);
+  
+  &:before{
+    display: none !important;
+  }
 
   @media only screen and (min-width: ${media.medium}) {
     &:hover {

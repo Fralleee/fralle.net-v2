@@ -35,7 +35,7 @@ const Component = styled(motion.div)`
   display: flex;
   flex-direction: column;
   z-index: 1;
-  pointer-events: all;   
+  pointer-events: all;
 
   @media only screen and (max-width: ${media.large}) {
     border-radius: 0;

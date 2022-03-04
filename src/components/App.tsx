@@ -7,6 +7,7 @@ import styled from "styled-components"
 import { AnimatePresence } from "framer-motion"
 import { useEffect, useState } from "react"
 import WebFont from "webfontloader"
+import DeveloperMessage from "utils/message"
 
 const Container = styled.div`
   display: flex;
@@ -19,6 +20,7 @@ const App = () => {
   const [fontsLoaded, setFontsLoaded] = useState(false)
 
   useEffect(() => {
+    DeveloperMessage()
     WebFont.load({
       google: {
         families: ["Roboto:400,700", "Kanit:700", "Montserrat:100"]

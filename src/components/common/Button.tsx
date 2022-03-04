@@ -20,7 +20,11 @@ const Button = styled.a`
   &:hover, &:focus {
     color: var(--cta);   
     border-color: var(--cta);
-    box-shadow: inset 280px 0 0 0 white;
+    background-color: white;
+  }
+  
+  &:before{
+    display: none !important;
   }
 
   @media only screen and (max-width: ${media.large}) {

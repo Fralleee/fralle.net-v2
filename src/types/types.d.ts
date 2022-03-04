@@ -11,6 +11,7 @@ type Project = {
   technologies: ReactNode[],
   repository?: string,
   site?: string
+  content: JSX.Element
 }
 
 type FontsLoadedProps = {
