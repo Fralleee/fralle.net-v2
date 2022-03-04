@@ -7,6 +7,7 @@ import media from "styles/media"
 import { spinAnimation } from "styles/keyframes"
 import { useEffect, useState } from "react"
 import { browseTransition } from "utils/pageTransitions"
+import { GitHub, HackerRank, LinkedIn } from "./common/Social"
 
 const HeaderSection = styled.section`
   position: relative;
@@ -93,7 +94,7 @@ const TitleContainer = styled.div`
 const Title = styled.h1`
   position: relative;
   color: var(--cta) !important;
-  line-height: 1.6;
+  /* line-height: 1.6; */
   transition: all 400ms var(--easeOutBack);
   transform: none;
   opacity: 1;
@@ -123,6 +124,13 @@ const Subtitle = styled.h2`
   }
 `
 
+const SocialContainer = styled.div`
+  display: flex;
+  margin: 0.5rem 0;
+  & > a {
+    margin: 0 .5rem;
+  }
+`
 
 const Header = ({ fontsLoaded }: FontsLoadedProps) => {
   const location = useLocation()
@@ -144,6 +152,11 @@ const Header = ({ fontsLoaded }: FontsLoadedProps) => {
           Fralle
         </Title>
         <Subtitle className={`${viewingProject ? "project" : ""} ${fontsLoaded ? "" : "hidden"}`}>Software developer & sassy home cook</Subtitle>
+        <SocialContainer>
+          <LinkedIn />
+          <GitHub />
+          <HackerRank />
+        </SocialContainer>
       </TitleContainer>
     </HeaderSection>
   )
