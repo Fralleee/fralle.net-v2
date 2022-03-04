@@ -14,13 +14,18 @@ const Section = styled(motion.section)`
   width: 100%;
   margin: 0 auto;
   border-radius: 48px;
+  padding: 5rem 0;
   
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   background-color: var(--background-dark);
-  min-height: 700px;
+  min-height: 600px;
+  
+  @media only screen and (max-width: ${media.large}) {
+    border-radius: 0;
+  }
 `
 
 const Container = styled.div`
