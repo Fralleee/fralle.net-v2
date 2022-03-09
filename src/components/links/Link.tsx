@@ -5,8 +5,6 @@ import media from "styles/media"
 
 const LinkComponent = styled(RouterLink)`
   position: relative;
-  font-family: Kanit, sans-serif;
-  text-decoration: none;
   max-width: 350px;
   width: 100%;
   margin: 1rem;

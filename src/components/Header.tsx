@@ -8,7 +8,6 @@ import { spinAnimation } from "styles/keyframes"
 import { useEffect, useState } from "react"
 import { browseTransition } from "utils/pageTransitions"
 import { GitHub, HackerRank, LinkedIn } from "./common/Social"
-import AboutLink from "./common/AboutLink"
 
 const HeaderSection = styled.section`
   position: relative;
@@ -172,7 +171,6 @@ const Header = ({ fontsLoaded }: FontsLoadedProps) => {
           <GitHub />
           <HackerRank />
         </SocialContainer>
-        <AboutLink />
       </TitleContainer>
     </HeaderSection>
   )
