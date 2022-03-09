@@ -12,7 +12,6 @@ const Header = styled.section`
   width: 100%;
   min-height: 500px;
   border-radius: 8px 8px 0 0;
-  overflow: hidden;
   clip-path: polygon(100% 0%, 100% 90%, 0% 100%, 0% 0%);
 
   @media only screen and (max-width: ${media.large}) {

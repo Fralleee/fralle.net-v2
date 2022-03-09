@@ -6,7 +6,7 @@ const FooterSection = styled.section`
   flex-direction: column-reverse;
   flex: 1;
   padding-top: 80px;
-  background-color: var(--cta);
+  background-color: var(--background-light);
   z-index: -1;
   transition: opacity 200ms 400ms ease-out;
 
@@ -16,10 +16,10 @@ const FooterSection = styled.section`
   }
   p {
     text-align: center;
+    opacity: 0.6;
     font-size: 1rem;
     font-weight: bold;    
     margin: 1rem 0;
-    color: var(--background-light);
   }
 `
 

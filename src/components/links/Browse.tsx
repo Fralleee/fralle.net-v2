@@ -1,7 +1,6 @@
 import { useEffect } from "react"
 import styled from "styled-components"
 import { motion } from "framer-motion"
-import { browseTransition } from "utils/pageTransitions"
 import media from "styles/media"
 import Projects from "data/projects"
 import Link from "components/links/Link"
@@ -77,7 +76,7 @@ const Browse = ({ fontsLoaded }: FontsLoadedProps) => {
   }, [])
 
   return (
-    <Section key="Browse" {...browseTransition} onAnimationComplete={() => window.scrollTo(0, 0)}>
+    <Section>
       <Header className={fontsLoaded ? "" : "hidden"}>Recent work</Header>
       <Container>
         {Object.values(Projects).map(link => link.to ? (

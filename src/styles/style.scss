@@ -3,7 +3,6 @@
 
 html {
   box-sizing: border-box;
-  overflow-y: scroll;
 }
 *, *:before, *:after {
   box-sizing: inherit;
@@ -98,7 +97,6 @@ body {
 
   #root {
     width: 100%;
-    overflow: hidden;
   }
 }
 

@@ -6,8 +6,7 @@ import LogoImage from "media/logo.svg"
 import media from "styles/media"
 import { spinAnimation } from "styles/keyframes"
 import { useEffect, useState } from "react"
-import { browseTransition } from "utils/pageTransitions"
-import { GitHub, HackerRank, LinkedIn } from "./common/Social"
+import { mainTransition } from "utils/pageTransitions"
 
 const HeaderSection = styled.section`
   position: relative;
@@ -16,31 +15,15 @@ const HeaderSection = styled.section`
   display: flex;
   flex-direction: column;
   align-items: center;
-  flex-wrap: wrap;
-  background-color: var(--background-light);
   transition: opacity 300ms var(--easeInOutBack), transform 300ms var(--easeInOutBack);
 
-  h1 {      
-    font-size: 10rem;
-  }
-
-  h2{
-    font-size: 1.75rem;
-  }
-  
-  &.fixed {
-    position: fixed;
-  }
+  h1 { font-size: 10rem; }
+  h2{ font-size: 1.75rem; }  
+  &.fixed { position: fixed; }
   &.to-background {
-    opacity: 0.5;
-    
-    i {
-      transform: translateY(24px) scale(0.85);
-    }
-
-    & canvas {
-      transform: scale(0.9);
-    }
+    opacity: 0.5;    
+    i { transform: translateY(24px) scale(0.85); }
+    & canvas { transform: scale(0.9); }
   }
   
   @media only screen and (max-width: ${media.large}) {
@@ -83,18 +66,16 @@ const TitleContainer = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-  background-color: var(--background-light-opacity);
-  background: linear-gradient(to right, transparent 0%, var(--background-light-opacity) 20%, var(--background-light-opacity) 80%, transparent 100%);
+  justify-content: center;
   z-index: 1;
-  height: 100%;
   flex: 1;
-  padding-top: 5rem;
+  background: radial-gradient(75% 60%, var(--background-light) 0%, var(--background-light) 33%, transparent 66%);
 `
 
 const Title = styled.h1`
   position: relative;
   color: var(--cta) !important;
-  transition: all 400ms var(--easeOutBack);
+  transition: all 300ms var(--easeOutBack) 100ms;
   transform: none;
   opacity: 1;
   
@@ -123,28 +104,6 @@ const Subtitle = styled.h2`
   }
 `
 
-const SocialContainer = styled.div`
-  display: flex;
-  margin: 0.5rem 0;
-  & > a {
-    margin: 0 .5rem;
-  }
-  
-  transition: all 400ms  100ms var(--easeOutBack);
-  transform: none;
-  opacity: 1;
-  
-  &.project {
-    transition: all 400ms var(--easeInOutBack);
-    transform: translateY(-60px) scale(0.9); 
-    opacity: 0;
-  }
-  &.hidden {
-    transform: translateY(30px); 
-    opacity: 0;
-  }
-`
-
 const Header = ({ fontsLoaded }: FontsLoadedProps) => {
   const location = useLocation()
   const viewingProject = location.pathname.length > 1
@@ -152,7 +111,7 @@ const Header = ({ fontsLoaded }: FontsLoadedProps) => {
 
   useEffect(() => {
     if (viewingProject)
-      setTimeout(() => setFixed(true), browseTransition.transition.duration * 1000)
+      setTimeout(() => setFixed(true), mainTransition.transition.duration * 1000)
     else setFixed(false)
   }, [viewingProject])
 
@@ -166,11 +125,6 @@ const Header = ({ fontsLoaded }: FontsLoadedProps) => {
           Fralle
         </Title>
         <Subtitle className={transitionClasses}>Software developer & sassy home cook</Subtitle>
-        <SocialContainer className={transitionClasses}>
-          <LinkedIn />
-          <GitHub />
-          <HackerRank />
-        </SocialContainer>
       </TitleContainer>
     </HeaderSection>
   )

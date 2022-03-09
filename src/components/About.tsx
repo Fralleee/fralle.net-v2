@@ -1,6 +1,5 @@
 import styled from "styled-components"
 import { motion } from "framer-motion"
-import { browseTransition } from "utils/pageTransitions"
 import media from "styles/media"
 import Button from "components/common/Button"
 import { FaDownload } from "react-icons/fa"
@@ -70,7 +69,7 @@ const Summary = styled.div`
 const About = ({ fontsLoaded }: FontsLoadedProps) => {
 
   return (
-    <Section id="about" key="About" {...browseTransition} onAnimationComplete={() => window.scrollTo(0, 0)}>
+    <Section>
       <Header className={fontsLoaded ? "" : "hidden"}>About</Header>
       <Zoom>
         <Image alt="Roland Chelwing" src={Profile} />

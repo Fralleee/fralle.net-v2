@@ -11,6 +11,15 @@ import ProjectHeader from "./ProjectHeader"
 import ProjectContent from "./ProjectContent"
 
 // #region styled
+const Section = styled.section`
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height:  100%;
+  overflow-y: scroll;
+`
+
 const Container = styled.div`
   position: absolute;
   width: 100%;
@@ -69,7 +78,7 @@ const ProjectComponent: FC = () => {
   }, [projectId])
 
   return project === null ? null : (
-    <>
+    <Section>
       <motion.div key="Overlay" {...overlayTransition}>
         <Overlay to="/" />
       </motion.div>
@@ -80,7 +89,7 @@ const ProjectComponent: FC = () => {
           <ProjectContent project={project} />
         </Component>
       </Container>
-    </>
+    </Section>
   )
 }
 
