@@ -18,6 +18,14 @@ const Wrapper = styled.div`
   flex-direction: column;
   justify-content: center;
   padding: 3rem 5rem;
+  transition: all 400ms var(--easeOutBack);
+  transform: none;
+  opacity: 1;
+  
+  &.hidden {
+    transform: translateY(30px); 
+    opacity: 0;
+  }
 
   h1 {
     font-size: 2.5rem;
@@ -43,7 +51,7 @@ const SocialContainer = styled.div`
 const Intro = ({ fontsLoaded }: FontsLoadedProps) => {
   return (
     <Section>
-      <Wrapper>
+      <Wrapper className={fontsLoaded ? "" : "hidden"}>
         <h1>Hey there! 👋</h1>
         <p>I am Roland Chelwing-Grzybowski, A software engineer based in Skövde, Sweden.</p>
         <p>When I'm not writing code for work, I grind away on passions projects primarily related to front-end development or game development.</p>
