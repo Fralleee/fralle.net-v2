@@ -1,8 +1,8 @@
-import Browse from "components/links/Browse"
 import { motion } from "framer-motion"
 import { mainTransition } from "utils/pageTransitions"
-import About from "./About"
-import Intro from "./Intro"
+import About from "components/About"
+import Intro from "components/Intro"
+import Browse from "components/links/Browse"
 
 const Main = ({ fontsLoaded }: { fontsLoaded: boolean }) => {
   return (
