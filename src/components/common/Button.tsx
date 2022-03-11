@@ -14,20 +14,22 @@ const ButtonComponent = styled.a`
   background-color: var(--cta);
   border: 2px solid transparent;
   color: white;   
-  border-radius: 8px;
+  border-radius: var(--radius-md);
   transition: all 200ms ease-out;
   
-  &:hover, &:focus {
-    color: var(--cta);   
-    border-color: var(--cta);
-    background-color: white;
+  @media (hover: hover) and (pointer: fine) {
+    &:hover, &:focus {
+      color: var(--cta);   
+      border-color: var(--cta);
+      background-color: white;
+    }
   }
   
   &:before{
     display: none !important;
   }
 
-  @media only screen and (max-width: ${media.large}) {
+  @media only screen and (max-width: ${media.large}) and (hover: hover) and (pointer: fine) {
     &:hover, &:focus {
       color: var(--cta);   
       background-color: white;

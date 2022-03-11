@@ -23,8 +23,10 @@ const Link = styled.a`
     height: auto;
   }  
 
-  &:hover {
-    transform: scale(1.15);
+  @media (hover: hover) and (pointer: fine) {
+    &:hover {
+      transform: scale(1.15);
+    }
   }
 `
 

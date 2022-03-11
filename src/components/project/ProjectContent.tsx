@@ -52,7 +52,7 @@ const Links = styled.div`
 `
 
 const NoLinks = styled.div`
-  border-radius: 16px;
+border-radius: var(--radius-lg);
   width: 100%;
   padding: 2rem;
   text-align: center;

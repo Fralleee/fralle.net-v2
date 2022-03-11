@@ -8,8 +8,10 @@ const Anchor = styled.a`
   color: var(--cta);
   display: inline-block;
 
-  &:hover, &:active {
-    color: var(--cta-light);
+  @media (hover: hover) and (pointer: fine) {
+    &:hover, &:active {
+      color: var(--cta-light);
+    }
   }
 
   &:before{

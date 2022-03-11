@@ -40,7 +40,7 @@ const Component = styled(motion.div)`
   width: 100%;
   max-width: ${media.large}; 
   flex: 1;
-  border-radius: 8px 8px 0 0;
+  border-radius: var(--radius-top);
   display: flex;
   flex-direction: column;
   z-index: 1;

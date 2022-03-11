@@ -13,7 +13,7 @@ const Section = styled(motion.section)`
   width: 100%;
   margin: 0 auto;
   margin-top: 40px;
-  border-radius: 48px;
+  border-radius: var(--radius-xl);
   padding: 5rem 0;
   
   display: flex;

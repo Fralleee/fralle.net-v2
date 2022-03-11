@@ -13,7 +13,7 @@ const LinkComponent = styled(RouterLink)`
   align-items: center;
   font-size: 1.25rem;
   z-index: 1;
-  border-radius: 8px;
+  border-radius: var(--radius-md);
   box-shadow: 0 0 0 5px var(--background-light);
   transition: transform 300ms var(--easeOutBack);
   
@@ -21,7 +21,7 @@ const LinkComponent = styled(RouterLink)`
     display: none !important;
   }
 
-  @media only screen and (min-width: ${media.medium}) {
+  @media only screen and (min-width: ${media.medium}) and (hover: hover) and (pointer: fine) {
     &:hover {
       transform: scale(1.05);
       transition: transform 200ms var(--easeOutBack);
@@ -42,7 +42,7 @@ const LinkComponent = styled(RouterLink)`
 
 const BackgroundImage = styled.img`
   width: 100%;
-  border-radius: 8px;
+  border-radius: var(--radius-md);
 `
 const ForegroundImage = styled.img`
   position: absolute;

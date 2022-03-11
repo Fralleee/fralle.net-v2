@@ -75,7 +75,7 @@ const TitleContainer = styled.div`
 const Title = styled.h1`
   position: relative;
   color: var(--cta) !important;
-  transition: all 300ms var(--easeOutBack) 100ms;
+  transition: all 400ms var(--easeOutBack) 100ms;
   transform: none;
   opacity: 1;
   

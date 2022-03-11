@@ -20,11 +20,13 @@ const Link = styled.a`
     height: auto;
   }  
 
-  &:hover {
-    transform: scale(1.15);
-    &.linkedin { color: #2867B2; }
-    &.github { color: #333; }
-    &.hackerrank { color: #2DB95C; }
+  @media (hover: hover) and (pointer: fine) {
+    &:hover {
+      transform: scale(1.15);
+      &.linkedin { color: #2867B2; }
+      &.github { color: #333; }
+      &.hackerrank { color: #2DB95C; }
+    }
   }
 `
 

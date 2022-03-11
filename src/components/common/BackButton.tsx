@@ -24,11 +24,13 @@ const Button = styled(Link)`
     transition: transform 200ms var(--easeOutBack);
   }
 
-  &:hover {
-    background: radial-gradient(circle at center, white 1.5rem, transparent 1.6rem);
-    color: var(--cta);
-    svg {
-      transform: rotate(-90deg);
+  @media (hover: hover) and (pointer: fine) {
+    &:hover {
+      background: radial-gradient(circle at center, white 1.5rem, transparent 1.6rem);
+      color: var(--cta);
+      svg {
+        transform: rotate(-90deg);
+      }
     }
   }
   

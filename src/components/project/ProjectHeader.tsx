@@ -11,7 +11,7 @@ const Header = styled.section`
   position: relative;
   width: 100%;
   min-height: 500px;
-  border-radius: 8px 8px 0 0;
+  border-radius: var(--radius-top);
   clip-path: polygon(100% 0%, 100% 90%, 0% 100%, 0% 0%);
 
   @media only screen and (max-width: ${media.large}) {
@@ -36,6 +36,7 @@ const Background = styled.img`
   top: 0;
   height: 100%;
   width: 100%;
+  border-radius: var(--radius-top);
   
   @media only screen and (max-width: ${media.large}) {
     width: ${media.large};
@@ -111,7 +112,7 @@ const Technologies = styled.div`
   justify-content: center;
   align-items: center;
   background: var(--background-light);
-  border-radius: 4px;
+  border-radius: var(--radius-sm);
   opacity: 0; 
   transform: translateY(30px);
   animation: ${popUpTransform} 300ms 250ms var(--easeOutBack) forwards;  
