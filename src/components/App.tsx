@@ -22,7 +22,10 @@ const App = () => {
     if (viewingProject) {
       document.body.classList.add("fixed")
     }
-    else document.body.classList.remove("fixed")
+    else {
+      document.body.classList.remove("fixed")
+      document.title = "Fralle"
+    }
   }, [viewingProject])
 
   useEffect(() => WebFont.load({ google: { families: ["Roboto:400,700", "Kanit:700", "Montserrat:100"] }, active: () => setFontsLoaded(true) }), [])
