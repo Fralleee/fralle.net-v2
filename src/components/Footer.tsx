@@ -43,9 +43,7 @@ const Left = styled.div`
   min-height: 220px;
   
   @media only screen and (max-width: ${media.medium}) {
-    order: 1;
-    margin-top: 1rem;
-    text-align: center;
+    display: none;
   }
 `
 
