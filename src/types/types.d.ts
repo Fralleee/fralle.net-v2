@@ -14,8 +14,9 @@ type Project = {
   content: JSX.Element
 }
 
-type FontsLoadedProps = {
+type DefaultAnimationProps = {
   fontsLoaded: boolean
+  viewingProject?: boolean
 }
 
 type ImageTypes = {

@@ -21,7 +21,7 @@ import Anchor from "components/common/Anchor"
 const projects: ProjectMap = {
   cooking: {
     title: "Cooking with Fralle",
-    to: "cooking",
+    to: "project/cooking",
     logo: CWFTitle,
     background: CWFBg,
     foreground: CWFFg,
@@ -39,7 +39,7 @@ const projects: ProjectMap = {
   },
   pizzeria: {
     title: "Pizzeria",
-    to: "pizzeria",
+    to: "project/pizzeria",
     logo: PizzeriaTitle,
     background: PizzeriaBg,
     foreground: PizzeriaFg,
@@ -56,7 +56,7 @@ const projects: ProjectMap = {
   },
   pingtap: {
     title: "Pingtap",
-    to: "pingtap",
+    to: "project/pingtap",
     logo: PingtapTitle,
     background: PingtapBg,
     foreground: PingtapFg,

@@ -1,13 +1,12 @@
 import { useEffect } from "react"
 import styled from "styled-components"
-import { motion } from "framer-motion"
 import media from "styles/media"
 import Projects from "data/projects"
 import Link from "components/links/Link"
 import { popAnimation } from "styles/keyframes"
 
 // #region styled
-const Section = styled(motion.section)`
+const Section = styled.section`
   position: relative;
   max-width: ${media.large};
   width: 100%;
@@ -69,7 +68,7 @@ const Header = styled.h1`
 `
 // #endregion
 
-const Browse = ({ fontsLoaded }: FontsLoadedProps) => {
+const Browse = ({ fontsLoaded }: DefaultAnimationProps) => {
 
   useEffect(() => {
     document.title = "Fralle"

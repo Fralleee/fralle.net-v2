@@ -1,7 +1,5 @@
 import { FC, useEffect, useState } from "react"
 import styled from "styled-components"
-import { motion } from "framer-motion"
-import { overlayTransition, projectTransition } from "utils/pageTransitions"
 import BackButton from "components/common/BackButton"
 import media from "styles/media"
 import { Link } from "react-router-dom"
@@ -18,23 +16,47 @@ const Section = styled.section`
   width: 100%;
   height:  100%;
   overflow-y: scroll;
+  z-index: 100;
+
+  &.route-exit { overflow: hidden; }
+
+  
+  &.route-enter, &.route-exit.route-exit-active {
+    .overlay {
+      opacity: 0;
+    }
+    .container {
+      opacity: 0;
+      transform: translateY(50px);
+      z-index: 1;
+    }
+  } 
+  &.route-enter.route-enter-active, &.route-exit {
+    .overlay {
+      opacity: 1;
+    }
+    .container {
+      opacity: 1;
+      transform: none;
+    }
+  }
 `
 
 const Container = styled.div`
   position: absolute;
   width: 100%;
-  height: 100%;
+  min-height: 100%;
   z-index: 1;
   display: flex;
   justify-content: center;
-  margin-top: 110px;
   pointer-events: none;
 
   @media only screen and (max-width: ${media.large}) {
     margin-top: 0;
   }
 `
-const Component = styled(motion.div)`
+const Component = styled.div`
+  margin-top: 110px;
   position: relative;
   background: var(--background-light);
   width: 100%;
@@ -45,8 +67,10 @@ const Component = styled(motion.div)`
   flex-direction: column;
   z-index: 1;
   pointer-events: all;
+  transition: all 300ms var(--easeOutBack) 100ms;
 
   @media only screen and (max-width: ${media.large}) {
+    margin-top: 0;
     border-radius: 0;
     box-shadow: none;
   }
@@ -59,6 +83,7 @@ const Overlay = styled(Link)`
   right: 0;
   bottom: 0;
   background-color: var(--shadow);
+  transition: all 300ms ease-out 100ms;
 
   @media only screen and (max-width: ${media.large}) {
     display: none;
@@ -74,16 +99,15 @@ const ProjectComponent: FC = () => {
   useEffect(() => {
     const foundProject = getProject(projectId)
     setProject(foundProject)
+
     document.title = `${foundProject.title} - Fralle`
   }, [projectId])
 
-  return project === null ? null : (
+  return project === null ? <Section /> : (
     <Section>
-      <motion.div key="Overlay" {...overlayTransition}>
-        <Overlay to="/" />
-      </motion.div>
-      <Container>
-        <Component key="Project" {...projectTransition} onAnimationComplete={() => window.scrollTo(0, 0)}>
+      <Overlay to="/" className="overlay" />
+      <Container >
+        <Component className="container">
           <BackButton />
           <ProjectHeader project={project} />
           <ProjectContent project={project} />

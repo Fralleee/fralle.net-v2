@@ -1,14 +1,10 @@
 import styled from "styled-components"
-import { motion } from "framer-motion"
 import media from "styles/media"
 import { GitHub, HackerRank, LinkedIn } from "components/common/Social"
 
 // #region styled
-const Section = styled(motion.section)`
-  width: 100%; 
-  transition: all 400ms var(--easeOutBack);
-  transform: none;
-  opacity: 1; 
+const Section = styled.section`
+  width: 100%;
 `
 
 const Wrapper = styled.div`
@@ -48,7 +44,7 @@ const SocialContainer = styled.div`
 `
 // #endregion
 
-const Intro = ({ fontsLoaded }: FontsLoadedProps) => {
+const Intro = ({ fontsLoaded }: DefaultAnimationProps) => {
   return (
     <Section>
       <Wrapper className={fontsLoaded ? "" : "hidden"}>

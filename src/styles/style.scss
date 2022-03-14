@@ -25,6 +25,15 @@ body {
   box-sizing: border-box;
   background-color: var(--background-light);
 
+  &.fixed { 
+    position: absolute; 
+    overflow: hidden;
+    padding-right: 1rem; // simulate scroll padding    
+    @media only screen and (max-width: 1140px) {
+      padding-right: 0;
+    }
+  }
+
   a {
     position: relative;
     text-decoration: none;

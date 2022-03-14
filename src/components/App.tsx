@@ -1,13 +1,11 @@
-import { Routes, Route, useLocation } from "react-router-dom"
 import Header from "components/Header"
 import Footer from "components/Footer"
 import Main from "components/Main"
-import Project from "components/project/Project"
 import styled from "styled-components"
-import { AnimatePresence } from "framer-motion"
 import { useEffect, useState } from "react"
 import WebFont from "webfontloader"
-import DeveloperMessage from "utils/message"
+import AnimatedRoutes from "./AnimatedRoutes"
+import { useLocation } from "react-router-dom"
 
 const Container = styled.div`
   display: flex;
@@ -16,28 +14,24 @@ const Container = styled.div`
 `
 
 const App = () => {
-  const location = useLocation()
   const [fontsLoaded, setFontsLoaded] = useState(false)
+  const location = useLocation()
+  const viewingProject = location.pathname.includes("/project/")
 
   useEffect(() => {
-    DeveloperMessage()
-    WebFont.load({
-      google: {
-        families: ["Roboto:400,700", "Kanit:700", "Montserrat:100"]
-      },
-      active: () => setFontsLoaded(true)
-    })
-  }, [])
+    if (viewingProject) {
+      document.body.classList.add("fixed")
+    }
+    else document.body.classList.remove("fixed")
+  }, [viewingProject])
+
+  useEffect(() => WebFont.load({ google: { families: ["Roboto:400,700", "Kanit:700", "Montserrat:100"] }, active: () => setFontsLoaded(true) }), [])
 
   return (
     <Container>
-      <Header fontsLoaded={fontsLoaded} />
-      <AnimatePresence exitBeforeEnter initial={false}>
-        <Routes location={location} key={location.pathname}>
-          <Route path="/" element={<Main fontsLoaded={fontsLoaded} />} />
-          <Route path="/:projectId" element={<Project />} />
-        </Routes>
-      </AnimatePresence>
+      <Header fontsLoaded={fontsLoaded} viewingProject={viewingProject} />
+      <Main fontsLoaded={fontsLoaded} viewingProject={viewingProject} />
+      <AnimatedRoutes />
       <Footer />
     </Container>
   )

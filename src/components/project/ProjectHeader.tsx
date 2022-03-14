@@ -42,6 +42,7 @@ const Background = styled.img`
     width: ${media.large};
     left: 50%;
     transform: translateX(-50%);
+    border-radius: 0;
   }
   @media only screen and (max-width: ${media.medium}) {
     width: ${media.medium};

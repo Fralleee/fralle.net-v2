@@ -25,7 +25,7 @@ const FooterSection = styled.section`
 
 const Footer = () => {
   const location = useLocation()
-  const viewingProject = location.pathname.length > 1
+  const viewingProject = location.pathname.includes("/project/")
   return (
     <FooterSection className={viewingProject ? "hidden" : ""}>
       <p>Copyright &copy; {new Date().getFullYear()} Fralle.net All Rights Reserved</p>

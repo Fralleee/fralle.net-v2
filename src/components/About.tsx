@@ -1,5 +1,4 @@
 import styled from "styled-components"
-import { motion } from "framer-motion"
 import media from "styles/media"
 import Button from "components/common/Button"
 import { FaDownload } from "react-icons/fa"
@@ -8,7 +7,7 @@ import Zoom from "react-medium-image-zoom"
 import CV from "files/CV.pdf"
 
 // #region styled
-const Section = styled(motion.section)`
+const Section = styled.section`
   position: relative;
   width: 100%;
   margin: 0 auto;
@@ -66,7 +65,7 @@ const Summary = styled.div`
 `
 // #endregion
 
-const About = ({ fontsLoaded }: FontsLoadedProps) => {
+const About = ({ fontsLoaded }: DefaultAnimationProps) => {
 
   return (
     <Section>
