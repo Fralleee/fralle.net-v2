@@ -4,7 +4,6 @@ import Project from "components/project/Project"
 
 const AnimatedRoutes = () => {
   const location = useLocation()
-
   return (
     <TransitionGroup>
       <CSSTransition key={location.key} timeout={400} classNames="route">

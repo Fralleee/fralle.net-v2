@@ -9,7 +9,7 @@ import ProjectHeader from "./ProjectHeader"
 import ProjectContent from "./ProjectContent"
 
 // #region styled
-const Section = styled.section`
+const Section = styled.main`
   position: fixed;
   top: 0;
   left: 0;

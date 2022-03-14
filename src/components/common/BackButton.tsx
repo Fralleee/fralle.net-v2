@@ -11,7 +11,7 @@ const Button = styled(Link)`
   right: 0;
   top: 0;
   font-size: 4rem;
-  color: var(--color);
+  color: var(--background-light);
   transition: color 200ms ease-out;
   user-select: none;
   z-index: 10;  
@@ -37,6 +37,8 @@ const Button = styled(Link)`
   @media only screen and (max-width: ${media.large}) {
     #backbutton-back { display: block; }
     #backbutton-close { display: none; }
+    color: var(--cta);
+    background: radial-gradient(circle, var(--background-light) 40%, transparent);
     position: fixed;
     left: auto;
     top: auto;
