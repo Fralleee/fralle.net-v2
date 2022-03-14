@@ -6,7 +6,7 @@ const particleSpawnRate = 50
 const minParticleSize = 4
 const maxParticleSize = 12
 const particleSpeedFactor = .4
-const colorArray = ["#042e27", "#364966", "#dc3d4b", "#fa4454"]
+const colorArray = ["#042e27", "#364966", "#cc3d4b", "#ea4454"]
 
 const FloatingParticles = () => {
   const canvas = document.getElementById("canvas") as HTMLCanvasElement
