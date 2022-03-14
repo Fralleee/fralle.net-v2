@@ -28,19 +28,40 @@ export const popAnimation = keyframes`
 export const popUpTransform = keyframes`
   from { 
     opacity: 0; 
-    transform: translateY(30px);
+    transform: scale(0.5) translateY(30px);
   }
   to { 
     opacity: 1; 
-    transform: translateY(0);
+    transform: none;
   }
 `
 
-export const upAndDownLoop = keyframes`
+export const rotateIn = keyframes`
   from {
-    transform: translateY(-3px);
+    opacity: 0;
+    transform: rotate(12deg) translateY(50px);
+  }
+  70% {    
+    transform: rotate(0) translateY(-25px);
   }
   to {
-    transform: translateY(3px);
+    opacity: 1;
+    transform: none;
   }
+`
+
+export const scaleIn = keyframes`
+  from {
+    opacity: 0;
+    transform: scale(0.5);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+`
+
+export const transparency = keyframes`
+  from { opacity: 0; }
+  to { opacity: 1; }
 `

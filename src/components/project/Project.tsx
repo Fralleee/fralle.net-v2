@@ -18,13 +18,9 @@ const Section = styled.main`
   overflow-y: scroll;
   z-index: 100;
 
-  &.route-exit { overflow: hidden; }
-
-  
+  &.route-exit { overflow: hidden; }  
   &.route-enter, &.route-exit.route-exit-active {
-    .overlay {
-      opacity: 0;
-    }
+    .overlay { opacity: 0; }
     .container {
       opacity: 0;
       transform: translateY(50px);
@@ -32,9 +28,7 @@ const Section = styled.main`
     }
   } 
   &.route-enter.route-enter-active, &.route-exit {
-    .overlay {
-      opacity: 1;
-    }
+    .overlay { opacity: 1; }
     .container {
       opacity: 1;
       transform: none;

@@ -3,7 +3,7 @@ import styled from "styled-components"
 import media from "styles/media"
 import Projects from "data/projects"
 import Link from "components/links/Link"
-import { popAnimation } from "styles/keyframes"
+import { transparency } from "styles/keyframes"
 
 // #region styled
 const Section = styled.section`
@@ -21,6 +21,11 @@ const Section = styled.section`
   justify-content: center;
   background-color: var(--background-dark);
   min-height: 600px;
+
+  opacity: 0;
+  &.animate {
+      animation: ${transparency} 800ms var(--easeOutBack) 600ms forwards;  
+  }
   
   @media only screen and (max-width: ${media.large}) {
     border-radius: 0;
@@ -30,31 +35,13 @@ const Section = styled.section`
 const Container = styled.div`
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;
-  
-  & > a {
-    opacity: 0;
-    animation: ${popAnimation} 300ms var(--easeOutBack) forwards;  
-    animation-delay: 300ms;
-    &:nth-child(1) { animation-delay: 75ms; }
-    &:nth-child(2) { animation-delay: 150ms; }
-    &:nth-child(3) { animation-delay: 225ms; }
-  }
-  
+  justify-content: center;  
 `
 
 const Header = styled.h1`
   font-size: 4rem;
   margin-bottom: 1rem;
   margin-top: -1rem;
-  transition: all 400ms var(--easeOutBack);
-  transform: none;
-  opacity: 1;
-  
-  &.hidden {
-    transform: translateY(30px); 
-    opacity: 0;
-  }
   
   @media only screen and (max-width: ${media.large}) {
     font-size: 3.5rem;
@@ -69,14 +56,15 @@ const Header = styled.h1`
 // #endregion
 
 const Browse = ({ fontsLoaded }: DefaultAnimationProps) => {
+  const animate = fontsLoaded ? "animate" : ""
 
   useEffect(() => {
     document.title = "Fralle"
   }, [])
 
   return (
-    <Section>
-      <Header className={fontsLoaded ? "" : "hidden"}>Recent work</Header>
+    <Section className={animate}>
+      <Header>Recent work</Header>
       <Container>
         {Object.values(Projects).map(link => link.to ? (
           <Link key={link.title} title={link.title} to={link.to} titleImage={link.logo} backgroundImage={link.background} foregroundImage={link.foreground} />
