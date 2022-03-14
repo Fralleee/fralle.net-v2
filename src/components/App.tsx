@@ -28,7 +28,14 @@ const App = () => {
     }
   }, [viewingProject])
 
-  useEffect(() => WebFont.load({ google: { families: ["Roboto:400,700", "Kanit:700", "Montserrat:100"] }, active: () => setFontsLoaded(true) }), [])
+  useEffect(() => {
+    WebFont.load({
+      google: {
+        families: ["Roboto:400,700", "Kanit:700", "Montserrat:100"]
+      },
+      active: () => setFontsLoaded(true)
+    })
+  }, [])
 
   return (
     <Container>

@@ -1,4 +1,3 @@
-import { useLocation } from "react-router-dom"
 import styled from "styled-components"
 
 const FooterSection = styled.section`
@@ -10,10 +9,6 @@ const FooterSection = styled.section`
   z-index: -1;
   transition: opacity 200ms 400ms ease-out;
 
-  &.hidden {
-    transition: opacity 200ms ease-out;
-    opacity: 0;
-  }
   p {
     text-align: center;
     opacity: 0.6;
@@ -24,10 +19,8 @@ const FooterSection = styled.section`
 `
 
 const Footer = () => {
-  const location = useLocation()
-  const viewingProject = location.pathname.includes("/project/")
   return (
-    <FooterSection className={viewingProject ? "hidden" : ""}>
+    <FooterSection>
       <p>Copyright &copy; {new Date().getFullYear()} Fralle.net All Rights Reserved</p>
     </FooterSection>
   )
