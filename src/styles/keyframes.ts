@@ -65,3 +65,10 @@ export const transparency = keyframes`
   from { opacity: 0; }
   to { opacity: 1; }
 `
+
+export const animateText = keyframes`
+  from { opacity: 0; }
+  10% { opacity: 1; }
+  90% { opacity: 1; }
+  to { opacity: 0; }
+`

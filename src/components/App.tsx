@@ -1,11 +1,11 @@
+import { useEffect, useState } from "react"
+import { useLocation } from "react-router-dom"
+import WebFont from "webfontloader"
+import styled from "styled-components"
+import AnimatedRoutes from "components/AnimatedRoutes"
 import Header from "components/Header"
 import Footer from "components/Footer"
 import Main from "components/Main"
-import styled from "styled-components"
-import { useEffect, useState } from "react"
-import WebFont from "webfontloader"
-import AnimatedRoutes from "./AnimatedRoutes"
-import { useLocation } from "react-router-dom"
 
 const Container = styled.div`
   display: flex;
@@ -17,6 +17,7 @@ const App = () => {
   const [fontsLoaded, setFontsLoaded] = useState(false)
   const location = useLocation()
   const viewingProject = location.pathname.includes("/project/")
+  const sectionProps = { fontsLoaded, viewingProject }
 
   useEffect(() => {
     if (viewingProject) {
@@ -39,10 +40,10 @@ const App = () => {
 
   return (
     <Container>
-      <Header fontsLoaded={fontsLoaded} viewingProject={viewingProject} />
-      <Main fontsLoaded={fontsLoaded} viewingProject={viewingProject} />
+      <Header {...sectionProps} />
+      <Main {...sectionProps} />
       <AnimatedRoutes />
-      <Footer />
+      <Footer {...sectionProps} />
     </Container>
   )
 }

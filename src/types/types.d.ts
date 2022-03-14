@@ -15,7 +15,7 @@ type Project = {
 }
 
 type DefaultAnimationProps = {
-  fontsLoaded: boolean
+  fontsLoaded?: boolean
   viewingProject?: boolean
 }
 

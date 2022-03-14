@@ -77,8 +77,7 @@ const projects: ProjectMap = {
     technologies: [],
     content: (
       <>
-        <p>Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet</p>
-        <p>Consectetur, adipisci velit, sed quia non <Anchor href="/" >numquam</Anchor> eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem.</p>
+        <p>Probably copy-pasted the wrong link?</p>
       </>
     )
   }

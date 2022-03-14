@@ -35,11 +35,6 @@ const Header = styled.h1`
   transform: none;
   opacity: 1;
   
-  &.hidden {
-    transform: translateY(30px); 
-    opacity: 0;
-  }
-  
   @media only screen and (max-width: ${media.large}) {
     font-size: 3.5rem;
   }
@@ -69,7 +64,7 @@ const About = ({ fontsLoaded }: DefaultAnimationProps) => {
 
   return (
     <Section>
-      <Header className={fontsLoaded ? "" : "hidden"}>About</Header>
+      <Header>About</Header>
       <Zoom>
         <Image alt="Roland Chelwing" src={Profile} />
       </Zoom>
