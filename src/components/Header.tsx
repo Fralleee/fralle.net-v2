@@ -15,7 +15,14 @@ const Section = styled.section`
   transition: all 400ms var(--easeInOutBack);
 
   h1 { font-size: 10rem; }
-  h2{ font-size: 1.75rem; }  
+  h2 { 
+    font-size: 2rem; 
+    strong { 
+      font-family: "Arial"; 
+      font-weight: normal; 
+    }
+  } 
+
   &.fixed { position: fixed; }
   &.minimized {
     transform: translateY(25px) scale(0.85);
@@ -24,15 +31,26 @@ const Section = styled.section`
   
   @media only screen and (max-width: ${media.large}) {
     min-height: 380px;
-    h1 { font-size: 7rem; }
-    h2{ font-size: 1.5rem; }
+    h1 { font-size: 8.5rem; }
+    h2 { 
+      font-size: 1.75rem; 
+    }
   }
   @media only screen and (max-width: ${media.medium}) {
-    h1 { font-size: 5rem; }
-    h2{ font-size: 1.25rem; }
+    h1 { font-size: 7rem; }
+    h2 { 
+      text-align: center;
+      strong { 
+        display: block; 
+        line-height: 0.1;
+        background: var(--cta);
+      }
+      span { display: block; }
+    }
   }
   @media only screen and (max-width: ${media.small}) {
-    h2{ font-size: 0.9rem; }
+    h1 { font-size: 5.5rem; }
+    h2 { font-size: 1.5rem; }
   }
 `
 
@@ -96,7 +114,7 @@ const Header = ({ fontsLoaded, viewingProject }: DefaultAnimationProps) => {
           Fralle
         </Title>
         <Subtitle>
-          Software developer & sassy home cook</Subtitle>
+          Software developer <span><strong>&</strong> sassy home cook</span></Subtitle>
       </TitleContainer>
     </Section>
   )
