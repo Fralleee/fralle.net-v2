@@ -40,6 +40,9 @@ const Section = styled.section`
       transform: none;
     }
   }
+  &.route-exit .container {    
+    transition: all 400ms var(--easeOutBack);
+  }
 `
 
 const Container = styled.div`
@@ -67,7 +70,7 @@ const Component = styled.div`
   flex-direction: column;
   z-index: 1;
   pointer-events: all;
-  transition: all 300ms var(--easeOutBack) 100ms;
+  transition: all 300ms var(--easeOutBack) 150ms;
 
   @media only screen and (max-width: ${media.large}) {
     margin-top: 0;
@@ -83,7 +86,7 @@ const Overlay = styled(Link)`
   right: 0;
   bottom: 0;
   background-color: var(--shadow);
-  transition: all 300ms ease-out 100ms;
+  transition: all 300ms ease-out;
 
   @media only screen and (max-width: ${media.large}) {
     display: none;
