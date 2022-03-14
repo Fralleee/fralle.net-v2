@@ -7,7 +7,7 @@ const AnimatedRoutes = () => {
 
   return (
     <TransitionGroup>
-      <CSSTransition key={location.key} timeout={500} classNames="route">
+      <CSSTransition key={location.key} timeout={400} classNames="route">
         <Routes location={location}>
           <Route path="/" element={<section />} />
           <Route path="/project/:projectId" element={<Project />} />
