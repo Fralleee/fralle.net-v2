@@ -105,7 +105,7 @@ const Header = ({ fontsLoaded, viewingProject }: DefaultAnimationProps) => {
       <TitleContainer>
         <Title className={animate}>
           <Logo className={animate} />
-          Fralle
+          Bajs
         </Title>
         <Subtitle className={animate}>
           Software developer <span><strong>&</strong> sassy home cook</span></Subtitle>
