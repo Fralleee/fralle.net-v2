@@ -16,7 +16,7 @@ const Container = styled.div`
 const App = () => {
   const [fontsLoaded, setFontsLoaded] = useState(false)
   const location = useLocation()
-  const viewingProject = location.pathname.includes("/project/")
+  const viewingProject = location.pathname.length > 1
   const sectionProps = { fontsLoaded, viewingProject }
 
   useEffect(() => {
