@@ -36,7 +36,7 @@ const FloatingParticles = () => {
     setupSize()
     particleCount = 0
     particles = []
-    timebetweenSpawn = 0
+    timebetweenSpawn = particleSpawnRate
   }
 
   function createParticle() {

@@ -88,7 +88,9 @@ const quotes = [
   { author: "Elon Musk", quote: "I always strive for perfection, excellence and supremacy. Roland is an obvious example of someone who has achieved all of this." },
   { author: "Ophrah Winfrey", quote: "I never had the pleasure of having him as a guest, but he's touched my heart in more ways than one." },
   { author: "Steve Wozniak", quote: "If I one day in the near future, achieve only half of what Roland has done for the world. I will die a happy man." },
-  { author: "Robert C. Martin", quote: "You want to see something SOLID? Check out this mans GitHub repository. My god!" }
+  { author: "Robert C. Martin", quote: "You want to see something SOLID? Check out this mans GitHub repository. My god!" },
+  { author: "Ryan Reynolds", quote: "I may not be perfect, but Roland is." },
+  { author: "Barack Obama", quote: "My man." }
 ]
 
 const Footer = ({ fontsLoaded, viewingProject }: DefaultAnimationProps) => {
