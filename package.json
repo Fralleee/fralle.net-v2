@@ -31,9 +31,8 @@
   },
   "scripts": {
     "start": "react-scripts start",
-    "build": "react-scripts build && yarn copy-cname && yarn copy-redirects",
+    "build": "react-scripts build && yarn copy-redirects",
     "eject": "react-scripts eject",
-    "copy-cname": "cp CNAME ./build || copy \"CNAME\" \"build\"",
     "copy-redirects": "cp _redirects ./build || copy \"_redirects\" \"build\"",
     "predeploy": "yarn build",
     "deploy": "gh-pages -d build"
