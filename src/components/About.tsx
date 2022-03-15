@@ -11,7 +11,6 @@ const Section = styled.section`
   position: relative;
   width: 100%;
   margin: 0 auto;
-  margin-top: 100px;
   padding: 5rem 2rem;
   
   max-width: ${media.large};
