@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react"
 import { useLocation } from "react-router-dom"
-import ReactGA from "react-ga"
+import ReactGA from "react-ga4"
 import WebFont from "webfontloader"
 import styled from "styled-components"
 import AnimatedRoutes from "components/AnimatedRoutes"
@@ -23,8 +23,8 @@ const App = () => {
   useEffect(() => ReactGA.initialize("G-3ES5YB2HGY"), [])
 
   useEffect(() => {
-    ReactGA.pageview(window.location.pathname)
-  }, [location.key])
+    ReactGA.send({ hitType: "pageview", page: location.pathname })
+  }, [location])
 
   useEffect(() => {
     if (viewingProject) {
