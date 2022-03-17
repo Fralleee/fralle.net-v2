@@ -30,6 +30,8 @@ const Section = styled.section`
 
   @media only screen and (max-width: ${media.large}) {
     border-radius: 0;
+    box-shadow: none;
+    padding: 4rem 0;
   }
 `
 

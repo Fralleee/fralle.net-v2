@@ -12,6 +12,7 @@ const Section = styled.section`
   padding: 2rem 0 1rem 0;
   background-color: var(--cta);
   color: var(--background-light);
+  box-shadow: 1rem 1rem var(--background-dark);
   transition: all 400ms var(--easeInOutBack);
 
   &.minimized {
