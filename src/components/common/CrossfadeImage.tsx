@@ -4,11 +4,15 @@ import styled from "styled-components"
 
 const FadeImage = styled.img`
   @keyframes imageSwap {
-    from { opacity:1; }
-    to { opacity:0; }
+    from {
+      opacity: 1;
+    }
+    to {
+      opacity: 0;
+    }
   }
 
-  animation: imageSwap 600ms ease-in-out forwards;  
+  animation: imageSwap 600ms ease-in-out forwards;
 `
 
 type PropTypes = {
@@ -27,14 +31,12 @@ const CrossfadeImage = ({ className, src, alt }: PropTypes) => {
     }
   }, [src, topSrc])
 
-
   return (
     <>
       <img key={topSrc} className={className} src={topSrc} alt={alt} />
       {bottomSrc && <FadeImage key={bottomSrc} className={className} src={bottomSrc} alt={alt} />}
     </>
   )
-
 }
 
 export default CrossfadeImage

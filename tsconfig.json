@@ -3,11 +3,7 @@
     "baseUrl": "src",
     "jsx": "react-jsx",
     "target": "es5",
-    "lib": [
-      "dom",
-      "dom.iterable",
-      "esnext"
-    ],
+    "lib": ["dom", "dom.iterable", "esnext"],
     "checkJs": false,
     "allowJs": true,
     "skipLibCheck": true,
@@ -22,7 +18,5 @@
     "isolatedModules": true,
     "noEmit": true
   },
-  "include": [
-    "src"
-  ]
+  "include": ["src"]
 }

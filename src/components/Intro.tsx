@@ -15,7 +15,7 @@ const Wrapper = styled.div`
   flex-direction: column;
   justify-content: center;
   padding: 3rem 5rem;
-  
+
   h1 {
     position: relative;
     opacity: 0;
@@ -28,17 +28,24 @@ const Wrapper = styled.div`
     position: relative;
     opacity: 0;
   }
-  
+
   &.animate {
-    h1, p {
-      animation: ${popAnimation} 300ms var(--easeOutBack) forwards;  
+    h1,
+    p {
+      animation: ${popAnimation} 300ms var(--easeOutBack) forwards;
       animation-delay: 350ms;
-      &:nth-child(1) { animation-delay: 125ms; }
-      &:nth-child(2) { animation-delay: 200ms; }
-      &:nth-child(3) { animation-delay: 275ms; }
+      &:nth-child(1) {
+        animation-delay: 125ms;
+      }
+      &:nth-child(2) {
+        animation-delay: 200ms;
+      }
+      &:nth-child(3) {
+        animation-delay: 275ms;
+      }
     }
   }
-  
+
   @media only screen and (max-width: ${media.small}) {
     padding: 0 1rem;
   }
@@ -49,17 +56,23 @@ const SocialContainer = styled.div`
   justify-content: center;
   margin-top: 2rem;
   & > a {
-    margin: 0 .5rem;
+    margin: 0 0.5rem;
     opacity: 0;
   }
 
   &.animate {
     & > a {
-      animation: ${popAnimation} 300ms var(--easeOutBack) forwards;  
+      animation: ${popAnimation} 300ms var(--easeOutBack) forwards;
       animation-delay: 550ms;
-      &:nth-child(1) { animation-delay: 400ms; }
-      &:nth-child(2) { animation-delay: 450ms; }
-      &:nth-child(3) { animation-delay: 500ms; }
+      &:nth-child(1) {
+        animation-delay: 400ms;
+      }
+      &:nth-child(2) {
+        animation-delay: 450ms;
+      }
+      &:nth-child(3) {
+        animation-delay: 500ms;
+      }
     }
   }
 `
@@ -72,8 +85,14 @@ const Intro = ({ fontsLoaded }: DefaultAnimationProps) => {
       <Wrapper className={animate}>
         <h1>Hey there! 👋</h1>
         <p>I am Roland Chelwing-Grzybowski, A software engineer based in Skövde, Sweden.</p>
-        <p>When I'm not writing code for work, I grind away on passions projects primarily related to front-end development or game development.</p>
-        <p>Have a look at some of my projects and, as usual, the code is available at my GitHub. If you want to get in touch, do so using the links below.</p>
+        <p>
+          When I'm not writing code for work, I grind away on passions projects primarily related to front-end development or game
+          development.
+        </p>
+        <p>
+          Have a look at some of my projects and, as usual, the code is available at my GitHub. If you want to get in touch, do so using the
+          links below.
+        </p>
         <SocialContainer className={animate}>
           <LinkedIn />
           <GitHub />

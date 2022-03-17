@@ -13,7 +13,6 @@ type CanvasProps = {
   render: Function
 }
 const Canvas: FC<CanvasProps> = ({ render }) => {
-
   useEffect(() => render(), [render])
 
   return <CanvasComponent id="canvas"></CanvasComponent>

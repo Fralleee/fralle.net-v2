@@ -16,8 +16,8 @@ const LinkComponent = styled(RouterLink)`
   border-radius: var(--radius-md);
   box-shadow: 0 0 0 5px var(--background-light);
   transition: transform 300ms var(--easeOutBack);
-  
-  &:before{
+
+  &:before {
     display: none !important;
   }
 
@@ -29,7 +29,7 @@ const LinkComponent = styled(RouterLink)`
 
     &:hover {
       .title {
-        transform: scale(1.1); 
+        transform: scale(1.1);
         transition: transform 200ms var(--easeOutBack);
       }
       .foreground {
@@ -46,7 +46,7 @@ const BackgroundImage = styled.img`
 `
 const ForegroundImage = styled.img`
   position: absolute;
-  width: 100%;  
+  width: 100%;
   transition: all 300ms var(--easeOutBack);
   filter: drop-shadow(2px 4px 6px var(--shadow));
 `
@@ -60,7 +60,6 @@ type LinkProps = {
   foregroundImageStyle?: object
 }
 const Link: FC<LinkProps> = ({ title, to, backgroundImage, titleImage, foregroundImage, foregroundImageStyle }) => {
-
   return (
     <LinkComponent to={to} title={title}>
       <BackgroundImage src={backgroundImage} />

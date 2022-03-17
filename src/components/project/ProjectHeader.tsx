@@ -23,7 +23,7 @@ const Header = styled.section`
   @media only screen and (max-width: ${media.small}) {
     min-height: 300px;
   }
-  
+
   @media only screen and (max-height: ${media.medium}) {
     min-height: 450px;
   }
@@ -37,7 +37,7 @@ const Background = styled.img`
   height: 100%;
   width: 100%;
   border-radius: var(--radius-top);
-  
+
   @media only screen and (max-width: ${media.large}) {
     width: ${media.large};
     left: 50%;
@@ -49,7 +49,7 @@ const Background = styled.img`
   }
 `
 
-const Foreground = styled(CrossfadeImage)`      
+const Foreground = styled(CrossfadeImage)`
   position: absolute;
   bottom: 20%;
   right: 10%;
@@ -73,11 +73,11 @@ const Video = styled(VideoPlayer)`
   width: 50%;
   transform: perspective(360px) rotateY(-15deg);
   filter: drop-shadow(4px 8px 8px var(--shadow-dark));
-  
+
   @media only screen and (max-width: ${media.small}) {
     top: 20%;
     min-width: 320px;
-  }  
+  }
 `
 
 const HeaderOverlay = styled.div`
@@ -92,12 +92,12 @@ const Title = styled.img`
   position: absolute;
   bottom: -5%;
   left: 0;
-  width: 100%;  
+  width: 100%;
   max-width: 900px;
   min-width: 420px;
-  opacity: 0; 
+  opacity: 0;
   transform: translateY(30px);
-  animation: ${popUpTransform} 300ms 200ms var(--easeOutBack) forwards;  
+  animation: ${popUpTransform} 300ms 200ms var(--easeOutBack) forwards;
 
   @media only screen and (max-width: ${media.small}) {
     bottom: 0;
@@ -114,10 +114,10 @@ const Technologies = styled.div`
   align-items: center;
   background: var(--background-light);
   border-radius: var(--radius-sm);
-  opacity: 0; 
+  opacity: 0;
   transform: translateY(30px);
-  animation: ${popUpTransform} 300ms 250ms var(--easeOutBack) forwards;  
-  
+  animation: ${popUpTransform} 300ms 250ms var(--easeOutBack) forwards;
+
   @media only screen and (max-width: ${media.large}) {
     bottom: 4rem;
   }
@@ -125,7 +125,7 @@ const Technologies = styled.div`
   @media only screen and (max-width: ${media.medium}) {
     bottom: 3rem;
   }
-  
+
   @media only screen and (max-width: ${media.small}) {
     left: 1rem;
     right: auto;
@@ -156,7 +156,9 @@ const ProjectHeader = ({ project }: ParamTypes) => {
       <Title src={project.logo} />
       {project.technologies.length > 0 && (
         <Technologies>
-          {project.technologies.map((Tech, i) => <Tech key={i} />)}
+          {project.technologies.map((Tech, i) => (
+            <Tech key={i} />
+          ))}
         </Technologies>
       )}
     </Header>

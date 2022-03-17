@@ -31,11 +31,20 @@ const projects: ProjectMap = {
     site: "https://cooking.fralle.net/",
     content: (
       <>
-        <p>Storing my favorite recipes has always been a challenge. From using hidden Facebook groups to use browser bookmarks, nothing was quite up to the challenge.</p>
+        <p>
+          Storing my favorite recipes has always been a challenge. From using hidden Facebook groups to use browser bookmarks, nothing was
+          quite up to the challenge.
+        </p>
         <p>The ultimate solution was creating a self-hosted site with a short URL for easy access.</p>
-        <p>Check out the repo if code interest you, otherwise make yourself a <Anchor href="https://cooking.fralle.net/#/dijon-travolta" title="To recipe">Dijon Travolta</Anchor> for that final splash every Friday deserves.</p>
+        <p>
+          Check out the repo if code interest you, otherwise make yourself a{" "}
+          <Anchor href="https://cooking.fralle.net/#/dijon-travolta" title="To recipe">
+            Dijon Travolta
+          </Anchor>{" "}
+          for that final splash every Friday deserves.
+        </p>
       </>
-    )
+    ),
   },
   pizzeria: {
     title: "Pizzeria",
@@ -52,7 +61,7 @@ const projects: ProjectMap = {
         <p>Originally, a full-stack developer coding challenge from a company I was interviewing for.</p>
         <p>Technologies used in this project were based on the stack the company used and this was made over a period of a week.</p>
       </>
-    )
+    ),
   },
   pingtap: {
     title: "Pingtap",
@@ -64,11 +73,20 @@ const projects: ProjectMap = {
     technologies: [CSharp, Unity],
     content: (
       <>
-        <p>Games have always been my passion, so it hardly comes as a surprise that I, as a programmer, would get involved in game programming.</p>
-        <p>What started as an arena game with a home-made JavaScript game engine strengthened into a multiplayer 3D FPS shooter made in <Anchor href="https://unity.com/" title="To Unity">Unity</Anchor>.</p>
+        <p>
+          Games have always been my passion, so it hardly comes as a surprise that I, as a programmer, would get involved in game
+          programming.
+        </p>
+        <p>
+          What started as an arena game with a home-made JavaScript game engine strengthened into a multiplayer 3D FPS shooter made in{" "}
+          <Anchor href="https://unity.com/" title="To Unity">
+            Unity
+          </Anchor>
+          .
+        </p>
         <p>Still a very early prototype and will probably never be completed, but is one of my ever evolving passion projects.</p>
       </>
-    )
+    ),
   },
   notfound: {
     title: "Not found",
@@ -79,8 +97,8 @@ const projects: ProjectMap = {
       <>
         <p>Probably copy-pasted the wrong link?</p>
       </>
-    )
-  }
+    ),
+  },
 }
 
 export const getProject = (id: string | undefined): Project => {

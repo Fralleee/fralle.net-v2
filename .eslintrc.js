@@ -1,5 +1,5 @@
 module.exports = {
-  extends: ["react-app"],
+  extends: ["react-app", "prettier"],
   rules: {
     semi: [1, "never"],
     quotes: [1, "double"],

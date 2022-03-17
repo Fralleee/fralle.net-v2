@@ -1,7 +1,6 @@
 import Vector from "./Vector"
 
 class Particle {
-
   position: Vector
   direction: Vector
   radius: number

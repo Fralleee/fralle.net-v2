@@ -12,7 +12,7 @@ const AnimatedRoutes = () => {
           <Route path="/:projectId" element={<Project />} />
         </Routes>
       </CSSTransition>
-    </TransitionGroup >
+    </TransitionGroup>
   )
 }
 

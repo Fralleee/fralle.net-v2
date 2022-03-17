@@ -1,5 +1,4 @@
 class Vector {
-
   x: number
   y: number
 
@@ -7,7 +6,6 @@ class Vector {
     this.x = x
     this.y = y
   }
-
 }
 
 export default Vector

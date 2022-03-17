@@ -22,7 +22,7 @@ const Section = styled.section`
   p {
     text-align: center;
     font-size: 1rem;
-    font-weight: bold;    
+    font-weight: bold;
     margin-top: 2rem;
   }
 `
@@ -41,7 +41,7 @@ const Left = styled.div`
   justify-content: center;
   align-items: center;
   min-height: 220px;
-  
+
   @media only screen and (max-width: ${media.medium}) {
     display: none;
   }
@@ -63,7 +63,7 @@ const Right = styled.div`
 `
 
 const Blockquote = styled.blockquote`
-  position: relative; 
+  position: relative;
   display: inline-block;
   font-size: 1.5rem;
   padding-left: 3rem;
@@ -85,12 +85,22 @@ const Blockquote = styled.blockquote`
 
 const quotes = [
   { author: "Bill Gates", quote: "Probably the wisest man I've ever met." },
-  { author: "Elon Musk", quote: "I always strive for perfection, excellence and supremacy. Roland is an obvious example of someone who has achieved all of this." },
-  { author: "Ophrah Winfrey", quote: "I never had the pleasure of having him as a guest, but he's touched my heart in more ways than one." },
-  { author: "Steve Wozniak", quote: "If I one day in the near future, achieve only half of what Roland has done for the world. I will die a happy man." },
+  {
+    author: "Elon Musk",
+    quote:
+      "I always strive for perfection, excellence and supremacy. Roland is an obvious example of someone who has achieved all of this.",
+  },
+  {
+    author: "Ophrah Winfrey",
+    quote: "I never had the pleasure of having him as a guest, but he's touched my heart in more ways than one.",
+  },
+  {
+    author: "Steve Wozniak",
+    quote: "If I one day in the near future, achieve only half of what Roland has done for the world. I will die a happy man.",
+  },
   { author: "Robert C. Martin", quote: "You want to see something SOLID? Check out this mans GitHub repository. My god!" },
   { author: "Ryan Reynolds", quote: "I may not be perfect, but Roland is." },
-  { author: "Barack Obama", quote: "My man." }
+  { author: "Barack Obama", quote: "My man." },
 ]
 
 const Footer = ({ fontsLoaded, viewingProject }: DefaultAnimationProps) => {
@@ -113,11 +123,21 @@ const Footer = ({ fontsLoaded, viewingProject }: DefaultAnimationProps) => {
           </Blockquote>
         </Left>
         <Right>
-          <Anchor href="https://www.linkedin.com/in/fralle/" inverted><FaLinkedin /> LinkedIn</Anchor>
-          <Anchor href="https://github.com/Fralleee/" inverted><FaGithub /> GitHub</Anchor>
-          <Anchor href="https://www.hackerrank.com/Fralle/" inverted><FaHackerrank /> HackerRank</Anchor>
-          <Anchor href="https://stackoverflow.com/users/3155183/fralle/" inverted><FaStackOverflow /> StackOverflow</Anchor>
-          <Anchor href="mailto: roland@fralle.net" inverted><FaEnvelope /> Contact</Anchor>
+          <Anchor href="https://www.linkedin.com/in/fralle/" inverted>
+            <FaLinkedin /> LinkedIn
+          </Anchor>
+          <Anchor href="https://github.com/Fralleee/" inverted>
+            <FaGithub /> GitHub
+          </Anchor>
+          <Anchor href="https://www.hackerrank.com/Fralle/" inverted>
+            <FaHackerrank /> HackerRank
+          </Anchor>
+          <Anchor href="https://stackoverflow.com/users/3155183/fralle/" inverted>
+            <FaStackOverflow /> StackOverflow
+          </Anchor>
+          <Anchor href="mailto: roland@fralle.net" inverted>
+            <FaEnvelope /> Contact
+          </Anchor>
         </Right>
       </Top>
       <p>Copyright &copy; {new Date().getFullYear()} Fralle.net All Rights Reserved</p>

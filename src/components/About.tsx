@@ -12,7 +12,7 @@ const Section = styled.section`
   width: 100%;
   margin: 0 auto;
   padding: 5rem 2rem;
-  
+
   max-width: ${media.large};
   background-color: var(--background-light);
   min-height: 600px;
@@ -20,7 +20,7 @@ const Section = styled.section`
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  
+
   @media only screen and (max-width: ${media.large}) {
     border-radius: 0;
   }
@@ -33,7 +33,7 @@ const Header = styled.h1`
   transition: all 400ms var(--easeOutBack);
   transform: none;
   opacity: 1;
-  
+
   @media only screen and (max-width: ${media.large}) {
     font-size: 3.5rem;
   }
@@ -51,6 +51,10 @@ const Image = styled.img`
   @media only screen and (max-width: ${media.small}) {
     max-width: 300px;
   }
+  .clusterPlannerDialog input[type="text"],
+  .clusterPlannerDialog .uiTypeahead {
+    color: #333;
+  }
 `
 
 const Summary = styled.div`
@@ -60,7 +64,6 @@ const Summary = styled.div`
 // #endregion
 
 const About = ({ fontsLoaded }: DefaultAnimationProps) => {
-
   return (
     <Section>
       <Header>About</Header>
@@ -68,10 +71,16 @@ const About = ({ fontsLoaded }: DefaultAnimationProps) => {
         <Image alt="Roland Chelwing" src={Profile} />
       </Zoom>
       <Summary>
-        <p>Dedicated and curious full-stack developer with 7+ years experience in React, microservices, databases, cloud-based development and DevOps.</p>
+        <p>
+          Dedicated and curious full-stack developer with 7+ years experience in React, microservices, databases, cloud-based development
+          and DevOps.
+        </p>
         <p>Specialized in MERN stack but also experienced in other tools such as Vue, C#, Java, SQL.</p>
       </Summary>
-      <Button style={{ minWidth: 0, maxWidth: 235 }} to={CV} download="resume" title="Resume/CV"><FaDownload />Download Resume/CV</Button>
+      <Button style={{ minWidth: 0, maxWidth: 235 }} to={CV} download="resume" title="Resume/CV">
+        <FaDownload />
+        Download Resume/CV
+      </Button>
     </Section>
   )
 }

@@ -12,7 +12,7 @@ const Link = styled.a`
   height: 42px;
   margin: 0.25rem;
   transition: all 200ms var(--easeOutBack);
-  
+
   @media only screen and (max-width: ${media.small}) {
     width: 32px;
     height: 32px;
@@ -21,7 +21,7 @@ const Link = styled.a`
   svg {
     width: 100%;
     height: auto;
-  }  
+  }
 
   @media (hover: hover) and (pointer: fine) {
     &:hover {
@@ -30,8 +30,28 @@ const Link = styled.a`
   }
 `
 
-export const CSharp = () => <Link href="https://docs.microsoft.com/en-us/dotnet/csharp/" title="C#" target="_blank"><CSharpSVG /></Link>
-export const Javascript = () => <Link href="https://www.javascript.com/" title="Javascript" target="_blank"><JavascriptSVG /></Link>
-export const Typescript = () => <Link href="https://www.typescriptlang.org/" title="Typescript" target="_blank"><TypescriptSVG /></Link>
-export const React = () => <Link href="https://reactjs.org/" title="React" target="_blank"><ReactSVG /></Link>
-export const Unity = () => <Link href="https://unity.com/" title="Unity" target="_blank"><UnitySVG /></Link>
+export const CSharp = () => (
+  <Link href="https://docs.microsoft.com/en-us/dotnet/csharp/" title="C#" target="_blank">
+    <CSharpSVG />
+  </Link>
+)
+export const Javascript = () => (
+  <Link href="https://www.javascript.com/" title="Javascript" target="_blank">
+    <JavascriptSVG />
+  </Link>
+)
+export const Typescript = () => (
+  <Link href="https://www.typescriptlang.org/" title="Typescript" target="_blank">
+    <TypescriptSVG />
+  </Link>
+)
+export const React = () => (
+  <Link href="https://reactjs.org/" title="React" target="_blank">
+    <ReactSVG />
+  </Link>
+)
+export const Unity = () => (
+  <Link href="https://unity.com/" title="Unity" target="_blank">
+    <UnitySVG />
+  </Link>
+)

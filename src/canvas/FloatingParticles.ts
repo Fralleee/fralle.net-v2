@@ -5,7 +5,7 @@ const particleAmountDensity = 0.25
 const particleSpawnRate = 50
 const minParticleSize = 4
 const maxParticleSize = 12
-const particleSpeedFactor = .4
+const particleSpeedFactor = 0.4
 const colorArray = ["#042e27", "#364966", "#cc3d4b", "#ea4454"]
 
 const FloatingParticles = () => {
@@ -25,7 +25,7 @@ const FloatingParticles = () => {
     size = canvas.getBoundingClientRect()
     ctx.canvas.width = size.width
     ctx.canvas.height = size.height
-    particleAmount = Math.floor(particleAmountDensity * (size.width + size.height) / maxParticleSize)
+    particleAmount = Math.floor((particleAmountDensity * (size.width + size.height)) / maxParticleSize)
   }
 
   function getRandomScreenPosition(maxSize: number) {

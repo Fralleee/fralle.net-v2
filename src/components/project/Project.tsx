@@ -14,27 +14,35 @@ const Section = styled.main`
   top: 0;
   left: 0;
   width: 100%;
-  height:  100%;
+  height: 100%;
   overflow-y: scroll;
   z-index: 100;
 
-  &.route-exit { overflow: hidden; }  
-  &.route-enter, &.route-exit.route-exit-active {
-    .overlay { opacity: 0; }
+  &.route-exit {
+    overflow: hidden;
+  }
+  &.route-enter,
+  &.route-exit.route-exit-active {
+    .overlay {
+      opacity: 0;
+    }
     .container {
       opacity: 0;
       transform: translateY(50px);
       z-index: 1;
     }
-  } 
-  &.route-enter.route-enter-active, &.route-exit {
-    .overlay { opacity: 1; }
+  }
+  &.route-enter.route-enter-active,
+  &.route-exit {
+    .overlay {
+      opacity: 1;
+    }
     .container {
       opacity: 1;
       transform: none;
     }
   }
-  &.route-exit .container {    
+  &.route-exit .container {
     transition: all 400ms var(--easeOutBack);
   }
 `
@@ -57,7 +65,7 @@ const Component = styled.div`
   position: relative;
   background: var(--background-light);
   width: 100%;
-  max-width: ${media.large}; 
+  max-width: ${media.large};
   flex: 1;
   border-radius: var(--radius-top);
   display: flex;
@@ -100,10 +108,12 @@ const ProjectComponent: FC = () => {
     document.title = `${foundProject.title} - Fralle`
   }, [projectId])
 
-  return project === null ? <Section /> : (
+  return project === null ? (
+    <Section />
+  ) : (
     <Section>
       <Overlay to="/" className="overlay" />
-      <Container >
+      <Container>
         <Component className="container">
           <BackButton />
           <ProjectHeader project={project} />

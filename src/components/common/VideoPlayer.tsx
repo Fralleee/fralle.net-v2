@@ -6,18 +6,12 @@ const VideoContainer = styled.div`
   }
 `
 type Props = {
-  video?: string,
+  video?: string
   className?: string
 }
 const VideoPlayer = ({ video, className }: Props) => (
   <VideoContainer className={className}>
-    <video
-      src={video}
-      autoPlay
-      loop
-      muted
-      playsInline>
-    </video>
+    <video src={video} autoPlay loop muted playsInline></video>
   </VideoContainer>
 )
 
