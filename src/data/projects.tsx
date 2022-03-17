@@ -44,7 +44,7 @@ const projects: ProjectMap = {
           for that final splash every Friday deserves.
         </p>
       </>
-    ),
+    )
   },
   pizzeria: {
     title: "Pizzeria",
@@ -61,7 +61,7 @@ const projects: ProjectMap = {
         <p>Originally, a full-stack developer coding challenge from a company I was interviewing for.</p>
         <p>Technologies used in this project were based on the stack the company used and this was made over a period of a week.</p>
       </>
-    ),
+    )
   },
   pingtap: {
     title: "Pingtap",
@@ -86,7 +86,7 @@ const projects: ProjectMap = {
         </p>
         <p>Still a very early prototype and will probably never be completed, but is one of my ever evolving passion projects.</p>
       </>
-    ),
+    )
   },
   notfound: {
     title: "Not found",
@@ -97,8 +97,8 @@ const projects: ProjectMap = {
       <>
         <p>Probably copy-pasted the wrong link?</p>
       </>
-    ),
-  },
+    )
+  }
 }
 
 export const getProject = (id: string | undefined): Project => {
