@@ -95,10 +95,10 @@ const Intro = ({ fontsLoaded, viewingProject }: DefaultAnimationProps) => {
           development.
         </p>
         <p>
-          Any questions? Send me an email <Anchor href="mailto: roland@fralle.net">roland@fralle.net</Anchor> or learn{" "}
+          Any questions? Send me an email <Anchor href="mailto: roland@fralle.net">roland@fralle.net</Anchor> or learn more{" "}
           <Anchor internal href="#about">
             {" "}
-            more about me <FaArrowDown />
+            about me <FaArrowDown />
           </Anchor>
         </p>
         <SocialContainer className={animate}>
