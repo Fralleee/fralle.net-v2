@@ -100,7 +100,6 @@ const Intro = ({ fontsLoaded }: DefaultAnimationProps) => {
             more about me <FaArrowDown />
           </Anchor>
         </p>
-        <p></p>
         <SocialContainer className={animate}>
           <LinkedIn />
           <GitHub />
