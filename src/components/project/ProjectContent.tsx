@@ -6,6 +6,7 @@ import { popUpTransform } from "styles/keyframes"
 
 // #region styled
 const Content = styled.section`
+  position: relative;
   display: flex;
   padding: 3rem 1rem;
   max-width: 900px;

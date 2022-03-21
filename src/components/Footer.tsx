@@ -105,14 +105,15 @@ const quotes = [
 ]
 
 const Footer = ({ fontsLoaded, viewingProject }: DefaultAnimationProps) => {
-  const [index, setIndex] = useState(Math.floor(Math.random() * (quotes.length - 1 - 0 + 1) + 0))
+  const [index, setIndex] = useState(Math.floor(Math.random() * quotes.length))
 
   useEffect(() => {
-    const interval = setInterval(() => {
-      setIndex(nextIndex(index, quotes, true))
+    const interval = setTimeout(() => {
+      const nextIdx = nextIndex(index, quotes, true)
+      setIndex(nextIdx)
     }, 10000)
-    return () => clearInterval(interval)
-  })
+    return () => clearTimeout(interval)
+  }, [index])
 
   return (
     <Section className={`${viewingProject ? "minimized" : ""}`}>
