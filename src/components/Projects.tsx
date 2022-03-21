@@ -1,7 +1,7 @@
 import { useEffect } from "react"
 import styled from "styled-components"
 import media from "styles/media"
-import data from "data/projects"
+import data from "data/projects-data"
 import ProjectLink from "components/project/ProjectLink"
 import { transparency } from "styles/keyframes"
 
