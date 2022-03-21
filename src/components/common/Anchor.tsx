@@ -3,11 +3,18 @@ import styled from "styled-components"
 
 type StyledProps = { inverted?: boolean }
 const Anchor = styled.a<StyledProps>`
-  position: relative;
+  /* position: relative; */
   text-decoration: none;
+  line-height: 1.6;
+  /* margin: 0 0.25rem; */
   font-weight: bold;
   color: ${props => (props.inverted ? "var(--background-light)" : "var(--cta)")};
   display: inline-block;
+
+  svg {
+    position: relative;
+    top: 2px;
+  }
 
   @media (hover: hover) and (pointer: fine) {
     &:hover,
@@ -44,10 +51,11 @@ type PropTypes = {
   title?: string
   style?: object
   inverted?: boolean
+  internal?: boolean
 }
-const AnchorComponent: FC<PropTypes> = ({ children, href, title, style, inverted }) => {
+const AnchorComponent: FC<PropTypes> = ({ children, href, title, style, internal, inverted }) => {
   return (
-    <Anchor href={href} title={title} style={style} inverted={inverted} target="_blank">
+    <Anchor href={href} title={title} style={style} inverted={inverted} target={internal ? "" : "_blank"}>
       {children}
     </Anchor>
   )

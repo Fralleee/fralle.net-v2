@@ -100,7 +100,8 @@ const quotes = [
   },
   { author: "Robert C. Martin", quote: "You want to see something SOLID? Check out this mans GitHub repository. My god!" },
   { author: "Ryan Reynolds", quote: "I may not be perfect, but Roland is." },
-  { author: "Barack Obama", quote: "My man." }
+  { author: "Barack Obama", quote: "My man." },
+  { author: "Mark Zuckerberg", quote: "You gotta make it sexy! Hips and nips, otherwise I'm not eating." }
 ]
 
 const Footer = ({ fontsLoaded, viewingProject }: DefaultAnimationProps) => {
@@ -136,7 +137,7 @@ const Footer = ({ fontsLoaded, viewingProject }: DefaultAnimationProps) => {
             <FaStackOverflow /> StackOverflow
           </Anchor>
           <Anchor href="mailto: roland@fralle.net" inverted>
-            <FaEnvelope /> Contact
+            <FaEnvelope /> roland@fralle.net
           </Anchor>
         </Right>
       </Top>

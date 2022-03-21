@@ -65,7 +65,7 @@ const Summary = styled.div`
 
 const About = ({ fontsLoaded }: DefaultAnimationProps) => {
   return (
-    <Section>
+    <Section id="about">
       <Header>About</Header>
       <Zoom>
         <Image alt="Roland Chelwing" src={Profile} />
@@ -75,7 +75,8 @@ const About = ({ fontsLoaded }: DefaultAnimationProps) => {
           Dedicated and curious full-stack developer with 7+ years experience in React, microservices, databases, cloud-based development
           and DevOps.
         </p>
-        <p>Specialized in MERN stack but also experienced in other tools such as Vue, C#, Java, SQL.</p>
+        <p>I like to find elegant and effective solutions to complex problems while also leveraging industry-leading frameworks.</p>
+        <p>Approaching every day as an opportunity to extend my knowledge and adapt to new technologies.</p>
       </Summary>
       <Button style={{ minWidth: 0, maxWidth: 235 }} to={CV} download="resume" title="Resume/CV">
         <FaDownload />

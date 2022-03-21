@@ -2,6 +2,8 @@ import styled from "styled-components"
 import media from "styles/media"
 import { GitHub, HackerRank, LinkedIn, StackOverflow } from "components/common/Social"
 import { popAnimation } from "styles/keyframes"
+import Anchor from "./common/Anchor"
+import { FaArrowDown } from "react-icons/fa"
 
 // #region styled
 const Section = styled.section`
@@ -84,15 +86,21 @@ const Intro = ({ fontsLoaded }: DefaultAnimationProps) => {
     <Section>
       <Wrapper className={animate}>
         <h1>Hey there! 👋</h1>
-        <p>I am Roland Chelwing-Grzybowski, A software engineer based in Skövde, Sweden.</p>
+        <p>
+          I am <strong>Roland Chelwing-Grzybowski</strong>, A software engineer based in <strong>Skövde, Sweden</strong>.
+        </p>
         <p>
           When I'm not writing code for work, I grind away on passions projects primarily related to front-end development or game
           development.
         </p>
         <p>
-          Have a look at some of my projects and, as usual, the code is available at my GitHub. If you want to get in touch, do so using the
-          links below.
+          Any questions? Send me an email <Anchor href="mailto: roland@fralle.net">roland@fralle.net</Anchor> or learn{" "}
+          <Anchor internal href="#about">
+            {" "}
+            more about me <FaArrowDown />
+          </Anchor>
         </p>
+        <p></p>
         <SocialContainer className={animate}>
           <LinkedIn />
           <GitHub />
