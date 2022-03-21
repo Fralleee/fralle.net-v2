@@ -1,7 +1,8 @@
+import styled from "styled-components"
 import About from "components/About"
 import Intro from "components/Intro"
 import Browse from "components/links/Browse"
-import styled from "styled-components"
+import Skills from "components/Skills"
 
 const Section = styled.section`
   transition: all 400ms var(--easeInOutBack);
@@ -17,7 +18,8 @@ const Main = ({ fontsLoaded, viewingProject }: DefaultAnimationProps) => {
     <Section className={`${viewingProject ? "minimized" : ""}`}>
       <Intro fontsLoaded={fontsLoaded} />
       <Browse fontsLoaded={fontsLoaded} />
-      <About fontsLoaded={fontsLoaded} />
+      <About />
+      <Skills />
     </Section>
   )
 }

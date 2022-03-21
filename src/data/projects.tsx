@@ -15,7 +15,7 @@ import PingtapTitle from "media/projects/Pingtap/title.png"
 import PingtapBg from "media/projects/Pingtap/background.png"
 import PingtapFg from "media/projects/Pingtap/foreground.png"
 import PingtapVideo from "media/projects/Pingtap/preview.mp4"
-import { CSharp, Javascript, React, Typescript, Unity } from "components/common/Technologies"
+import { CSharp, JavaScript, React, TypeScript, Unity } from "components/common/Technologies"
 import Anchor from "components/common/Anchor"
 
 const projects: ProjectMap = {
@@ -26,7 +26,7 @@ const projects: ProjectMap = {
     background: CWFBg,
     foreground: CWFFg,
     preview: [CWFPreview1, CWFPreview2],
-    technologies: [Typescript, React],
+    technologies: [TypeScript, React],
     repository: "https://github.com/Fralleee/cooking-with-fralle",
     site: "https://cooking.fralle.net/",
     content: (
@@ -53,7 +53,7 @@ const projects: ProjectMap = {
     background: PizzeriaBg,
     foreground: PizzeriaFg,
     preview: [PizzeriaPreview1, PizzeriaPreview2],
-    technologies: [Javascript, React],
+    technologies: [JavaScript, React],
     repository: "https://github.com/Fralleee/pizzeria-frontend-challenge",
     site: "https://fralleee.github.io/pizzeria-frontend-challenge/",
     content: (

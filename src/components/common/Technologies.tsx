@@ -1,7 +1,7 @@
 /* eslint-disable max-len */
 import { ReactComponent as CSharpSVG } from "media/programming/csharp.svg"
-import { ReactComponent as JavascriptSVG } from "media/programming/javascript.svg"
-import { ReactComponent as TypescriptSVG } from "media/programming/typescript.svg"
+import { ReactComponent as JavaScriptSVG } from "media/programming/javascript.svg"
+import { ReactComponent as TypeScriptSVG } from "media/programming/typescript.svg"
 import { ReactComponent as ReactSVG } from "media/programming/react.svg"
 import { ReactComponent as UnitySVG } from "media/programming/unity.svg"
 import styled from "styled-components"
@@ -35,14 +35,14 @@ export const CSharp = () => (
     <CSharpSVG />
   </Link>
 )
-export const Javascript = () => (
+export const JavaScript = () => (
   <Link href="https://www.javascript.com/" title="Javascript" target="_blank">
-    <JavascriptSVG />
+    <JavaScriptSVG />
   </Link>
 )
-export const Typescript = () => (
+export const TypeScript = () => (
   <Link href="https://www.typescriptlang.org/" title="Typescript" target="_blank">
-    <TypescriptSVG />
+    <TypeScriptSVG />
   </Link>
 )
 export const React = () => (

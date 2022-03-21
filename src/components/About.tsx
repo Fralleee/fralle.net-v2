@@ -63,7 +63,7 @@ const Summary = styled.div`
 `
 // #endregion
 
-const About = ({ fontsLoaded }: DefaultAnimationProps) => {
+const About = () => {
   return (
     <Section id="about">
       <Header>About</Header>
