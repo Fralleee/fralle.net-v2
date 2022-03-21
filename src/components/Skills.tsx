@@ -51,7 +51,7 @@ const Skills = () => {
       <div>
         <SkillCategory title="Languages">
           {Languages.map(({ SVG, title }) => (
-            <SkillItem>
+            <SkillItem key={title}>
               <SVG /> {title}
             </SkillItem>
           ))}
@@ -59,7 +59,7 @@ const Skills = () => {
 
         <SkillCategory title="Libraries, frameworks, APIs and platforms">
           {Libraries.map(({ SVG, title }) => (
-            <SkillItem>
+            <SkillItem key={title}>
               <SVG /> {title}
             </SkillItem>
           ))}
@@ -67,7 +67,7 @@ const Skills = () => {
 
         <SkillCategory title="Certificates">
           {Certificates.map(({ SVG, title }) => (
-            <SkillItem>
+            <SkillItem key={title}>
               <SVG /> {title}
             </SkillItem>
           ))}

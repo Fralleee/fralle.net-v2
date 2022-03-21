@@ -57,9 +57,9 @@ const Right = styled.div`
   }
   @media only screen and (max-width: ${media.medium}) {
     width: 100%;
+    padding-left: 6rem;
     display: flex;
     flex-direction: column;
-    align-items: center;
   }
 `
 
