@@ -1,5 +1,5 @@
-@import "./easings.scss";
-@import "./variables.scss";
+@import "styles/easings.scss";
+@import "styles/variables.scss";
 
 html {
   box-sizing: border-box;
@@ -34,6 +34,15 @@ body {
     padding-right: 1rem; // simulate scroll padding
     @media only screen and (max-width: 1140px) {
       padding-right: 0;
+    }
+  }
+
+  section {
+    transition: all 400ms var(--easeInOutBack);
+
+    &.minimized {
+      transform: scale(0.8);
+      opacity: 0.5;
     }
   }
 
@@ -113,6 +122,9 @@ body {
 
   #root {
     width: 100%;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
   }
 }
 

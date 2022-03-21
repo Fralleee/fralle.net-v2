@@ -5,10 +5,10 @@ import Project from "components/project/Project"
 const AnimatedRoutes = () => {
   const location = useLocation()
   return (
-    <TransitionGroup>
+    <TransitionGroup component={null}>
       <CSSTransition key={location.key} timeout={400} classNames="route">
         <Routes location={location}>
-          <Route path="/" element={<section />} />
+          <Route path="/" element={null} />
           <Route path="/:projectId" element={<Project />} />
         </Routes>
       </CSSTransition>

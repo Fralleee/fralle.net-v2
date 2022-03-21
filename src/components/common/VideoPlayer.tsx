@@ -1,10 +1,13 @@
 import styled from "styled-components"
 
+// #region styled
 const VideoContainer = styled.div`
   video {
     width: 100%;
   }
 `
+// #endregion
+
 type Props = {
   video?: string
   className?: string

@@ -2,6 +2,7 @@ import { useEffect } from "react"
 import { useState } from "react"
 import styled from "styled-components"
 
+// #region styled
 const FadeImage = styled.img`
   @keyframes imageSwap {
     from {
@@ -14,6 +15,7 @@ const FadeImage = styled.img`
 
   animation: imageSwap 600ms ease-in-out forwards;
 `
+// #endregion
 
 type PropTypes = {
   className?: string

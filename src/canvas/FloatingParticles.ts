@@ -1,5 +1,5 @@
-import Particle from "./Particle"
-import Vector from "./Vector"
+import Particle from "canvas/Particle"
+import Vector from "canvas/Vector"
 
 const particleAmountDensity = 0.25
 const particleSpawnRate = 50

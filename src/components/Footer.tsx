@@ -6,7 +6,7 @@ import { useEffect, useState } from "react"
 import { nextIndex } from "utils/arrayHelpers"
 import { animateText } from "styles/keyframes"
 
-const Section = styled.section`
+const Section = styled.footer`
   display: flex;
   flex-direction: column;
   padding: 2rem 0 1rem 0;

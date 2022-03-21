@@ -63,9 +63,10 @@ const Summary = styled.div`
 `
 // #endregion
 
-const About = () => {
+const About = ({ fontsLoaded, viewingProject }: DefaultAnimationProps) => {
+  const minimized = viewingProject ? "minimized" : ""
   return (
-    <Section id="about">
+    <Section id="about" className={minimized}>
       <Header>About</Header>
       <Zoom>
         <Image alt="Roland Chelwing" src={Profile} />

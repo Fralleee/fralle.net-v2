@@ -5,11 +5,11 @@ import media from "styles/media"
 import { Link } from "react-router-dom"
 import { getProject } from "data/projects"
 import { useParams } from "react-router"
-import ProjectHeader from "./ProjectHeader"
-import ProjectContent from "./ProjectContent"
+import ProjectHeader from "components/project/ProjectHeader"
+import ProjectContent from "components/project/ProjectContent"
 
 // #region styled
-const Section = styled.main`
+const Section = styled.section`
   position: fixed;
   top: 0;
   left: 0;

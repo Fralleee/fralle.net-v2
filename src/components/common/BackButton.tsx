@@ -5,6 +5,7 @@ import { ImArrowLeft } from "react-icons/im"
 import { FaTimesCircle } from "react-icons/fa"
 import media from "styles/media"
 
+// #region styled
 const Button = styled(Link)`
   position: absolute;
   padding: 2rem;
@@ -53,6 +54,7 @@ const Button = styled(Link)`
     bottom: -2rem;
   }
 `
+// #endregion
 
 const BackButton: FC = () => {
   return (

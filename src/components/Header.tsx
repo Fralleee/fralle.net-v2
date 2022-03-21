@@ -1,12 +1,12 @@
 import styled from "styled-components"
-import Canvas from "components/Canvas"
+import Canvas from "components/common/Canvas"
 import FloatingParticles from "canvas/FloatingParticles"
 import LogoImage from "media/logo.svg"
 import media from "styles/media"
 import { rotateIn, scaleIn, spinAnimation } from "styles/keyframes"
 
 // #region styled
-const Section = styled.section`
+const Section = styled.header`
   position: relative;
   width: 100%;
   min-height: 480px;

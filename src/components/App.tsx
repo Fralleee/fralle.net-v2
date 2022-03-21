@@ -2,17 +2,13 @@ import { useEffect, useState } from "react"
 import { useLocation } from "react-router-dom"
 import ReactGA from "react-ga4"
 import WebFont from "webfontloader"
-import styled from "styled-components"
 import AnimatedRoutes from "components/AnimatedRoutes"
 import Header from "components/Header"
 import Footer from "components/Footer"
-import Main from "components/Main"
-
-const Container = styled.div`
-  display: flex;
-  flex-direction: column;
-  min-height: 100vh;
-`
+import Intro from "components/Intro"
+import Projects from "components/Projects"
+import About from "components/About"
+import Skills from "components/Skills"
 
 const App = () => {
   const [fontsLoaded, setFontsLoaded] = useState(false)
@@ -45,12 +41,15 @@ const App = () => {
   }, [])
 
   return (
-    <Container>
+    <>
       <Header {...sectionProps} />
-      <Main {...sectionProps} />
+      <Intro {...sectionProps} />
+      <Projects {...sectionProps} />
+      <About {...sectionProps} />
+      <Skills {...sectionProps} />
       <AnimatedRoutes />
       <Footer {...sectionProps} />
-    </Container>
+    </>
   )
 }
 

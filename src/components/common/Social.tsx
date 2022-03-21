@@ -3,6 +3,7 @@ import { FaLinkedin, FaGithub, FaHackerrank, FaStackOverflow } from "react-icons
 import styled from "styled-components"
 import media from "styles/media"
 
+// #region styled
 const Link = styled.a`
   width: 48px;
   height: 48px;
@@ -38,6 +39,7 @@ const Link = styled.a`
     }
   }
 `
+// #endregion
 
 export const LinkedIn = () => (
   <Link className="linkedin" href="https://www.linkedin.com/in/fralle/" title="LinkedIn" target="_blank">

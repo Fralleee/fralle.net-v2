@@ -1,8 +1,8 @@
 import { useEffect } from "react"
 import styled from "styled-components"
 import media from "styles/media"
-import Projects from "data/projects"
-import Link from "components/links/Link"
+import data from "data/projects"
+import ProjectLink from "components/project/ProjectLink"
 import { transparency } from "styles/keyframes"
 
 // #region styled
@@ -59,20 +59,21 @@ const Header = styled.h1`
 `
 // #endregion
 
-const Browse = ({ fontsLoaded }: DefaultAnimationProps) => {
+const Projects = ({ fontsLoaded, viewingProject }: DefaultAnimationProps) => {
   const animate = fontsLoaded ? "animate" : ""
+  const minimized = viewingProject ? "minimized" : ""
 
   useEffect(() => {
     document.title = "Fralle"
   }, [])
 
   return (
-    <Section className={animate}>
+    <Section id="projects" className={`${minimized} ${animate}`}>
       <Header>Recent work</Header>
       <Container>
-        {Object.values(Projects).map(link =>
+        {Object.values(data).map(link =>
           link.to ? (
-            <Link
+            <ProjectLink
               key={link.title}
               title={link.title}
               to={link.to}
@@ -87,4 +88,4 @@ const Browse = ({ fontsLoaded }: DefaultAnimationProps) => {
   )
 }
 
-export default Browse
+export default Projects

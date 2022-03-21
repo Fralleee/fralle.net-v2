@@ -1,7 +1,7 @@
 import styled from "styled-components"
 import media from "styles/media"
-import SkillCategory from "./skills/SkillCategory"
-import SkillItem from "./skills/SkillsItem"
+import SkillCategory from "components/skills/SkillCategory"
+import SkillItem from "components/skills/SkillsItem"
 import { Certificates, Languages, Libraries } from "data/skills"
 
 // #region styled
@@ -44,9 +44,10 @@ const Header = styled.h1`
 `
 // #endregion
 
-const Skills = () => {
+const Skills = ({ fontsLoaded, viewingProject }: DefaultAnimationProps) => {
+  const minimized = viewingProject ? "minimized" : ""
   return (
-    <Section id="skills">
+    <Section id="skills" className={minimized}>
       <Header>Skills</Header>
       <div>
         <SkillCategory title="Languages">

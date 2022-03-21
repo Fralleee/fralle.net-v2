@@ -2,7 +2,7 @@ import styled from "styled-components"
 import media from "styles/media"
 import { GitHub, HackerRank, LinkedIn, StackOverflow } from "components/common/Social"
 import { popAnimation } from "styles/keyframes"
-import Anchor from "./common/Anchor"
+import Anchor from "components/common/Anchor"
 import { FaArrowDown } from "react-icons/fa"
 
 // #region styled
@@ -80,10 +80,11 @@ const SocialContainer = styled.div`
 `
 // #endregion
 
-const Intro = ({ fontsLoaded }: DefaultAnimationProps) => {
+const Intro = ({ fontsLoaded, viewingProject }: DefaultAnimationProps) => {
   const animate = fontsLoaded ? "animate" : ""
+  const minimized = viewingProject ? "minimized" : ""
   return (
-    <Section>
+    <Section id="intro" className={minimized}>
       <Wrapper className={animate}>
         <h1>Hey there! 👋</h1>
         <p>

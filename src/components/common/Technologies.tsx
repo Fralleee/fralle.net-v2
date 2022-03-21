@@ -1,4 +1,3 @@
-/* eslint-disable max-len */
 import { ReactComponent as CSharpSVG } from "media/programming/csharp.svg"
 import { ReactComponent as JavaScriptSVG } from "media/programming/javascript.svg"
 import { ReactComponent as TypeScriptSVG } from "media/programming/typescript.svg"
@@ -7,6 +6,7 @@ import { ReactComponent as UnitySVG } from "media/programming/unity.svg"
 import styled from "styled-components"
 import media from "styles/media"
 
+// #region styled
 const Link = styled.a`
   width: 42px;
   height: 42px;
@@ -29,6 +29,7 @@ const Link = styled.a`
     }
   }
 `
+// #endregion
 
 export const CSharp = () => (
   <Link href="https://docs.microsoft.com/en-us/dotnet/csharp/" title="C#" target="_blank">

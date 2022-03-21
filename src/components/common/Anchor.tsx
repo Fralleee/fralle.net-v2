@@ -1,12 +1,11 @@
 import { FC } from "react"
 import styled from "styled-components"
 
+// #region styled
 type StyledProps = { inverted?: boolean }
 const Anchor = styled.a<StyledProps>`
-  /* position: relative; */
   text-decoration: none;
   line-height: 1.6;
-  /* margin: 0 0.25rem; */
   font-weight: bold;
   color: ${props => (props.inverted ? "var(--background-light)" : "var(--cta)")};
   display: inline-block;
@@ -45,6 +44,7 @@ const Anchor = styled.a<StyledProps>`
     }
   }
 `
+// #endregion
 
 type PropTypes = {
   href: string

@@ -2,6 +2,7 @@ import { FC } from "react"
 import styled from "styled-components"
 import media from "styles/media"
 
+// #region styled
 const ButtonComponent = styled.a`
   display: flex;
   align-items: center;
@@ -50,6 +51,7 @@ const ButtonComponent = styled.a`
     margin-right: 1rem;
   }
 `
+// #endregion
 
 type PropTypes = {
   to: string
