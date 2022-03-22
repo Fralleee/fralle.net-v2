@@ -149,11 +149,11 @@ const ProjectHeader = ({ project }: ParamTypes) => {
 
   return (
     <Header>
-      <Background src={project.background} />
+      <Background alt="Background" src={project.background} />
       <HeaderOverlay />
-      {project.preview && <Foreground src={project.preview[index]} />}
+      {project.preview && <Foreground alt="Preview" src={project.preview[index]} />}
       {project.video && <Video video={project.video} />}
-      <Title src={project.logo} />
+      <Title alt="Title" src={project.logo} />
       {project.technologies.length > 0 && (
         <Technologies>
           {project.technologies.map((Tech, i) => (

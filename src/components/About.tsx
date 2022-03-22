@@ -2,7 +2,7 @@ import styled from "styled-components"
 import media from "styles/media"
 import Button from "components/common/Button"
 import { FaDownload } from "react-icons/fa"
-import Profile from "media/profile.png"
+import Profile from "media/profile.webp"
 import Zoom from "react-medium-image-zoom"
 import CV from "files/CV.pdf"
 
@@ -69,7 +69,7 @@ const About = ({ viewingProject }: DefaultAnimationProps) => {
     <Section id="about" className={minimized}>
       <Header>About</Header>
       <Zoom>
-        <Image alt="Roland Chelwing" src={Profile} />
+        <Image width={400} height={400} alt="Roland Chelwing" src={Profile} />
       </Zoom>
       <Summary>
         <p>

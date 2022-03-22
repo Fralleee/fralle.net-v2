@@ -62,9 +62,16 @@ type LinkProps = {
 const Link: FC<LinkProps> = ({ title, to, backgroundImage, titleImage, foregroundImage, foregroundImageStyle }) => {
   return (
     <LinkComponent to={to} title={title}>
-      <BackgroundImage src={backgroundImage} />
-      <ForegroundImage className="foreground" style={foregroundImageStyle} src={foregroundImage} />
-      <ForegroundImage className="title" style={foregroundImageStyle} src={titleImage} />
+      <BackgroundImage alt="Background" width={350} height={185} src={backgroundImage} />
+      <ForegroundImage
+        alt="Foreground"
+        width={350}
+        height={185}
+        className="foreground"
+        style={foregroundImageStyle}
+        src={foregroundImage}
+      />
+      <ForegroundImage alt="Title" width={350} height={185} className="title" style={foregroundImageStyle} src={titleImage} />
     </LinkComponent>
   )
 }
