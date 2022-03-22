@@ -44,7 +44,7 @@ const Header = styled.h1`
 `
 // #endregion
 
-const Skills = ({ fontsLoaded, viewingProject }: DefaultAnimationProps) => {
+const Skills = ({ viewingProject }: DefaultAnimationProps) => {
   const minimized = viewingProject ? "minimized" : ""
   return (
     <Section id="skills" className={minimized}>

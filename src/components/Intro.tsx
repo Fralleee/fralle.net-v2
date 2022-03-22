@@ -31,20 +31,20 @@ const Wrapper = styled.div`
     opacity: 0;
   }
 
-  &.animate {
-    h1,
-    p {
-      animation: ${popAnimation} 300ms var(--easeOutBack) forwards;
+  h1,
+  p {
+    animation: ${popAnimation} 300ms var(--easeOutBack) forwards;
+    &:nth-child(1) {
+      animation-delay: 150ms;
+    }
+    &:nth-child(2) {
+      animation-delay: 250ms;
+    }
+    &:nth-child(3) {
       animation-delay: 350ms;
-      &:nth-child(1) {
-        animation-delay: 125ms;
-      }
-      &:nth-child(2) {
-        animation-delay: 200ms;
-      }
-      &:nth-child(3) {
-        animation-delay: 275ms;
-      }
+    }
+    &:nth-child(4) {
+      animation-delay: 450ms;
     }
   }
 
@@ -62,30 +62,29 @@ const SocialContainer = styled.div`
     opacity: 0;
   }
 
-  &.animate {
-    & > a {
-      animation: ${popAnimation} 300ms var(--easeOutBack) forwards;
+  & > a {
+    animation: ${popAnimation} 300ms var(--easeOutBack) forwards;
+    &:nth-child(1) {
       animation-delay: 550ms;
-      &:nth-child(1) {
-        animation-delay: 400ms;
-      }
-      &:nth-child(2) {
-        animation-delay: 450ms;
-      }
-      &:nth-child(3) {
-        animation-delay: 500ms;
-      }
+    }
+    &:nth-child(2) {
+      animation-delay: 650ms;
+    }
+    &:nth-child(3) {
+      animation-delay: 750ms;
+    }
+    &:nth-child(4) {
+      animation-delay: 850ms;
     }
   }
 `
 // #endregion
 
-const Intro = ({ fontsLoaded, viewingProject }: DefaultAnimationProps) => {
-  const animate = fontsLoaded ? "animate" : ""
+const Intro = ({ viewingProject }: DefaultAnimationProps) => {
   const minimized = viewingProject ? "minimized" : ""
   return (
     <Section id="intro" className={minimized}>
-      <Wrapper className={animate}>
+      <Wrapper>
         <h1>Hey there! 👋</h1>
         <p>
           I am <strong>Roland Chelwing-Grzybowski</strong>, A software engineer based in <strong>Skövde, Sweden</strong>.
@@ -101,7 +100,7 @@ const Intro = ({ fontsLoaded, viewingProject }: DefaultAnimationProps) => {
             about me <FaArrowDown />
           </Anchor>
         </p>
-        <SocialContainer className={animate}>
+        <SocialContainer>
           <LinkedIn />
           <GitHub />
           <HackerRank />

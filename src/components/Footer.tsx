@@ -104,7 +104,7 @@ const quotes = [
   { author: "Mark Zuckerberg", quote: "You gotta make it sexy! Hips and nips, otherwise I'm not eating." }
 ]
 
-const Footer = ({ fontsLoaded, viewingProject }: DefaultAnimationProps) => {
+const Footer = ({ viewingProject }: DefaultAnimationProps) => {
   const [index, setIndex] = useState(Math.floor(Math.random() * quotes.length))
 
   useEffect(() => {

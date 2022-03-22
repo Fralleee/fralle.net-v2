@@ -23,9 +23,7 @@ const Section = styled.section`
   min-height: 600px;
 
   opacity: 0;
-  &.animate {
-    animation: ${transparency} 800ms var(--easeOutBack) 600ms forwards;
-  }
+  animation: ${transparency} 400ms ease-out 800ms forwards;
 
   @media only screen and (max-width: ${media.large}) {
     border-radius: 0;
@@ -58,12 +56,10 @@ const Header = styled.h1`
 `
 // #endregion
 
-const Projects = ({ fontsLoaded, viewingProject }: DefaultAnimationProps) => {
-  const animate = fontsLoaded ? "animate" : ""
+const Projects = ({ viewingProject }: DefaultAnimationProps) => {
   const minimized = viewingProject ? "minimized" : ""
-
   return (
-    <Section id="projects" className={`${minimized} ${animate}`}>
+    <Section id="projects" className={minimized}>
       <Header>Recent work</Header>
       <Container>
         {Object.values(data).map(link =>

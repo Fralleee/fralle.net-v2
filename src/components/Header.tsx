@@ -89,39 +89,32 @@ const Logo = styled.i`
   height: 100%;
   z-index: 2;
   opacity: 0;
-  &.animate {
-    animation: ${spinAnimation} 600ms var(--easeOutBack) forwards;
-  }
+  animation: ${spinAnimation} 600ms var(--easeOutBack) forwards;
 `
 
 const Title = styled.h1`
   position: relative;
   color: var(--cta) !important;
   opacity: 0;
-  &.animate {
-    animation: ${rotateIn} 600ms var(--easeOutBack) forwards;
-  }
+  animation: ${rotateIn} 600ms var(--easeOutBack) forwards;
 `
 
 const Subtitle = styled.h2`
   opacity: 0;
-  &.animate {
-    animation: ${scaleIn} 300ms var(--easeOutBack) 500ms forwards;
-  }
+  animation: ${scaleIn} 300ms var(--easeOutBack) 400ms forwards;
 `
 // #endregion
 
-const Header = ({ fontsLoaded, viewingProject }: DefaultAnimationProps) => {
-  const animate = fontsLoaded ? "animate" : ""
+const Header = ({ viewingProject }: DefaultAnimationProps) => {
   return (
     <Section className={viewingProject ? "minimized" : ""}>
       <Canvas render={FloatingParticles} />
       <TitleContainer>
-        <Title className={animate}>
-          <Logo className={animate} />
+        <Title>
+          <Logo />
           Fralle
         </Title>
-        <Subtitle className={animate}>
+        <Subtitle>
           Software developer{" "}
           <span>
             <strong>&</strong> sassy home cook

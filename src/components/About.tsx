@@ -63,7 +63,7 @@ const Summary = styled.div`
 `
 // #endregion
 
-const About = ({ fontsLoaded, viewingProject }: DefaultAnimationProps) => {
+const About = ({ viewingProject }: DefaultAnimationProps) => {
   const minimized = viewingProject ? "minimized" : ""
   return (
     <Section id="about" className={minimized}>
