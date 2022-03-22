@@ -23,15 +23,6 @@ const App = () => {
   }, [location])
 
   useEffect(() => {
-    if (viewingProject) {
-      document.body.classList.add("fixed")
-    } else {
-      document.body.classList.remove("fixed")
-      document.title = "Fralle"
-    }
-  }, [viewingProject])
-
-  useEffect(() => {
     WebFont.load({
       google: {
         families: ["Roboto:400,700", "Kanit:400,700", "Montserrat:100"]

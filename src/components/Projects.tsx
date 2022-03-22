@@ -1,4 +1,3 @@
-import { useEffect } from "react"
 import styled from "styled-components"
 import media from "styles/media"
 import data from "data/projects-data"
@@ -62,10 +61,6 @@ const Header = styled.h1`
 const Projects = ({ fontsLoaded, viewingProject }: DefaultAnimationProps) => {
   const animate = fontsLoaded ? "animate" : ""
   const minimized = viewingProject ? "minimized" : ""
-
-  useEffect(() => {
-    document.title = "Fralle"
-  }, [])
 
   return (
     <Section id="projects" className={`${minimized} ${animate}`}>

@@ -106,6 +106,12 @@ const ProjectComponent: FC = () => {
     setProject(foundProject)
 
     document.title = `${foundProject.title} - Fralle`
+    document.body.classList.add("fixed")
+
+    return () => {
+      document.title = "Fralle"
+      document.body.classList.remove("fixed")
+    }
   }, [projectId])
 
   return project === null ? (
