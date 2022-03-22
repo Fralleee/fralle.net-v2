@@ -32,22 +32,22 @@ export const Languages = [
 
 export const Libraries = [
   { title: "React", SVG: ReactSVG },
-  { title: "Vue", SVG: VueSVG },
-  { title: "NodeJS", SVG: NodeJSSVG },
   { title: "Redux", SVG: ReduxSVG },
+  { title: "Vue", SVG: VueSVG },
+  { title: "styled-components", SVG: CodeSVG },
+  { title: "NodeJS", SVG: NodeJSSVG },
+  { title: "Express.js", SVG: CodeSVG },
+  { title: "Spring", SVG: SpringSVG },
   { title: "GraphQL", SVG: GraphQLSVG },
+  { title: "Rest", SVG: CodeSVG },
   { title: "Webpack", SVG: WebpackSVG },
   { title: "Babel", SVG: BabelSVG },
   { title: "ESLint", SVG: ESLintSVG },
   { title: "Docker", SVG: DockerSVG },
   { title: "Kubernetes", SVG: KubernetesSVG },
   { title: "Azure", SVG: AzureSVG },
-  { title: "Unity", SVG: UnitySVG },
-  { title: "Spring", SVG: SpringSVG },
-  { title: "Express.js", SVG: CodeSVG },
-  { title: "Rest", SVG: CodeSVG },
-  { title: "styled-components", SVG: CodeSVG },
-  { title: "OpenShift", SVG: OpenShiftSVG }
+  { title: "OpenShift", SVG: OpenShiftSVG },
+  { title: "Unity", SVG: UnitySVG }
 ]
 
 export const Certificates = [{ title: "Professional Scrum Master (PSM 1)", SVG: PSMSVG }]
