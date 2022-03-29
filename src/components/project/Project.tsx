@@ -1,6 +1,6 @@
 import { FC, useEffect, useState } from "react"
 import styled from "styled-components"
-import BackButton from "components/common/BackButton"
+import BackButton from "components/project/BackButton"
 import media from "styles/media"
 import { Link } from "react-router-dom"
 import { getProject } from "data/projects-data"
