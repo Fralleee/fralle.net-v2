@@ -61,7 +61,7 @@ type PropTypes = {
 }
 const Button: FC<PropTypes> = ({ children, to, title, style, download }) => {
   return (
-    <ButtonComponent href={to} title={title} style={style} download={download} target="_blank">
+    <ButtonComponent href={to} title={title} style={style} download={download} target="_blank" rel="noopener noreferrer">
       {children}
     </ButtonComponent>
   )

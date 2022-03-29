@@ -32,27 +32,27 @@ const Link = styled.a`
 // #endregion
 
 export const CSharp = () => (
-  <Link href="https://docs.microsoft.com/en-us/dotnet/csharp/" title="C#" target="_blank">
+  <Link href="https://docs.microsoft.com/en-us/dotnet/csharp/" title="C#" target="_blank" rel="noopener noreferrer">
     <CSharpSVG />
   </Link>
 )
 export const JavaScript = () => (
-  <Link href="https://www.javascript.com/" title="Javascript" target="_blank">
+  <Link href="https://www.javascript.com/" title="Javascript" target="_blank" rel="noopener noreferrer">
     <JavaScriptSVG />
   </Link>
 )
 export const TypeScript = () => (
-  <Link href="https://www.typescriptlang.org/" title="Typescript" target="_blank">
+  <Link href="https://www.typescriptlang.org/" title="Typescript" target="_blank" rel="noopener noreferrer">
     <TypeScriptSVG />
   </Link>
 )
 export const React = () => (
-  <Link href="https://reactjs.org/" title="React" target="_blank">
+  <Link href="https://reactjs.org/" title="React" target="_blank" rel="noopener noreferrer">
     <ReactSVG />
   </Link>
 )
 export const Unity = () => (
-  <Link href="https://unity.com/" title="Unity" target="_blank">
+  <Link href="https://unity.com/" title="Unity" target="_blank" rel="noopener noreferrer">
     <UnitySVG />
   </Link>
 )

@@ -36,7 +36,7 @@ const CrossfadeImage = ({ className, src, alt }: PropTypes) => {
   return (
     <>
       <img key={topSrc} className={className} src={topSrc} alt={alt} />
-      {bottomSrc && <FadeImage key={bottomSrc} className={className} src={bottomSrc} alt={alt} />}
+      <FadeImage key={bottomSrc} className={className} src={bottomSrc} alt={alt} />
     </>
   )
 }

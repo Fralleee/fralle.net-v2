@@ -55,7 +55,13 @@ type PropTypes = {
 }
 const AnchorComponent: FC<PropTypes> = ({ children, href, title, style, internal, inverted }) => {
   return (
-    <Anchor href={href} title={title} style={style} inverted={inverted} target={internal ? "" : "_blank"}>
+    <Anchor
+      href={href}
+      title={title}
+      style={style}
+      inverted={inverted}
+      target={internal ? "" : "_blank"}
+      rel={internal ? "" : "noopener noreferrer"}>
       {children}
     </Anchor>
   )

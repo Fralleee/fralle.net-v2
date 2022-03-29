@@ -42,22 +42,27 @@ const Link = styled.a`
 // #endregion
 
 export const LinkedIn = () => (
-  <Link className="linkedin" href="https://www.linkedin.com/in/fralle/" title="LinkedIn" target="_blank">
+  <Link className="linkedin" href="https://www.linkedin.com/in/fralle/" title="LinkedIn" target="_blank" rel="noopener noreferrer">
     <FaLinkedin />
   </Link>
 )
 export const GitHub = () => (
-  <Link className="github" href="https://github.com/Fralleee/" title="GitHub" target="_blank">
+  <Link className="github" href="https://github.com/Fralleee/" title="GitHub" target="_blank" rel="noopener noreferrer">
     <FaGithub />
   </Link>
 )
 export const HackerRank = () => (
-  <Link className="hackerrank" href="https://www.hackerrank.com/Fralle/" title="HackerRank" target="_blank">
+  <Link className="hackerrank" href="https://www.hackerrank.com/Fralle/" title="HackerRank" target="_blank" rel="noopener noreferrer">
     <FaHackerrank />
   </Link>
 )
 export const StackOverflow = () => (
-  <Link className="stackoverflow" href="https://stackoverflow.com/users/3155183/fralle/" title="StaockOverflow" target="_blank">
+  <Link
+    className="stackoverflow"
+    href="https://stackoverflow.com/users/3155183/fralle/"
+    title="StaockOverflow"
+    target="_blank"
+    rel="noopener noreferrer">
     <FaStackOverflow />
   </Link>
 )
