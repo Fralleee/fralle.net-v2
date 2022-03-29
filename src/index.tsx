@@ -1,17 +1,20 @@
 import "styles/style.scss"
 import "react-medium-image-zoom/dist/styles.css"
 
-import ReactDOM from "react-dom"
+import ReactDOM from "react-dom/client"
 import { BrowserRouter as Router } from "react-router-dom"
 import App from "components/App"
 import * as serviceWorkerRegistration from "./serviceWorkerRegistration"
 import reportWebVitals from "./reportWebVitals"
 
-ReactDOM.render(
+const rootElement = document.getElementById("root")
+if (!rootElement) throw new Error("Failed to find the root element")
+
+const root = ReactDOM.createRoot(rootElement)
+root.render(
   <Router>
     <App />
-  </Router>,
-  document.getElementById("root")
+  </Router>
 )
 
 // If you want your app to work offline and load faster, you can change
