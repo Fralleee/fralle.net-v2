@@ -21,6 +21,13 @@
   opacity: 0;
 }
 
+@media only screen and (max-width: 600px) {
+  #loader .logo {
+    height: 96px;
+    width: 96px;
+  }
+}
+
 @keyframes bounce {
   from {
     transform: none;
