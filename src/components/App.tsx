@@ -21,14 +21,8 @@ const App = () => {
       google: {
         families: ["Roboto:400,700", "Kanit:700", "Montserrat:100"]
       },
-      fontactive: () => {
-        console.log("FONT ACTIVE")
-        document.getElementById("loader")?.classList.add("loaded")
-      },
-      active: () => {
-        console.log("ACTEIVE")
-        setFontsLoaded(true)
-      }
+      fontactive: () => document.getElementById("loader")?.classList.add("loaded"),
+      active: () => setFontsLoaded(true)
     })
   }, [])
 
