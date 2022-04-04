@@ -12,20 +12,15 @@ const LinkComponent = styled(RouterLink)`
   display: flex;
   justify-content: center;
   align-items: center;
-  font-size: 1.25rem;
   z-index: 1;
   border-radius: var(--radius-md);
   box-shadow: 0 0 0 5px var(--background-light);
-  transition: transform 300ms var(--easeOutBack);
-
-  &:before {
-    display: none !important;
-  }
+  transform: translateZ(0);
+  transition: transform 200ms ease-out;
 
   @media only screen and (min-width: ${media.medium}) and (hover: hover) and (pointer: fine) {
     &:hover {
       transform: scale(1.05);
-      transition: transform 200ms var(--easeOutBack);
     }
 
     &:hover {
@@ -54,14 +49,15 @@ const ForegroundImage = styled.img`
 
 const Technologies = styled.div`
   position: absolute;
-  left: -1px;
-  top: -1px;
+  left: 0;
+  top: 0;
+  transform: translate(-2px, -2px);
   display: flex;
   background: var(--background-light);
-  border-radius: 0 0 5px 0;
+  border-radius: 5px 0 5px 0;
   z-index: 2;
   pointer-events: none;
-  padding: 4px;
+  padding: 2px;
   & > a {
     width: 32px;
     height: 32px;
