@@ -2,7 +2,6 @@ import { FC } from "react"
 import styled from "styled-components"
 import { Link as RouterLink } from "react-router-dom"
 import media from "styles/media"
-import { popUpTransform } from "styles/keyframes"
 
 // #region styled
 const LinkComponent = styled(RouterLink)`
