@@ -54,13 +54,12 @@ const Container = styled.div`
   z-index: 1;
   display: flex;
   justify-content: center;
-  overflow: hidden;
   pointer-events: none;
 `
 
 const Component = styled.div`
   position: relative;
-  top: 40px;
+  margin-top: 110px;
   background-color: var(--background-light);
   width: 100%;
   max-width: ${media.large};
@@ -76,7 +75,7 @@ const Component = styled.div`
   transition: all 350ms var(--easeOutBack) 150ms;
 
   @media only screen and (max-width: ${media.large}) {
-    top: 0;
+    margin-top: 0;
     border-radius: 0;
     box-shadow: none;
   }
