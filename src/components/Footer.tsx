@@ -13,6 +13,8 @@ const Section = styled.footer`
   background-color: var(--cta);
   color: var(--background-light);
   box-shadow: 1rem 1rem var(--background-dark);
+  will-change: transform, opacity;
+  transition: all 400ms var(--easeInOutBack);
 
   p {
     text-align: center;

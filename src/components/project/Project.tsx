@@ -17,6 +17,7 @@ const Section = styled.section`
   height: 100%;
   overflow-y: scroll;
   z-index: 100;
+  will-change: auto;
 
   &.route-exit {
     overflow: hidden;
@@ -50,16 +51,17 @@ const Section = styled.section`
 const Container = styled.div`
   position: absolute;
   width: 100%;
-  min-height: 100%;
+  min-height: 100vh;
   z-index: 1;
   display: flex;
   justify-content: center;
+  overflow: hidden;
   pointer-events: none;
 `
 
 const Component = styled.div`
   position: relative;
-  margin-top: 110px;
+  top: 40px;
   background-color: var(--background-light);
   width: 100%;
   max-width: ${media.large};
@@ -75,7 +77,7 @@ const Component = styled.div`
   transition: all 350ms var(--easeOutBack) 150ms;
 
   @media only screen and (max-width: ${media.large}) {
-    margin-top: 0;
+    top: 0;
     border-radius: 0;
     box-shadow: none;
   }

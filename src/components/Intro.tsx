@@ -8,6 +8,8 @@ import { FaArrowDown } from "react-icons/fa"
 // #region styled
 const Section = styled.section`
   width: 100%;
+  will-change: transform, opacity;
+  transition: all 400ms var(--easeInOutBack);
 `
 
 const Wrapper = styled.div`
