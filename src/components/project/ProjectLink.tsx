@@ -65,6 +65,7 @@ const Technologies = styled.div`
   background: var(--background-light);
   border-radius: 0 0 5px 0;
   z-index: 2;
+  pointer-events: none;
 `
 // #endregion
 
