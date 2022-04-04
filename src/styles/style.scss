@@ -37,8 +37,10 @@ body {
     }
   }
 
-  section {
-    transition: all 400ms var(--easeInOutBack);
+  section,
+  header,
+  footer {
+    transform: translateZ(0);
 
     &.minimized {
       transform: scale(0.8);

@@ -15,6 +15,8 @@ const LinkComponent = styled(RouterLink)`
   z-index: 1;
   border-radius: var(--radius-md);
   box-shadow: 0 0 0 5px var(--background-light);
+  transform: translateZ(0);
+  will-change: transform;
   transition: transform 300ms var(--easeOutBack);
 
   &:before {
@@ -47,6 +49,8 @@ const BackgroundImage = styled.img`
 const ForegroundImage = styled.img`
   position: absolute;
   width: 100%;
+  transform: translateZ(0);
+  will-change: transform;
   transition: all 300ms var(--easeOutBack);
   filter: drop-shadow(2px 4px 6px var(--shadow));
 `

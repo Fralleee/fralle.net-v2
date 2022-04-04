@@ -12,6 +12,8 @@ const Section = styled.section`
   width: 100%;
   margin: 0 auto;
   padding: 5rem 2rem;
+  will-change: transform, opacity;
+  transition: all 400ms var(--easeInOutBack);
 
   max-width: ${media.large};
   background-color: var(--background-light);
@@ -30,9 +32,6 @@ const Header = styled.h1`
   font-size: 4rem;
   margin-bottom: 1rem;
   margin-top: -1rem;
-  transition: all 400ms var(--easeOutBack);
-  transform: none;
-  opacity: 1;
 
   @media only screen and (max-width: ${media.large}) {
     font-size: 3.5rem;

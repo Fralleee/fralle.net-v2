@@ -13,6 +13,7 @@ const Section = styled.header`
   display: flex;
   flex-direction: column;
   align-items: center;
+  will-change: transform, opacity;
   transition: all 400ms var(--easeInOutBack);
 
   h1 {
@@ -24,11 +25,6 @@ const Section = styled.header`
       font-family: "Arial";
       font-weight: normal;
     }
-  }
-
-  &.minimized {
-    transform: translateY(25px) scale(0.85);
-    opacity: 0.5;
   }
 
   @media only screen and (max-width: ${media.large}) {
@@ -89,6 +85,8 @@ const Logo = styled.i`
   height: 100%;
   z-index: 2;
   opacity: 0;
+  will-change: opacity, transform;
+  transform: translateZ(0);
   animation: ${spinAnimation} 600ms var(--easeOutBack) forwards;
 `
 
@@ -96,11 +94,15 @@ const Title = styled.h1`
   position: relative;
   color: var(--cta) !important;
   opacity: 0;
+  will-change: opacity, transform;
+  transform: translateZ(0);
   animation: ${rotateIn} 600ms var(--easeOutBack) forwards;
 `
 
 const Subtitle = styled.h2`
   opacity: 0;
+  will-change: opacity, transform;
+  transform: translateZ(0);
   animation: ${scaleIn} 300ms var(--easeOutBack) 400ms forwards;
 `
 // #endregion

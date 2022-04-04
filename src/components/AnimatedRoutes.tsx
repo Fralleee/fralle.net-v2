@@ -6,7 +6,7 @@ const AnimatedRoutes = () => {
   const location = useLocation()
   return (
     <TransitionGroup component={null}>
-      <CSSTransition key={location.key} timeout={400} classNames="route">
+      <CSSTransition key={location.key} timeout={500} classNames="route">
         <Routes location={location}>
           <Route path="/" element={null} />
           <Route path="/:projectId" element={<Project />} />

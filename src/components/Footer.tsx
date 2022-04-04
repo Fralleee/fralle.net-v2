@@ -13,12 +13,8 @@ const Section = styled.footer`
   background-color: var(--cta);
   color: var(--background-light);
   box-shadow: 1rem 1rem var(--background-dark);
+  will-change: transform, opacity;
   transition: all 400ms var(--easeInOutBack);
-
-  &.minimized {
-    transform: scale(0.9);
-    opacity: 0.5;
-  }
 
   p {
     text-align: center;
@@ -68,6 +64,7 @@ const Blockquote = styled.blockquote`
   display: inline-block;
   font-size: 1.5rem;
   padding-left: 3rem;
+  will-change: opacity;
   animation: ${animateText} 10000ms forwards;
 
   figcaption {
