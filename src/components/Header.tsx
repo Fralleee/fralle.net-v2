@@ -13,7 +13,6 @@ const Section = styled.header`
   display: flex;
   flex-direction: column;
   align-items: center;
-  will-change: transform, opacity;
   transition: all 400ms var(--easeInOutBack);
 
   h1 {
