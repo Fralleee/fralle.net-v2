@@ -2,7 +2,9 @@ import { FC } from "react"
 import styled from "styled-components"
 import { Link as RouterLink } from "react-router-dom"
 import media from "styles/media"
+import { popUpTransform } from "styles/keyframes"
 
+// #region styled
 const LinkComponent = styled(RouterLink)`
   position: relative;
   max-width: 350px;
@@ -55,18 +57,28 @@ const ForegroundImage = styled.img`
   filter: drop-shadow(2px 4px 6px var(--shadow));
 `
 
-type LinkProps = {
-  title: string
-  to: string
-  backgroundImage: string
-  titleImage: string
-  foregroundImage?: string
-  foregroundImageStyle?: object
-}
-const Link: FC<LinkProps> = ({ title, to, backgroundImage, titleImage, foregroundImage, foregroundImageStyle }) => {
+const Technologies = styled.div`
+  position: absolute;
+  left: -1px;
+  top: -1px;
+  display: flex;
+  background: var(--background-light);
+  border-radius: 0 0 5px 0;
+  z-index: 2;
+`
+// #endregion
+
+const Link: FC<ProjectLinkProps> = ({ title, to, backgroundImage, titleImage, foregroundImage, foregroundImageStyle, technologies }) => {
   return (
     <LinkComponent to={to} title={title}>
       <BackgroundImage alt="Background" width={350} height={185} src={backgroundImage} />
+      {technologies.length > 0 && (
+        <Technologies>
+          {technologies.map((Tech, i) => (
+            <Tech key={i} />
+          ))}
+        </Technologies>
+      )}
       <ForegroundImage
         alt="Foreground"
         width={350}

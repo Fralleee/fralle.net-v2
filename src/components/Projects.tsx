@@ -73,6 +73,7 @@ const Projects = ({ viewingProject }: DefaultAnimationProps) => {
               titleImage={link.logo}
               backgroundImage={link.background}
               foregroundImage={link.foreground}
+              technologies={link.technologies}
             />
           ) : null
         )}

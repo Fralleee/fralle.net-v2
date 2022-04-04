@@ -15,6 +15,15 @@ type Project = {
   site?: string
   content: JSX.Element
 }
+type ProjectLinkProps = {
+  title: string
+  to: string
+  backgroundImage: string
+  titleImage: string
+  foregroundImage?: string
+  foregroundImageStyle?: object
+  technologies: ReactNode[]
+}
 
 type DefaultAnimationProps = {
   viewingProject?: boolean
