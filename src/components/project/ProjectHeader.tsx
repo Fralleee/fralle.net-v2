@@ -39,13 +39,11 @@ const Background = styled.img`
   border-radius: var(--radius-top);
 
   @media only screen and (max-width: ${media.large}) {
-    width: ${media.large};
     left: 50%;
     transform: translateX(-50%);
     border-radius: 0;
   }
   @media only screen and (max-width: ${media.medium}) {
-    width: ${media.medium};
   }
 `
 
@@ -94,7 +92,6 @@ const Title = styled.img`
   left: 0;
   width: 100%;
   max-width: 900px;
-  min-width: 420px;
   opacity: 0;
   transform: translateY(30px);
   animation: ${popUpTransform} 300ms 200ms var(--easeOutBack) forwards;

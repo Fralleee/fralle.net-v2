@@ -37,7 +37,11 @@ body {
     }
   }
 
-  section {
+  section,
+  header,
+  footer {
+    transform: translateZ(0);
+    will-change: transform, opacity;
     transition: all 400ms var(--easeInOutBack);
 
     &.minimized {

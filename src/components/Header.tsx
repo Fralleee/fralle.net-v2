@@ -13,7 +13,6 @@ const Section = styled.header`
   display: flex;
   flex-direction: column;
   align-items: center;
-  transition: all 400ms var(--easeInOutBack);
 
   h1 {
     font-size: 10rem;
@@ -24,11 +23,6 @@ const Section = styled.header`
       font-family: "Arial";
       font-weight: normal;
     }
-  }
-
-  &.minimized {
-    transform: translateY(25px) scale(0.85);
-    opacity: 0.5;
   }
 
   @media only screen and (max-width: ${media.large}) {

@@ -8,6 +8,8 @@ const Link = styled.a`
   width: 48px;
   height: 48px;
   margin: 0.25rem;
+  transform: translateZ(0);
+  will-change: transform, color;
   transition: all 200ms var(--easeOutBack);
   color: #c9cbd5;
 

@@ -15,9 +15,11 @@ const Button = styled(Link)`
   line-height: 64px;
   font-size: 4rem;
   color: var(--background-light);
+  transform: translateZ(0);
+  will-change: color;
   transition: color 200ms ease-out;
   user-select: none;
-  z-index: 10;
+  z-index: 101;
 
   svg {
     transition: transform 200ms var(--easeOutBack);
@@ -34,13 +36,12 @@ const Button = styled(Link)`
   }
 
   @media only screen and (max-width: ${media.large}) {
-    color: var(--cta);
-    background: radial-gradient(circle, var(--background-light) 40%, transparent);
     position: fixed;
-    left: auto;
-    top: auto;
-    right: 0rem;
-    bottom: 0rem;
+    padding: 1rem;
+    width: 96px;
+    height: 96px;
+    background: radial-gradient(circle at center, white 1.5rem, transparent 1.6rem);
+    color: var(--cta);
   }
 `
 // #endregion

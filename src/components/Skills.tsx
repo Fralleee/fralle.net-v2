@@ -28,9 +28,6 @@ const Header = styled.h1`
   font-size: 4rem;
   margin-bottom: 1rem;
   margin-top: -1rem;
-  transition: all 400ms var(--easeOutBack);
-  transform: none;
-  opacity: 1;
 
   @media only screen and (max-width: ${media.large}) {
     font-size: 3.5rem;

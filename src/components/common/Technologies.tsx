@@ -11,6 +11,8 @@ const Link = styled.a`
   width: 42px;
   height: 42px;
   margin: 0.25rem;
+  transform: translateZ(0);
+  will-change: transform;
   transition: all 200ms var(--easeOutBack);
 
   @media only screen and (max-width: ${media.small}) {
