@@ -61,6 +61,11 @@ const Technologies = styled.div`
   border-radius: 0 0 5px 0;
   z-index: 2;
   pointer-events: none;
+  padding: 4px;
+  & > a {
+    width: 32px;
+    height: 32px;
+  }
 `
 // #endregion
 
