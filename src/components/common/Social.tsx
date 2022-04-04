@@ -8,8 +8,6 @@ const Link = styled.a`
   width: 48px;
   height: 48px;
   margin: 0.25rem;
-  transform: translateZ(0);
-  will-change: color;
   transition: all 150ms ease-out;
   color: #c9cbd5;
 
@@ -19,8 +17,6 @@ const Link = styled.a`
   }
 
   svg {
-    transform: translateZ(0);
-    will-change: transform;
     transition: all 200ms var(--easeOutBack);
     width: 100%;
     height: auto;

@@ -40,8 +40,6 @@ body {
   section,
   header,
   footer {
-    transform: translateZ(0);
-
     &.minimized {
       transform: scale(0.8);
       opacity: 0.5;

@@ -6,15 +6,12 @@
   height: 100%;
   background-color: #f8f8ff;
   opacity: 1;
-  transform: translateZ(0);
-  will-change: opacity;
 }
 
 #loader .logo {
   position: relative;
   width: 144px;
   height: 144px;
-  transform: translateZ(0);
   animation: bounce 2500ms infinite ease-out;
 }
 

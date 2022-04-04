@@ -12,7 +12,6 @@ const Section = styled.section`
   width: 100%;
   margin: 0 auto;
   padding: 5rem 2rem;
-  will-change: transform, opacity;
   transition: all 400ms var(--easeInOutBack);
 
   max-width: ${media.large};

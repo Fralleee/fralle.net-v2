@@ -13,7 +13,6 @@ const Section = styled.section`
   border-radius: 82% 18% 66% 34% / 18% 66% 34% 82%;
   background-color: var(--cta);
   box-shadow: 1rem 1rem var(--background-dark);
-  will-change: transform, opacity;
   transition: all 400ms var(--easeInOutBack);
 
   padding: 8rem 0;

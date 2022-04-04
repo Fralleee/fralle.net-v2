@@ -17,7 +17,6 @@ const Section = styled.section`
   height: 100%;
   overflow-y: scroll;
   z-index: 100;
-  will-change: auto;
 
   &.route-exit {
     overflow: hidden;
@@ -72,8 +71,6 @@ const Component = styled.div`
   z-index: 1;
   pointer-events: all;
 
-  transform: translateZ(0);
-  will-change: transform, opacity;
   transition: all 350ms var(--easeOutBack) 150ms;
 
   @media only screen and (max-width: ${media.large}) {
@@ -92,8 +89,6 @@ const Overlay = styled(Link)`
   background-color: var(--shadow);
   overflow: hidden;
 
-  transform: translateZ(0);
-  will-change: opacity;
   transition: opacity 500ms ease-out;
 
   @media only screen and (max-width: ${media.large}) {
