@@ -8,8 +8,9 @@ const Link = styled.a`
   width: 48px;
   height: 48px;
   margin: 0.25rem;
+  transform: translateZ(0);
   will-change: color;
-  transition: all 200ms ease-out;
+  transition: all 150ms ease-out;
   color: #c9cbd5;
 
   @media only screen and (max-width: ${media.small}) {
@@ -18,12 +19,18 @@ const Link = styled.a`
   }
 
   svg {
+    transform: translateZ(0);
+    will-change: transform;
+    transition: all 200ms var(--easeOutBack);
     width: 100%;
     height: auto;
   }
 
   @media (hover: hover) and (pointer: fine) {
     &:hover {
+      svg {
+        transform: scale(1.15);
+      }
       &.linkedin {
         color: #2867b2;
       }
