@@ -64,6 +64,7 @@ const Blockquote = styled.blockquote`
   display: inline-block;
   font-size: 1.5rem;
   padding-left: 3rem;
+  will-change: opacity;
   animation: ${animateText} 10000ms forwards;
 
   figcaption {

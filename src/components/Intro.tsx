@@ -35,6 +35,8 @@ const Wrapper = styled.div`
 
   h1,
   p {
+    will-change: opacity, transform;
+    transform: translateZ(0);
     animation: ${popAnimation} 300ms var(--easeOutBack) forwards;
     &:nth-child(1) {
       animation-delay: 150ms;

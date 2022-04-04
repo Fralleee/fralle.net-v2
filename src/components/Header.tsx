@@ -85,6 +85,8 @@ const Logo = styled.i`
   height: 100%;
   z-index: 2;
   opacity: 0;
+  will-change: opacity, transform;
+  transform: translateZ(0);
   animation: ${spinAnimation} 600ms var(--easeOutBack) forwards;
 `
 
@@ -92,11 +94,15 @@ const Title = styled.h1`
   position: relative;
   color: var(--cta) !important;
   opacity: 0;
+  will-change: opacity, transform;
+  transform: translateZ(0);
   animation: ${rotateIn} 600ms var(--easeOutBack) forwards;
 `
 
 const Subtitle = styled.h2`
   opacity: 0;
+  will-change: opacity, transform;
+  transform: translateZ(0);
   animation: ${scaleIn} 300ms var(--easeOutBack) 400ms forwards;
 `
 // #endregion

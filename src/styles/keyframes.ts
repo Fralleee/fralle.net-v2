@@ -17,11 +17,11 @@ export const spinAnimation = keyframes`
 export const popAnimation = keyframes`
   from { 
     opacity: 0; 
-    top: 30px; 
+    transform: translateY(30px); 
   }
   to { 
     opacity: 1; 
-    top: 0; 
+    transform: none; 
   }
 `
 
