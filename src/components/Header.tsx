@@ -1,9 +1,8 @@
 import styled from "styled-components"
 import Canvas from "components/common/Canvas"
 import FloatingParticles from "canvas/FloatingParticles"
-import LogoImage from "media/logo.svg"
 import media from "styles/media"
-import { rotateIn, scaleIn, spinAnimation } from "styles/keyframes"
+import { rotateIn, scaleIn } from "styles/keyframes"
 
 // #region styled
 const Section = styled.header`
@@ -73,20 +72,6 @@ const TitleContainer = styled.div`
   background: radial-gradient(75% 60%, var(--background-light) 0%, var(--background-light) 33%, transparent 66%);
 `
 
-const Logo = styled.i`
-  position: absolute;
-  top: -0.75rem;
-  left: -3vw;
-  background-size: contain;
-  background-image: ${() => `url(${LogoImage})`};
-  background-repeat: no-repeat;
-  width: calc(20px + 2vw);
-  height: 100%;
-  z-index: 2;
-  opacity: 0;
-  animation: ${spinAnimation} 600ms var(--easeOutBack) forwards;
-`
-
 const Title = styled.h1`
   position: relative;
   color: var(--cta) !important;
@@ -105,10 +90,7 @@ const Header = ({ viewingProject }: DefaultAnimationProps) => {
     <Section className={viewingProject ? "minimized" : ""}>
       <Canvas render={FloatingParticles} />
       <TitleContainer>
-        <Title>
-          <Logo />
-          Fralle
-        </Title>
+        <Title>Site</Title>
         <Subtitle>
           Software developer{" "}
           <span>

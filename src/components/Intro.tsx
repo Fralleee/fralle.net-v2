@@ -88,14 +88,14 @@ const Intro = ({ viewingProject }: DefaultAnimationProps) => {
       <Wrapper>
         <h1>Hey there! 👋</h1>
         <p>
-          I am <strong>Roland Chelwing-Grzybowski</strong>, A software engineer based in <strong>Skövde, Sweden</strong>.
+          I am <strong>Developer Developersson</strong>, A software engineer based in <strong>City, Country</strong>.
         </p>
         <p>
           When I'm not writing code for work, I grind away on passions projects primarily related to front-end development or game
           development.
         </p>
         <p>
-          Any questions? Send me an email <Anchor href="mailto: roland@fralle.net">roland@fralle.net</Anchor> or learn more{" "}
+          Any questions? Send me an email <Anchor href="mailto: developer@code.com">developer@code.com</Anchor> or learn more{" "}
           <Anchor internal href="#about">
             {" "}
             about me <FaArrowDown />

@@ -67,7 +67,7 @@ const About = ({ viewingProject }: DefaultAnimationProps) => {
     <Section id="about" className={minimized}>
       <Header>About</Header>
       <Zoom>
-        <Image width={400} height={400} alt="Roland Chelwing" src={Profile} />
+        <Image width={400} height={400} alt="Developer Developersson" src={Profile} />
       </Zoom>
       <Summary>
         <p>

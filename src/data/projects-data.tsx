@@ -20,15 +20,15 @@ import Anchor from "components/common/Anchor"
 
 const projects: ProjectMap = {
   cooking: {
-    title: "Cooking with Fralle",
+    title: "Cooking",
     to: "cooking",
     logo: CWFTitle,
     background: CWFBg,
     foreground: CWFFg,
     preview: [CWFPreview1, CWFPreview2],
     technologies: [TypeScript, React],
-    repository: "https://github.com/Fralleee/cooking-with-fralle",
-    site: "https://cooking.fralle.net/",
+    repository: "https://github.com/developer",
+    site: "https://site.com/",
     content: (
       <>
         <p>
@@ -38,7 +38,7 @@ const projects: ProjectMap = {
         <p>The ultimate solution was creating a self-hosted site with a short URL for easy access.</p>
         <p>
           Check out the repo if code interest you, otherwise make yourself a{" "}
-          <Anchor href="https://cooking.fralle.net/#/dijon-travolta" title="To recipe">
+          <Anchor href="https://site.com/" title="To recipe">
             Dijon Travolta
           </Anchor>{" "}
           for that final splash every Friday deserves.
@@ -54,8 +54,8 @@ const projects: ProjectMap = {
     foreground: PizzeriaFg,
     preview: [PizzeriaPreview1, PizzeriaPreview2],
     technologies: [JavaScript, React],
-    repository: "https://github.com/Fralleee/pizzeria-frontend-challenge",
-    site: "https://fralleee.github.io/pizzeria-frontend-challenge/",
+    repository: "https://github.com/developer",
+    site: "https://site.com/",
     content: (
       <>
         <p>Originally, a full-stack developer coding challenge from a company I was interviewing for.</p>

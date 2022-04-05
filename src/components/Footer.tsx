@@ -83,7 +83,8 @@ const quotes = [
   { author: "Bill Gates", quote: "Probably the wisest man I've ever met." },
   {
     author: "Elon Musk",
-    quote: "I always strive for perfection, excellence and supremacy. Roland is an obvious example of someone who has achieved all of this."
+    quote:
+      "I always strive for perfection, excellence and supremacy. Developer is an obvious example of someone who has achieved all of this."
   },
   {
     author: "Ophrah Winfrey",
@@ -91,10 +92,10 @@ const quotes = [
   },
   {
     author: "Steve Wozniak",
-    quote: "If I one day in the near future, achieve only half of what Roland has done for the world. I will die a happy man."
+    quote: "If I one day in the near future, achieve only half of what Developer has done for the world. I will die a happy man."
   },
   { author: "Robert C. Martin", quote: "You want to see something SOLID? Check out this mans GitHub repository. My god!" },
-  { author: "Ryan Reynolds", quote: "I may not be perfect, but Roland is." },
+  { author: "Ryan Reynolds", quote: "I may not be perfect, but Developer is." },
   { author: "Barack Obama", quote: "My man." },
   { author: "Mark Zuckerberg", quote: "You gotta make it sexy! Hips and nips, otherwise I'm not eating." }
 ]
@@ -120,24 +121,24 @@ const Footer = ({ viewingProject }: DefaultAnimationProps) => {
           </Blockquote>
         </Left>
         <Right>
-          <Anchor href="https://www.linkedin.com/in/fralle/" inverted>
+          <Anchor href="https://www.linkedin.com/in/developer/" inverted>
             <FaLinkedin /> LinkedIn
           </Anchor>
-          <Anchor href="https://github.com/Fralleee/" inverted>
+          <Anchor href="https://github.com/developer/" inverted>
             <FaGithub /> GitHub
           </Anchor>
-          <Anchor href="https://www.hackerrank.com/Fralle/" inverted>
+          <Anchor href="https://www.hackerrank.com/developer/" inverted>
             <FaHackerrank /> HackerRank
           </Anchor>
-          <Anchor href="https://stackoverflow.com/users/3155183/fralle/" inverted>
+          <Anchor href="https://stackoverflow.com/users/developer/" inverted>
             <FaStackOverflow /> StackOverflow
           </Anchor>
-          <Anchor href="mailto: roland@fralle.net" inverted>
-            <FaEnvelope /> roland@fralle.net
+          <Anchor href="mailto: developer@code.com" inverted>
+            <FaEnvelope /> developer@code.com
           </Anchor>
         </Right>
       </Top>
-      <p>Copyright &copy; {new Date().getFullYear()} Fralle.net All Rights Reserved</p>
+      <p>Copyright &copy; {new Date().getFullYear()} Site.com All Rights Reserved</p>
     </Section>
   )
 }

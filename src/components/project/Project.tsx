@@ -103,11 +103,11 @@ const ProjectComponent: FC = () => {
   const [project] = useState<Project>(getProject(projectId))
 
   useEffect(() => {
-    document.title = `${project.title} - Fralle`
+    document.title = `${project.title} - Site`
     document.body.classList.add("fixed")
 
     return () => {
-      document.title = "Fralle"
+      document.title = "Site"
       document.body.classList.remove("fixed")
     }
   })
