@@ -58,7 +58,7 @@ const Technologies = styled.div`
   z-index: 2;
   pointer-events: none;
   padding: 2px;
-  & > a {
+  & > p {
     width: 32px;
     height: 32px;
   }
@@ -72,7 +72,7 @@ const Link: FC<ProjectLinkProps> = ({ title, to, backgroundImage, titleImage, fo
       {technologies.length > 0 && (
         <Technologies>
           {technologies.map((Tech, i) => (
-            <Tech key={i} />
+            <Tech key={i} nonLink />
           ))}
         </Technologies>
       )}
