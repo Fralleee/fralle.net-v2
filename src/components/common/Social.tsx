@@ -9,7 +9,6 @@ const Link = styled.a`
   height: 48px;
   margin: 0.25rem;
   transition: all 150ms ease-out;
-  color: #c9cbd5;
 
   @media only screen and (max-width: ${media.small}) {
     width: 32px;
@@ -24,6 +23,7 @@ const Link = styled.a`
 
   @media (hover: hover) and (pointer: fine) {
     &:hover {
+      transition: all 100ms ease-out;
       svg {
         transform: scale(1.15);
       }
