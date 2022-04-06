@@ -1,5 +1,6 @@
 import { FC } from "react"
 import styled from "styled-components"
+import media from "styles/media"
 
 // #region styled
 const ListItem = styled.li`
@@ -12,6 +13,10 @@ const ListItem = styled.li`
     height: 32px;
     width: 32px;
     margin: 0 0.5rem;
+  }
+
+  @media only screen and (max-width: ${media.small}) {
+    min-width: 150px;
   }
 `
 // #endregion
