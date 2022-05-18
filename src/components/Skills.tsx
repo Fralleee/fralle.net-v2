@@ -1,7 +1,7 @@
 import styled from "styled-components"
 import media from "styles/media"
 import SkillCategory from "components/skills/SkillCategory"
-import SkillItem from "components/skills/SkillsItem"
+import SkillItem from "components/skills/SkillItem"
 import { Certificates, Languages, Libraries } from "data/skills-data"
 
 // #region styled

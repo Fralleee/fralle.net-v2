@@ -22,7 +22,7 @@ const App = () => {
         families: ["Roboto:400,700", "Kanit:700", "Montserrat:100"]
       },
       fontactive: () => document.getElementById("loader")?.classList.add("loaded"),
-      active: () => setFontsLoaded(true)
+      active: () => setTimeout(() => setFontsLoaded(true), 400)
     })
   }, [])
 
