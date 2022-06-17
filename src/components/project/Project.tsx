@@ -16,6 +16,12 @@ const Section = styled.section`
   width: 100%;
   height: 100%;
   overflow-y: scroll;
+
+  @supports (scrollbar-gutter: stable) {
+    overflow: auto;
+    scrollbar-gutter: stable;
+  }
+
   z-index: 100;
 
   &.route-exit {

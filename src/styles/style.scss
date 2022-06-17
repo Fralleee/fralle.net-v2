@@ -27,6 +27,8 @@ body {
   color: var(--text);
   box-sizing: border-box;
   background-color: var(--background-light);
+  scrollbar-width: thin;
+  scrollbar-color: hsl(0 0% 50%);
 
   &.fixed {
     position: absolute;
