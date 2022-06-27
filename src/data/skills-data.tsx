@@ -19,6 +19,8 @@ import { ReactComponent as PHPSVG } from "media/programming/php.svg"
 import { ReactComponent as MySQLSVG } from "media/programming/mysql.svg"
 import { ReactComponent as OpenShiftSVG } from "media/programming/openshift.svg"
 import { ReactComponent as SpringSVG } from "media/programming/spring.svg"
+import { ReactComponent as SvelteSVG } from "media/programming/svelte.svg"
+import { ReactComponent as TailwindSVG } from "media/programming/tailwind.svg"
 import { ReactComponent as CodeSVG } from "media/programming/code.svg"
 
 export const Languages = [
@@ -47,7 +49,9 @@ export const Libraries = [
   { title: "Kubernetes", SVG: KubernetesSVG },
   { title: "Azure", SVG: AzureSVG },
   { title: "OpenShift", SVG: OpenShiftSVG },
-  { title: "Unity", SVG: UnitySVG }
+  { title: "Unity", SVG: UnitySVG },
+  { title: "Svelte", SVG: SvelteSVG },
+  { title: "TailwindCSS", SVG: TailwindSVG }
 ]
 
 export const Certificates = [{ title: "Professional Scrum Master (PSM 1)", SVG: PSMSVG }]

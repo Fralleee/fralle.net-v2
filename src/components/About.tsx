@@ -71,16 +71,11 @@ const About = ({ viewingProject }: DefaultAnimationProps) => {
       </Zoom>
       <Summary>
         <p>
-          Dedicated and curious full-stack developer with 7+ years experience in React, microservices, databases, cloud-based development
-          and DevOps.
+          Dedicated and curious full stack engineer. With a strong technical skill-set, attention to detail, and 7+ years of experience.
         </p>
         <p>
           I like to find elegant and effective solutions to complex problems while also leveraging industry-leading frameworks. Approaching
-          every day as an opportunity to extend my knowledge and adapt to new technologies.
-        </p>
-        <p>
-          I always try to lighten the mood and to make each day more enjoyable than the last. I'm one of those people that waves at the end
-          of the video call.
+          every day as an opportunity to extend my knowledge, seek new technologies and stay up-to-date on industry trends and advancements.
         </p>
       </Summary>
       <Button style={{ minWidth: 0, maxWidth: 235 }} to={CV} download="resume" title="Resume/CV">
