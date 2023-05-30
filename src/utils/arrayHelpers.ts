@@ -1,7 +1,3 @@
-export const nextIndex = (index: number, array: any[], loop: boolean = true) => {
-  let nextIndex = index + 1
-  if (nextIndex > array.length - 1) {
-    nextIndex = loop ? 0 : index
-  }
-  return nextIndex
+export const nextIndex = (index: number, array: any[], loop: boolean = true): number => {
+  return loop ? (index + 1) % array.length : Math.min(index + 1, array.length - 1)
 }

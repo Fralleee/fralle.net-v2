@@ -23,17 +23,21 @@ class Particle {
   }
 
   update(canvas: HTMLCanvasElement) {
-    if (this.radius < this.targetRadius) this.radius += this.radius * 0.05 + 0.01
+    const { width, height } = canvas
+    const { targetRadius, position, direction } = this
 
-    if (this.position.x + this.targetRadius > canvas.width || this.position.x - this.targetRadius < 0) {
-      this.direction.x = -this.direction.x
-    }
-    if (this.position.y + this.targetRadius > canvas.height || this.position.y - this.targetRadius < 0) {
-      this.direction.y = -this.direction.y
+    this.radius += Math.min(this.radius * 0.05 + 0.01, targetRadius - this.radius)
+
+    if (position.x + targetRadius > width || position.x - targetRadius < 0) {
+      direction.x = -direction.x
     }
 
-    this.position.x += this.direction.x
-    this.position.y += this.direction.y
+    if (position.y + targetRadius > height || position.y - targetRadius < 0) {
+      direction.y = -direction.y
+    }
+
+    position.x += direction.x
+    position.y += direction.y
   }
 }
 

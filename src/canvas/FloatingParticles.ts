@@ -7,6 +7,7 @@ const minParticleSize = 4
 const maxParticleSize = 12
 const particleSpeedFactor = 0.4
 const colorArray = ["#042e27", "#364966", "#cc3d4b", "#ea4454"]
+const resizeDebounceTime = 250
 
 const FloatingParticles = () => {
   const canvas = document.getElementById("canvas") as HTMLCanvasElement
@@ -18,6 +19,7 @@ const FloatingParticles = () => {
   let size: DOMRect
   let startTime = Date.now()
   let timebetweenSpawn: number
+  let resizeTimeout: any
 
   function setupSize() {
     if (ctx === null) return
@@ -29,7 +31,7 @@ const FloatingParticles = () => {
   }
 
   function getRandomScreenPosition(maxSize: number) {
-    return Math.min(Math.max(Math.random() * maxSize, maxParticleSize), maxSize - maxParticleSize)
+    return Math.random() * (maxSize - 2 * maxParticleSize) + maxParticleSize
   }
 
   function init() {
@@ -75,7 +77,10 @@ const FloatingParticles = () => {
   animate()
 
   window.addEventListener("resize", function () {
-    if (canvas.getBoundingClientRect().width !== size.width) init()
+    clearTimeout(resizeTimeout)
+    resizeTimeout = setTimeout(function () {
+      if (canvas.getBoundingClientRect().width !== size.width) init()
+    }, resizeDebounceTime)
   })
 }
 
