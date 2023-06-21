@@ -1,10 +1,9 @@
 import styled from "styled-components"
 import media from "styles/media"
-import Button from "components/common/Button"
-import { FaDownload } from "react-icons/fa"
+import { FaFile } from "react-icons/fa"
 import Profile from "media/profile.webp"
 import Zoom from "react-medium-image-zoom"
-import CV from "files/CV.pdf"
+import Anchor from "./common/Anchor"
 
 // #region styled
 const Section = styled.section`
@@ -69,19 +68,19 @@ const About = ({ viewingProject }: DefaultAnimationProps) => {
       <Zoom>
         <Image width={400} height={400} alt="Roland Chelwing" src={Profile} />
       </Zoom>
+      <Anchor style={{ fontSize: 20, marginTop: 20 }} href="https://drive.google.com/file/d/1hLQ18Bx3CMGYoTt85Ou1hSmCXv-AtAGM/view">
+        <FaFile /> Resume / CV
+      </Anchor>
       <Summary>
         <p>
-          Dedicated and curious full stack engineer. With a strong technical skill-set, attention to detail, and 7+ years of experience.
+          Curious and dedicated Software Engineer with diverse and progressive experience in software development spanning multiple
+          industries, including fintech, e-commerce, online gaming, and ad tech.
         </p>
         <p>
-          I like to find elegant and effective solutions to complex problems while also leveraging industry-leading frameworks. Approaching
-          every day as an opportunity to extend my knowledge, seek new technologies and stay up-to-date on industry trends and advancements.
+          Adept at solving complex problems using cutting-edge technologies and frameworks, with a proven track record in creating
+          sophisticated, efficient solutions.
         </p>
       </Summary>
-      <Button style={{ minWidth: 0, maxWidth: 235 }} to={CV} download="resume" title="Resume/CV">
-        <FaDownload />
-        Download Resume/CV
-      </Button>
     </Section>
   )
 }

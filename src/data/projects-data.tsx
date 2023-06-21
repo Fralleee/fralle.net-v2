@@ -32,16 +32,18 @@ const projects: ProjectMap = {
     content: (
       <>
         <p>
-          Storing my favorite recipes has always been a challenge. From using hidden Facebook groups to use browser bookmarks, nothing was
-          quite up to the challenge.
+          Keeping track of my preferred recipes was constantly difficult. Whether I utilized concealed Facebook groups or resorted to
+          browser bookmarks, no method seemed sufficiently effective.
         </p>
-        <p>The ultimate solution was creating a self-hosted site with a short URL for easy access.</p>
+
+        <p>The best answer to this issue was to create a self-hosted website with a brief URL for convenient accessibility.</p>
+
         <p>
-          Check out the repo if code interest you, otherwise make yourself a{" "}
-          <Anchor href="https://cooking.fralle.net/#/dijon-travolta" title="To recipe">
+          If coding piques your interest, feel free to explore the repository. If not, treat yourself to a{" "}
+          <Anchor href="https://cooking.fralle.net/dijon-travolta" title="To recipe">
             Dijon Travolta
           </Anchor>{" "}
-          for that final splash every Friday deserves.
+          , the perfect end-of-week garnish that every Friday calls for.
         </p>
       </>
     )
@@ -74,17 +76,62 @@ const projects: ProjectMap = {
     content: (
       <>
         <p>
-          Games have always been my passion, so it hardly comes as a surprise that I, as a programmer, would get involved in game
-          programming.
+          My fervor for games is longstanding, hence it's unsurprising that my programming journey led me into the realm of game
+          development.
         </p>
         <p>
-          What started as an arena game with a home-made JavaScript game engine strengthened into a multiplayer 3D FPS shooter made in{" "}
+          What initially emerged as an arena game, powered by a custom-built JavaScript game engine, evolved into a multiplayer 3D FPS
+          shooter developed in{" "}
           <Anchor href="https://unity.com/" title="To Unity">
             Unity
           </Anchor>
           .
         </p>
-        <p>Still a very early prototype and will probably never be completed, but is one of my ever evolving passion projects.</p>
+        <p>
+          While still in the nascent prototype stage and perhaps never destined for completion, it remains one of my continuously evolving
+          passion projects.
+        </p>
+      </>
+    )
+  },
+  swiftpaste: {
+    title: "SwiftPaste",
+    to: "swiftpaste",
+    logo: PingtapTitle,
+    background: PingtapBg,
+    foreground: PingtapFg,
+    video: PingtapVideo,
+    preview: [PizzeriaPreview1, PizzeriaPreview2],
+    technologies: [TypeScript],
+    repository: "https://github.com/Fralleee/SwiftPaste",
+    site: "https://chrome.google.com/webstore/detail/swiftpaste/ocamjpjndljkgcoeadplclcoiepjicgj/",
+    content: (
+      <>
+        <p>Introducing SwiftPaste, a spiffy chrome extension that turbocharges your copy-paste experience.</p>
+        <p>
+          With quick access to categorized clipboard data based on context, it takes form filling, coding, and communication from a
+          yawn-inducing task to a walk in the park.
+        </p>
+      </>
+    )
+  },
+  bunsandburgers: {
+    title: "Buns and Burgers",
+    to: "bunsandburgers",
+    logo: PingtapTitle,
+    background: PingtapBg,
+    foreground: PingtapFg,
+    video: PingtapVideo,
+    technologies: [TypeScript, React],
+    repository: "https://github.com/Fralleee/buns-and-burgers",
+    site: "https://buns-and-burgers.netlify.app/",
+    content: (
+      <>
+        <p>Welcome to Buns and Burgers, a hamburger restaurant ordering website built with Next.js, Chakra UI, and Xata.</p>
+        <p>
+          This project serves as a demo page and a proof of concept, showcasing the power of Next.js for server-side rendering, Chakra UI
+          for beautiful and responsive UI components, and Xata as a lightweight database solution.
+        </p>
       </>
     )
   },
@@ -102,7 +149,7 @@ const projects: ProjectMap = {
 }
 
 export const getProject = (id: string | undefined): Project => {
-  if (id !== undefined && ["cooking", "pizzeria", "pingtap"].includes(id)) {
+  if (id !== undefined && Object.keys(projects).includes(id)) {
     return projects[id]
   }
   return projects.notfound

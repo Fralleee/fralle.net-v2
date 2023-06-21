@@ -103,7 +103,7 @@ const Overlay = styled(Link)`
 `
 // #endregion
 
-type ParamTypes = { projectId: "cooking" | "pizzeria" | "pingtap" | string }
+type ParamTypes = { projectId: "cooking" | "pizzeria" | "pingtap" | "swiftpaste" | "bunsandburgers" | string }
 const ProjectComponent: FC = () => {
   const { projectId } = useParams<ParamTypes>()
   const [project] = useState<Project>(getProject(projectId))

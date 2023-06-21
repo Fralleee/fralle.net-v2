@@ -7,7 +7,7 @@ import { transparency } from "styles/keyframes"
 // #region styled
 const Section = styled.section`
   position: relative;
-  max-width: ${media.large};
+  max-width: 1280px;
   width: 100%;
   margin: 40px auto;
   border-radius: 82% 18% 66% 34% / 18% 66% 34% 82%;
@@ -15,7 +15,7 @@ const Section = styled.section`
   box-shadow: 1rem 1rem var(--background-dark);
   transition: all 400ms var(--easeInOutBack);
 
-  padding: 8rem 0;
+  padding: 8rem;
 
   display: flex;
   flex-direction: column;
