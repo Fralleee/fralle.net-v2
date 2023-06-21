@@ -17,6 +17,7 @@ const Content = styled.section`
     flex-direction: column-reverse;
     align-items: center;
     padding: 1rem;
+    padding-bottom: 5rem;
   }
 `
 

@@ -15,6 +15,19 @@ import PingtapTitle from "media/projects/Pingtap/title.webp"
 import PingtapBg from "media/projects/Pingtap/background.webp"
 import PingtapFg from "media/projects/Pingtap/foreground.webp"
 import PingtapVideo from "media/projects/Pingtap/preview.mp4"
+
+import SwiftPasteTitle from "media/projects/SwiftPaste/title.png"
+import SwiftPasteBg from "media/projects/SwiftPaste/background.png"
+import SwiftPasteFg from "media/projects/SwiftPaste/foreground.png"
+import SwiftPastePreview1 from "media/projects/SwiftPaste/preview1.png"
+import SwiftPastePreview2 from "media/projects/SwiftPaste/preview2.png"
+
+import BunsAndBurgersTitle from "media/projects/BunsAndBurgers/title.png"
+import BunsAndBurgersBg from "media/projects/BunsAndBurgers/background.png"
+import BunsAndBurgersFg from "media/projects/BunsAndBurgers/foreground.png"
+import BunsAndBurgersPreview1 from "media/projects/BunsAndBurgers/preview1.png"
+import BunsAndBurgersPreview2 from "media/projects/BunsAndBurgers/preview2.png"
+
 import { CSharp, JavaScript, React, TypeScript, Unity } from "components/common/Technologies"
 import Anchor from "components/common/Anchor"
 
@@ -97,11 +110,10 @@ const projects: ProjectMap = {
   swiftpaste: {
     title: "SwiftPaste",
     to: "swiftpaste",
-    logo: PingtapTitle,
-    background: PingtapBg,
-    foreground: PingtapFg,
-    video: PingtapVideo,
-    preview: [PizzeriaPreview1, PizzeriaPreview2],
+    logo: SwiftPasteTitle,
+    background: SwiftPasteBg,
+    foreground: SwiftPasteFg,
+    preview: [SwiftPastePreview1, SwiftPastePreview2],
     technologies: [TypeScript],
     repository: "https://github.com/Fralleee/SwiftPaste",
     site: "https://chrome.google.com/webstore/detail/swiftpaste/ocamjpjndljkgcoeadplclcoiepjicgj/",
@@ -118,10 +130,10 @@ const projects: ProjectMap = {
   bunsandburgers: {
     title: "Buns and Burgers",
     to: "bunsandburgers",
-    logo: PingtapTitle,
-    background: PingtapBg,
-    foreground: PingtapFg,
-    video: PingtapVideo,
+    logo: BunsAndBurgersTitle,
+    background: BunsAndBurgersBg,
+    foreground: BunsAndBurgersFg,
+    preview: [BunsAndBurgersPreview1, BunsAndBurgersPreview2],
     technologies: [TypeScript, React],
     repository: "https://github.com/Fralleee/buns-and-burgers",
     site: "https://buns-and-burgers.netlify.app/",
