@@ -1,4 +1,4 @@
-# fralle.net
+# fralle.net-v2
 
 ![GitHub issues](https://img.shields.io/github/issues/Fralleee/fralle.net)
 
