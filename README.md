@@ -27,3 +27,4 @@ fralle.net is my portfolio page, serving as a showcase of my projects and skills
 
 ## Contributing
 While contributions are not expected for this specific portfolio page project, I appreciate your interest and support. If you have any suggestions or feedback regarding my projects or the portfolio page itself, feel free to contact me through the provided contact information on the website.
+
